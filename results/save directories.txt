@@ -1,0 +1,5 @@
+[PosixPath('/lab/micah/yolov10/runs/detect/train5'),
+PosixPath('/lab/micah/yolov10/runs/detect/train52'), 
+PosixPath('/lab/micah/yolov10/runs/detect/train522'), 
+PosixPath('/lab/micah/yolov10/runs/detect/train5222'), 
+PosixPath('/lab/micah/yolov10/runs/detect/train52222')]

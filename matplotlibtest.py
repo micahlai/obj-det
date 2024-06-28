@@ -15,3 +15,7 @@ for i, txt in enumerate(labels):
     axis[0,1].annotate(txt, (x[i], y2[i]))
 
 plt.savefig('destination %s.eps' % str(5), format='eps')
+
+file = open("/lab/micah/obj-det/results/trainingResults %s.txt" % str(4),"w")
+file.write('test')
+file.close()
