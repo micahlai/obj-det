@@ -1,7 +1,7 @@
 import gradio as gr
 import cv2
 import tempfile
-from ultralytics import YOLOv10
+from yolov10.ultralytics import YOLOv10
 from roboflow import Roboflow
 #from IPython.display import Image
 import supervision as sv
@@ -12,7 +12,7 @@ import supervision as sv
 #version = project.version(26)
 #dataset = version.download("yolov8")
 
-model = YOLOv10('/lab/micah/yolov10/runs/detect/train3/weights/best.pt')
+model = YOLOv10('/lab/micah/obj-det/yolov10/runs/detect/train2/weights/best.pt')
 
 #!yolo task=detect mode=train epochs=10 batch=32 plots=True \
 #model=/lab/micah/yolov10/yolov10n.pt
@@ -21,6 +21,11 @@ model = YOLOv10('/lab/micah/yolov10/runs/detect/train3/weights/best.pt')
 #imagePath='/lab/micah/Downloads/hardhattest.jpg'
 #results = model(source=imagePath,conf=0.25)
 
-model.val(data='/lab/micah/yolov10/hard hat uni/data.yaml')
+results = model.val(data='/lab/micah/obj-det/hard hat uni/data.yaml')
+file=open('results.txt', 'w')
+file.write(str(results))
+file.close()
+
+print(results.results_dict['metrics/mAP50(B)'])
 
 

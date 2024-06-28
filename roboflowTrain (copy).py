@@ -1,24 +1,23 @@
 import gradio as gr
 import cv2
 import tempfile
-from ultralytics import YOLOv10
-from roboflow import Roboflow
-#from IPython.display import Image
+from yolov10.ultralytics import YOLOv10
 
-
-rf = Roboflow(api_key="gPxEF3ZGSUeLAVy1OPUy")
-project = rf.workspace("universe-datasets").project("hard-hat-universe-0dy7t")
-version = project.version(26)
-dataset = version.download("yolov8")
-
-model = YOLOv10('/lab/micah/yolov10/yolov10n.pt')
+model = YOLOv10.from_pretrained('jameslahm/yolov10l')
 
 #!yolo task=detect mode=train epochs=10 batch=32 plots=True \
 #model=/lab/micah/yolov10/yolov10n.pt
 #data=/lab/micah/yolov10/hard hat uni/data.yaml
 
 
-model.train(data='/lab/micah/yolov10/hard hat uni/data.yaml', freeze=20)
+results = model.train(data='/lab/micah/obj-det/hard hat uni/data.yaml', epochs=30,freeze=20)
 
 print("done training")
+
+file=open('obj-det/results.txt', 'w')
+file.write(str(results))
+file.close()
+
+print(results.speed)
+
 

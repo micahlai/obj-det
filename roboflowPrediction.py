@@ -1,7 +1,7 @@
 import gradio as gr
 import cv2
 import tempfile
-from ultralytics import YOLOv10
+from yolov10.ultralytics import YOLOv10
 from roboflow import Roboflow
 #from IPython.display import Image
 import supervision as sv
@@ -13,7 +13,7 @@ import supervision as sv
 #dataset = version.download("yolov8")
 
 #model = YOLOv10('/lab/micah/yolov10/runs/detect/train3/weights/best.pt')
-model = YOLOv10('/lab/micah/yolov10/yolov10n.pt')
+model = YOLOv10('/yolov10/yolov10n.pt')
 
 #!yolo task=detect mode=train epochs=10 batch=32 plots=True \
 #model=/lab/micah/yolov10/yolov10n.pt
@@ -38,6 +38,6 @@ annotated_image = label_annotator.annotate(scene=annotated_image, detections=det
 
 sv.plot_image(annotated_image)
 
-annotated_image.save('/lab/micah/annotatedImage.jpg')
+annotated_image.save('annotatedImage.jpg')
 print('saved annotated image')
 
