@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Human']
+
+roboflow:
+  workspace: roboflow-100
+  project: people-in-paintings
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/roboflow-100/people-in-paintings/dataset/2

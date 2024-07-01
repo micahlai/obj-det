@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['breadboard', 'resistor', 'wire']
+
+roboflow:
+  workspace: circuits-project
+  project: resistor-detection-5azes
+  version: 5
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/circuits-project/resistor-detection-5azes/dataset/5

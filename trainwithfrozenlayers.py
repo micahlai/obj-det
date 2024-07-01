@@ -50,7 +50,7 @@ plt.savefig('/lab/micah/obj-det/results/results.eps', format='eps')
 
 file = open('/lab/micah/obj-det/results/save directories.txt','w')
 file.writelines(str(saveDirs))
-file.close()
+file.close()    
 
 
 
