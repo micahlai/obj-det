@@ -1,0 +1,2 @@
+Total runtime: 871.6382448673248
+mean_mAPs

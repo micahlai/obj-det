@@ -1,0 +1,1 @@
+[PosixPath('/lab/micah/obj-det/testing runs/7-1 multidataset trial5/models/hard hat uni0'), PosixPath('/lab/micah/obj-det/testing runs/7-1 multidataset trial5/models/hard hat uni4'), PosixPath('/lab/micah/obj-det/testing runs/7-1 multidataset trial5/models/hard hat uni8'), PosixPath('/lab/micah/obj-det/testing runs/7-1 multidataset trial5/models/hard hat uni12')]
