@@ -6,7 +6,7 @@ import os
 import time
 
 save_dir = '/lab/micah/obj-det/testing runs/7-10 discontin'
-data_dir = '/lab/micah/obj-det/datasets/Hard hat uni/data.yaml'
+data_dir = '/lab/micah/obj-det/datasets/hard hat uni/data.yaml'
 
 os.makedirs(save_dir + '/results', exist_ok=True)
 os.makedirs(save_dir + '/models', exist_ok=True)
