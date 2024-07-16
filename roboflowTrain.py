@@ -2,22 +2,40 @@ import gradio as gr
 import cv2
 import tempfile
 from yolov10.ultralytics import YOLOv10
+import time
+import os
+import callbackFreezer
 
+save_dir = '/lab/micah/obj-det/testing runs/7-15 branch test take 2'
+freeze_set_path = '/lab/micah/obj-det/freeze set.txt'
+dataset = '/lab/micah/obj-det/datasets/garage dataset/data.yaml'
 
+os.makedirs(save_dir + '/results', exist_ok=True)
+os.makedirs(save_dir + '/models', exist_ok=True)
+
+startTS = time.time()
+        
 model = YOLOv10.from_pretrained('jameslahm/yolov10l')
 
-#!yolo task=detect mode=train epochs=10 batch=32 plots=True \
-#model=/lab/micah/yolov10/yolov10n.pt
-#data=/lab/micah/yolov10/hard hat uni/data.yaml
+freeze_set = open(freeze_set_path, 'r').read().split('\n')
 
+callbackFreezer.layersToFreeze = freeze_set
+model.add_callback("on_train_start", callbackFreezer.freeze_layer)
 
-model.train(data='hard hat uni/data.yaml', epochs=50)
-print("done training 0 layers frozen")
+result = model.train(data='/lab/micah/obj-det/datasets/garage dataset/data.yaml',
+                                  epochs=100,
+                                  project=save_dir + '/models',
+                                  name='branch test')
 
-model.train(data='hard hat uni/data.yaml', epochs=50, freeze=20)
-print("done training 20 layers frozen")
-#validation = model.val(data='/lab/micah/yolov10/hard hat uni/data.yaml')
+#result = model.train(data=dataset,epochs=100,freeze=freeze_set,project=save_dir + '/models',name='branch freeze')
+        
+# trainingTime = (time.time()-startTS)/3600
 
+# file = open(save_dir + '/results/trainingResults.txt','w')
+# file.write(str(result))
+# file.close()
 
-print("done training")
+# file = open(save_dir + '/results/overallResults.txt','w')
+# file.write(str(trainingTime))
+# file.close()
 
