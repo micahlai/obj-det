@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import os
+import json
 
 
 def initialize(sd):
@@ -7,7 +8,9 @@ def initialize(sd):
     save_dir = sd
     if(save_dir == ""):
         save_dir = '/lab/micah/obj-det/testing runs/unnamed'
-    os.makedirs(save_dir + '/results', exist_ok=True)
+    os.makedirs(save_dir + '/results/JSON DATA', exist_ok=True)
+    os.makedirs(save_dir + '/results/freeze data', exist_ok=True)
+    os.makedirs(save_dir + '/results/individual results', exist_ok=True)
     os.makedirs(save_dir + '/models', exist_ok=True)
 
 #input array
@@ -54,3 +57,7 @@ def saveFile(name, data):
         for key, value in data.items():
             file.write('%s:%s\n' % (key,value))
     file.close()
+
+def saveJSON(name, data):
+    with open(f"{save_dir}/results/JSON DATA/{name}.json", "w") as outfile: 
+        json.dump(data, outfile)

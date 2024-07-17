@@ -1,4 +1,5 @@
 from yolov10.ultralytics import YOLOv10
+import colors
 
 layersToFreeze = []
 
@@ -13,7 +14,7 @@ def freeze_layer(trainer):
             print(f'freezing {k}') 
             v.requires_grad = False 
             count += 1
-    print(f"{count} layers are freezed.")
+    print(f"{colors.bcolors.OKGREEN}{count} layers are freezed{colors.bcolors.ENDC}")
 
 
 
