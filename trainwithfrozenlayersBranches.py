@@ -7,7 +7,7 @@ import callbackFreezer
 import colors
 
 #save data init
-save_dir = '/lab/micah/obj-det/testing runs/7-17 TEST take2'
+save_dir = '/lab/micah/obj-det/testing runs/7-17 Full Test'
 saveData.initialize(save_dir)
 
 #read freeze set data
