@@ -25,7 +25,7 @@ model = YOLOv10.from_pretrained('jameslahm/yolov10l')
 
 dataset = '/lab/micah/obj-det/datasets/garage dataset/data.yaml'
 
-defaultEpochs = 2
+defaultEpochs = 50
 
 mAPs = {}
 trainingTimes = {}
