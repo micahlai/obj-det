@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import os
 import json
+import math
 
 
 def initialize(sd):
@@ -32,17 +33,32 @@ def plotDataLine(layersToFreeze, mAPs, trainingTimes):
 
 #input dictionary
 def plotDataBar(mAPs, trainingTimes):
-    figure, (ax1,ax2) = plt.subplots(2,1,figsize=(5,10))
+    figure, (ax1,ax2) = plt.subplots(2,1,figsize=(10,10))
 
-    ax1.bar(range(len(mAPs)),list(mAPs.values()), tick_label=list(mAPs.keys()))
+    mAPVals = list(mAPs.values())
+    ax1.bar(range(len(mAPs)),mAPVals, tick_label=list(mAPs.keys()))
     ax1.set_title("mAPs")
+    low1 = min(mAPVals)
+    high1 = max(mAPVals)
+    ax1.set_ylim([(low1-0.5*(high1-low1)), (high1+0.5*(high1-low1))])
 
-    ax2.bar(range(len(trainingTimes)),list(trainingTimes.values()), tick_label=list(trainingTimes.keys()))
+    for i in range(len(mAPs)):
+        ax1.text(i, round(mAPVals[i],3), round(mAPVals[i],3), ha = 'center')
+
+    trainingTimeVals = list(trainingTimes.values())
+    ax2.bar(range(len(trainingTimes)),trainingTimeVals, tick_label=list(trainingTimes.keys()))
     ax2.set_title("Training Times")
+    low2 = min(trainingTimeVals)
+    high2 = max(trainingTimeVals)
+    ax2.set_ylim([(low2-0.5*(high2-low2)), (high2+0.5*(high2-low2))])
+
+
+    for i in range(len(trainingTimes)):
+        ax2.text(i, round(trainingTimeVals[i],5), round(trainingTimeVals[i],5), ha = 'center')
 
     plt.draw()
-    ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90, ha='right')
-    ax2.set_xticklabels(ax2.get_xticklabels(), rotation=90, ha='right')
+    ax1.set_xticklabels(ax1.get_xticklabels(), rotation=60, ha='right')
+    ax2.set_xticklabels(ax2.get_xticklabels(), rotation=60, ha='right')
 
     plt.savefig(save_dir + '/results/results.jpg', format='jpg')
 
