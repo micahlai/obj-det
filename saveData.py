@@ -32,7 +32,7 @@ def plotDataLine(layersToFreeze, mAPs, trainingTimes):
     plt.savefig(save_dir + '/results/results.eps', format='jpg')
 
 #input dictionary
-def plotDataBar(mAPs, trainingTimes):
+def plotDataBar(mAPs, trainingTimes, name=""):
     figure, (ax1,ax2) = plt.subplots(2,1,figsize=(10,10))
 
     mAPVals = list(mAPs.values())
@@ -60,7 +60,11 @@ def plotDataBar(mAPs, trainingTimes):
     ax1.set_xticklabels(ax1.get_xticklabels(), rotation=60, ha='right')
     ax2.set_xticklabels(ax2.get_xticklabels(), rotation=60, ha='right')
 
-    plt.savefig(save_dir + '/results/results.jpg', format='jpg')
+    if(name != ""):
+        plt.suptitle(name, fontsize=14)
+        plt.savefig(save_dir + f'/results/results [{name}].jpg', format='jpg')
+    else:
+        plt.savefig(save_dir + f'/results/results [{name}].jpg', format='jpg')
 
 def saveFile(name, data):
     file = open(save_dir + f'/results/{name}.txt','w')
@@ -77,3 +81,10 @@ def saveFile(name, data):
 def saveJSON(name, data):
     with open(f"{save_dir}/results/JSON DATA/{name}.json", "w") as outfile: 
         json.dump(data, outfile)
+
+def createSubfoldersInResults(name):
+
+    os.makedirs(save_dir + '/results/JSON DATA/' + name, exist_ok=True)
+    os.makedirs(save_dir + '/results/freeze data/' + name, exist_ok=True)
+    os.makedirs(save_dir + '/results/individual results/' + name, exist_ok=True)
+    os.makedirs(save_dir + '/models/' + name, exist_ok=True)
