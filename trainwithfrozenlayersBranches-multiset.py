@@ -26,12 +26,11 @@ model = YOLOv10.from_pretrained('jameslahm/yolov10l')
 
 dataset_home_dir = '/lab/micah/obj-det/datasets/'
 datasets = ['part number',
-            'People in painting',
+            'garage dataset',
             'Resistors',
             'teeth',
             'toyota',
-            'car types',
-            'class of clans']
+            'car types']
 
 defaultEpochs = 100
 
