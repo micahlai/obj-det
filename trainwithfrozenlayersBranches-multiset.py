@@ -25,8 +25,7 @@ freeze_data=dict(sorted(freeze_data.items(), key=lambda item:len(item[1])))
 model = YOLOv10.from_pretrained('jameslahm/yolov10l')
 
 dataset_home_dir = '/lab/micah/obj-det/datasets/'
-datasets = ['garage dataset',
-            'hard hat uni',
+datasets = ['part number',
             'People in painting',
             'Resistors',
             'teeth',
@@ -96,3 +95,4 @@ for i in datasets:
         print(colors.bcolors.FAIL + str(e) + colors.bcolors.ENDC)
 
     print(f"{colors.bcolors.OKBLUE}Finished testing [{i}]{colors.bcolors.ENDC}")
+print(f"{colors.bcolors.BOLD}Finished testing all datasets{colors.bcolors.ENDC}")
