@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import os
 import json
 import math
-
+import matplotlib.cm as cm
+import freezeDataLookup
 
 def initialize(sd):
     global save_dir
@@ -31,9 +32,13 @@ def plotDataLine(layersToFreeze, mAPs, trainingTimes):
 
     plt.savefig(save_dir + '/results/results.eps', format='jpg')
 
+    plt.close()
+
 #input dictionary
-def plotDataBar(mAPs, trainingTimes, name=""):
-    figure, (ax1,ax2) = plt.subplots(2,1,figsize=(10,10))
+def plotDataBar(mAPs, trainingTimes, name="",file=""):
+    figure, (ax1,ax2) = plt.subplots(2,1,figsize=(10,20))
+    plt.tight_layout()
+    plt.subplots_adjust(hspace = 0.4, bottom = 0.1, top = 0.95)
 
     mAPVals = list(mAPs.values())
     ax1.bar(range(len(mAPs)),mAPVals, tick_label=list(mAPs.keys()))
@@ -43,7 +48,7 @@ def plotDataBar(mAPs, trainingTimes, name=""):
     ax1.set_ylim([(low1-0.5*(high1-low1)), (high1+0.5*(high1-low1))])
 
     for i in range(len(mAPs)):
-        ax1.text(i, round(mAPVals[i],3), round(mAPVals[i],3), ha = 'center')
+        ax1.text(i, round(mAPVals[i],3), round(mAPVals[i],3), ha = 'left', rotation = 90)
 
     trainingTimeVals = list(trainingTimes.values())
     ax2.bar(range(len(trainingTimes)),trainingTimeVals, tick_label=list(trainingTimes.keys()))
@@ -54,17 +59,100 @@ def plotDataBar(mAPs, trainingTimes, name=""):
 
 
     for i in range(len(trainingTimes)):
-        ax2.text(i, round(trainingTimeVals[i],5), round(trainingTimeVals[i],5), ha = 'center')
+        ax2.text(i, round(trainingTimeVals[i],5), round(trainingTimeVals[i],5), ha = 'left', rotation = 90)
 
     plt.draw()
-    ax1.set_xticklabels(ax1.get_xticklabels(), rotation=60, ha='right')
-    ax2.set_xticklabels(ax2.get_xticklabels(), rotation=60, ha='right')
+    ax1.set_xticklabels(ax1.get_xticklabels(), rotation=-90, ha='left')
+    ax2.set_xticklabels(ax2.get_xticklabels(), rotation=-90, ha='left')
 
     if(name != ""):
         plt.suptitle(name, fontsize=14)
-        plt.savefig(save_dir + f'/results/results [{name}].jpg', format='jpg')
+        plt.savefig(save_dir + f'/results/{file}results [{name}].jpg', format='jpg')
     else:
-        plt.savefig(save_dir + f'/results/results [{name}].jpg', format='jpg')
+        plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
+    
+    plt.close()
+
+def plotDataScatter(mAPs, trainingTimes, name="",file=""):
+
+    mAPVals = list(mAPs.values())
+    trainingTimeVals = list(trainingTimes.values())
+                            
+    low1 = min(mAPVals)
+    high1 = max(mAPVals)
+    low2 = min(trainingTimeVals)
+    high2 = max(trainingTimeVals)
+
+    colorData = []
+    for i in mAPs.keys():
+        colorData.append(len(freezeDataLookup.lookupData(i)))
+
+    plt.figure(figsize=(20,15))
+    plt.scatter(trainingTimeVals,mAPVals,c=colorData,s=100)
+    plt.xlim([(low2-0.1*(high2-low2)), (high2+0.1*(high2-low2))])
+    plt.ylim([(low1-0.1*(high1-low1)), (high1+0.1*(high1-low1))])
+
+    plt.xlabel("Training Time")
+    plt.ylabel("mAPs")
+    for i, txt in enumerate(mAPs.keys()):
+        plt.annotate(txt, (trainingTimeVals[i], mAPVals[i]),ha="center")
+    plt.colorbar()
+    
+
+    if(name != ""):
+        plt.suptitle(name, fontsize=14)
+        plt.savefig(save_dir + f'/results/{file}results [{name}].jpg', format='jpg')
+    else:
+        plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
+
+    plt.close()
+
+def plotDataCombined(mAPs, trainingTimes, name="",file=""):
+
+    mAPVals = list(mAPs.values())
+    trainingTimeVals = list(trainingTimes.values())
+                            
+    low1 = min(mAPVals)
+    high1 = max(mAPVals)
+    low2 = min(trainingTimeVals)
+    high2 = max(trainingTimeVals)
+
+    colorData = []
+    for i in mAPs.keys():
+        colorData.append(len(freezeDataLookup.lookupData(i)))
+
+    plt.figure(figsize=(40,15))
+    plt.subplot(2,2,1)
+    plt.bar(range(len(mAPs)),mAPVals, tick_label=list(mAPs.keys()))
+    plt.ylim([(low1-0.5*(high1-low1)), (high1+0.5*(high1-low1))])
+    plt.xticks(rotation=-90, ha='left')
+    plt.title("mAP")
+
+    plt.subplot(2,2,3)
+    plt.bar(range(len(trainingTimes)),trainingTimeVals, tick_label=list(trainingTimes.keys()))
+    plt.ylim([(low2-0.5*(high2-low2)), (high2+0.5*(high2-low2))])
+    plt.xticks(rotation=-90, ha='left')
+    plt.title("Training Time")
+
+    plt.subplot(1,2,2)
+    plt.scatter(trainingTimeVals,mAPVals,c=colorData)
+    plt.xlim([(low2-0.1*(high2-low2)), (high2+0.1*(high2-low2))])
+    plt.ylim([(low1-0.1*(high1-low1)), (high1+0.1*(high1-low1))])
+
+    plt.xlabel("Training Time")
+    plt.ylabel("mAPs")
+    for i, txt in enumerate(mAPs.keys()):
+        plt.annotate(txt, (trainingTimeVals[i], mAPVals[i]),ha="center",fontsize=5)
+    plt.colorbar()
+    
+
+    if(name != ""):
+        plt.suptitle(name, fontsize=14)
+        plt.savefig(save_dir + f'/results/{file}results [{name}].jpg', format='jpg',dpi=300)
+    else:
+        plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg',dpi=300)
+
+    plt.close()
 
 def saveFile(name, data):
     file = open(save_dir + f'/results/{name}.txt','w')
