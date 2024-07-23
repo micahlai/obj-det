@@ -123,7 +123,7 @@ def plotDataCombined(mAPs, trainingTimes, name="",file=""):
 
     labels = []
     for i in mAPs.keys():
-        labels.append(f"{i}:{len(freezeDataLookup.lookupData(i))}")
+        labels.append(f"{i}:[{len(freezeDataLookup.lookupData(i))}]")
 
     colorData = []
     for i in mAPs.keys():
@@ -133,14 +133,21 @@ def plotDataCombined(mAPs, trainingTimes, name="",file=""):
     plt.subplot(2,2,1)
     plt.bar(range(len(mAPs)),mAPVals, tick_label=labels)
     plt.ylim([(low1-0.5*(high1-low1)), (high1+0.5*(high1-low1))])
-    plt.xticks(rotation=-90, ha='left')
+    plt.xticks(rotation=90, ha='left')
     plt.title("mAP")
+
+    for i in range(len(mAPs)):
+        plt.text(i, round(mAPVals[i],3), round(mAPVals[i],3), ha = 'left', rotation = 90)
+
 
     plt.subplot(2,2,3)
     plt.bar(range(len(trainingTimes)),trainingTimeVals, tick_label=labels)
     plt.ylim([(low2-0.5*(high2-low2)), (high2+0.5*(high2-low2))])
-    plt.xticks(rotation=-90, ha='left')
+    plt.xticks(rotation=90, ha='left')
     plt.title("Training Time")
+
+    for i in range(len(trainingTimes)):
+        plt.text(i, round(trainingTimeVals[i],5), round(trainingTimeVals[i],5), ha = 'left', rotation = 90)
 
     plt.subplot(1,2,2)
     plt.scatter(trainingTimeVals,mAPVals,c=colorData)
@@ -152,10 +159,11 @@ def plotDataCombined(mAPs, trainingTimes, name="",file=""):
     for i, txt in enumerate(mAPs.keys()):
         plt.annotate(txt, (trainingTimeVals[i], mAPVals[i]),ha="center",fontsize=5)
     plt.colorbar()
+    plt.tight_layout()
     
 
     if(name != ""):
-        plt.suptitle(name, fontsize=14)
+        plt.suptitle(name, fontsize=20, va="bottom")
         plt.savefig(save_dir + f'/results/{file}results [{name}].jpg', format='jpg',dpi=300)
     else:
         plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg',dpi=300)
