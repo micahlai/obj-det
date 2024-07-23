@@ -40,8 +40,12 @@ def plotDataBar(mAPs, trainingTimes, name="",file=""):
     plt.tight_layout()
     plt.subplots_adjust(hspace = 0.4, bottom = 0.1, top = 0.95)
 
+    labels = []
+    for i in mAPs.keys():
+        labels.append(f"{i}:{len(freezeDataLookup.lookupData(i))}")
+
     mAPVals = list(mAPs.values())
-    ax1.bar(range(len(mAPs)),mAPVals, tick_label=list(mAPs.keys()))
+    ax1.bar(range(len(mAPs)),mAPVals, tick_label=labels)
     ax1.set_title("mAPs")
     low1 = min(mAPVals)
     high1 = max(mAPVals)
@@ -51,7 +55,7 @@ def plotDataBar(mAPs, trainingTimes, name="",file=""):
         ax1.text(i, round(mAPVals[i],3), round(mAPVals[i],3), ha = 'left', rotation = 90)
 
     trainingTimeVals = list(trainingTimes.values())
-    ax2.bar(range(len(trainingTimes)),trainingTimeVals, tick_label=list(trainingTimes.keys()))
+    ax2.bar(range(len(trainingTimes)),trainingTimeVals, tick_label=labels)
     ax2.set_title("Training Times")
     low2 = min(trainingTimeVals)
     high2 = max(trainingTimeVals)
@@ -117,19 +121,23 @@ def plotDataCombined(mAPs, trainingTimes, name="",file=""):
     low2 = min(trainingTimeVals)
     high2 = max(trainingTimeVals)
 
+    labels = []
+    for i in mAPs.keys():
+        labels.append(f"{i}:{len(freezeDataLookup.lookupData(i))}")
+
     colorData = []
     for i in mAPs.keys():
         colorData.append(len(freezeDataLookup.lookupData(i)))
 
     plt.figure(figsize=(40,15))
     plt.subplot(2,2,1)
-    plt.bar(range(len(mAPs)),mAPVals, tick_label=list(mAPs.keys()))
+    plt.bar(range(len(mAPs)),mAPVals, tick_label=labels)
     plt.ylim([(low1-0.5*(high1-low1)), (high1+0.5*(high1-low1))])
     plt.xticks(rotation=-90, ha='left')
     plt.title("mAP")
 
     plt.subplot(2,2,3)
-    plt.bar(range(len(trainingTimes)),trainingTimeVals, tick_label=list(trainingTimes.keys()))
+    plt.bar(range(len(trainingTimes)),trainingTimeVals, tick_label=labels)
     plt.ylim([(low2-0.5*(high2-low2)), (high2+0.5*(high2-low2))])
     plt.xticks(rotation=-90, ha='left')
     plt.title("Training Time")

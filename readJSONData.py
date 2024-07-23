@@ -15,6 +15,13 @@ datasets = ['part number',
             'hard hat uni',
             'People in painting']
 
+freeze_data = freezeDataLookup.getAllData()
+
+def getOrder(key):
+    return freeze_data[key]
+
+print(freeze_data)
+
 for i in datasets:
 
     mAP_path1 = f"{trial1path}/JSON DATA/{i}/FINAL mAP RESULTS.json"
@@ -81,15 +88,12 @@ for i in datasets:
         else:
             trainTime[key] = trainTime2[key]
 
-    # myKeys = list(mAPs.keys())
-    # myKeys = sorted(myKeys, key=freezeDataLookup.lookupData)
+    myKeys = list(mAPs.keys())
+    myKeys = sorted(myKeys, key=getOrder)
 
-    # SmAPs = {i:mAPs[i]for i in myKeys}
-    # StrainTime = {i:trainTime[i]for i in myKeys}
+    SmAPs = {i:mAPs[i]for i in myKeys}
+    StrainTime = {i:trainTime[i]for i in myKeys}
 
-    #mAPs=dict(sorted(mAPs.items(), key=lambda item:len(freezeDataLookup.lookupData(key[1]))))
-    #trainTime=dict(sorted(trainTime.items(), key=lambda item:len(freezeDataLookup.lookupData(key[1]))))
-
-    saveData.plotDataBar(mAPs,trainTime, file="Bar ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-    saveData.plotDataScatter(mAPs,trainTime, file="Scatter ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-    saveData.plotDataCombined(mAPs,trainTime, file="Combined ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    saveData.plotDataBar(SmAPs,StrainTime, file="Bar ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    saveData.plotDataScatter(SmAPs,StrainTime, file="Scatter ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    saveData.plotDataCombined(SmAPs,StrainTime, file="Combined ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
