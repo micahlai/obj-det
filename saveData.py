@@ -42,7 +42,7 @@ def plotDataBar(mAPs, trainingTimes, name="",file=""):
 
     labels = []
     for i in mAPs.keys():
-        labels.append(f"{i}:{len(freezeDataLookup.lookupData(i))}")
+        labels.append(f"{i}:[{len(freezeDataLookup.lookupData(i))}]")
 
     mAPVals = list(mAPs.values())
     ax1.bar(range(len(mAPs)),mAPVals, tick_label=labels)
