@@ -4,16 +4,19 @@ import json
 import math
 import matplotlib.cm as cm
 import freezeDataLookup
+import readyaml
 
-def initialize(sd):
+def initialize(sd, keepSubs = True, keepModels = True):
     global save_dir
     save_dir = sd
     if(save_dir == ""):
         save_dir = '/lab/micah/obj-det/testing runs/unnamed'
-    os.makedirs(save_dir + '/results/JSON DATA', exist_ok=True)
-    os.makedirs(save_dir + '/results/freeze data', exist_ok=True)
-    os.makedirs(save_dir + '/results/individual results', exist_ok=True)
-    os.makedirs(save_dir + '/models', exist_ok=True)
+    if(keepSubs):
+        os.makedirs(save_dir + '/results/JSON DATA', exist_ok=True)
+        os.makedirs(save_dir + '/results/freeze data', exist_ok=True)
+        os.makedirs(save_dir + '/results/individual results', exist_ok=True)
+    if(keepModels):
+        os.makedirs(save_dir + '/models', exist_ok=True)
 
 #input array
 def plotDataLine(layersToFreeze, mAPs, trainingTimes):
@@ -74,14 +77,14 @@ def plotDataBar(mAPs, trainingTimes, name="",file=""):
         plt.savefig(save_dir + f'/results/{file}results [{name}].jpg', format='jpg')
     else:
         plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
-    
+
     plt.close()
 
 def plotDataScatter(mAPs, trainingTimes, name="",file=""):
 
     mAPVals = list(mAPs.values())
     trainingTimeVals = list(trainingTimes.values())
-                            
+
     low1 = min(mAPVals)
     high1 = max(mAPVals)
     low2 = min(trainingTimeVals)
@@ -101,7 +104,7 @@ def plotDataScatter(mAPs, trainingTimes, name="",file=""):
     for i, txt in enumerate(mAPs.keys()):
         plt.annotate(txt, (trainingTimeVals[i], mAPVals[i]),ha="center")
     plt.colorbar()
-    
+
 
     if(name != ""):
         plt.suptitle(name, fontsize=14)
@@ -115,7 +118,7 @@ def plotDataCombined(mAPs, trainingTimes, name="",file=""):
 
     mAPVals = list(mAPs.values())
     trainingTimeVals = list(trainingTimes.values())
-                            
+
     low1 = min(mAPVals)
     high1 = max(mAPVals)
     low2 = min(trainingTimeVals)
@@ -160,7 +163,7 @@ def plotDataCombined(mAPs, trainingTimes, name="",file=""):
         plt.annotate(txt, (trainingTimeVals[i], mAPVals[i]),ha="center",fontsize=5)
     plt.colorbar()
     plt.tight_layout()
-    
+
 
     if(name != ""):
         plt.suptitle(name, fontsize=20, va="bottom")
@@ -169,6 +172,64 @@ def plotDataCombined(mAPs, trainingTimes, name="",file=""):
         plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg',dpi=300)
 
     plt.close()
+
+def plotDataScatterByGradient(mAPs, trainingTimes, file="", unfrozenKey = "unfrozen", relativeToUnfrozen = True):
+    defaultKeys = list(mAPs.keys())
+    unfrozenExists = (unfrozenKey in defaultKeys) and relativeToUnfrozen
+    keys = defaultKeys
+
+    if(unfrozenExists):
+        keys.remove(unfrozenKey)
+    for grad in keys:
+        # mAPVals = list(mAPs[grad].values())
+        # trainingTimeVals = list(trainingTimes[grad].values())
+
+        # mAPUnfrozenVal = list(mAPs[unfrozenKey].values())
+        # trainingTimeUnfrozenVal = list(trainingTimes[unfrozenKey].values())
+        # print(mAPVals)
+        # if(unfrozenExists):
+        #     for i in mAPVals:
+        #         mAPVals[i] = mAPVals[i]/mAPUnfrozenVal[i]
+        #     for i in trainingTimes:
+        #         trainingTimeVals[i] = trainingTimeVals[i]/trainingTimeUnfrozenVal[i]
+        mAPVals = []
+        trainingTimeVals = []
+
+        if(unfrozenExists):
+            for dataset in mAPs[grad]:
+                mAPVals.append(mAPs[grad][dataset]/mAPs[unfrozenKey][dataset])
+                trainingTimeVals.append(trainingTimes[grad][dataset]/trainingTimes[unfrozenKey][dataset])
+        else:
+            mAPVals = list(mAPs[grad].values())
+            trainingTimeVals = list(trainingTimes[grad].values())
+
+        low1 = min(mAPVals)
+        high1 = max(mAPVals)
+        low2 = min(trainingTimeVals)
+        high2 = max(trainingTimeVals)
+
+        colorData = []
+        for i in mAPs[grad].keys():
+            colorData.append(readyaml.returnClassCountDefaultDir(i))
+
+        plt.figure(figsize=(20,15))
+        plt.scatter(trainingTimeVals,mAPVals,c=colorData,s=100,cmap="plasma")
+        plt.xlim([(low2-0.1*(high2-low2)), (high2+0.1*(high2-low2))])
+        plt.ylim([(low1-0.1*(high1-low1)), (high1+0.1*(high1-low1))])
+
+        plt.xlabel("Training Time")
+        plt.ylabel("mAPs")
+        for i, txt in enumerate(mAPs[grad].keys()):
+            plt.annotate(txt, (trainingTimeVals[i], mAPVals[i]),ha="center")
+        plt.colorbar()
+
+        if(unfrozenExists):
+            plt.suptitle(f"{grad} (Relative to Unfrozen)", fontsize=14)
+        else:
+            plt.suptitle(grad, fontsize=14)
+        plt.savefig(save_dir + f'/results/{file}results [{grad}].jpg', format='jpg')
+
+        plt.close()
 
 def saveFile(name, data):
     file = open(save_dir + f'/results/{name}.txt','w')
@@ -183,7 +244,7 @@ def saveFile(name, data):
     file.close()
 
 def saveJSON(name, data):
-    with open(f"{save_dir}/results/JSON DATA/{name}.json", "w") as outfile: 
+    with open(f"{save_dir}/results/JSON DATA/{name}.json", "w") as outfile:
         json.dump(data, outfile)
 
 def createSubfoldersInResults(name):
@@ -192,3 +253,6 @@ def createSubfoldersInResults(name):
     os.makedirs(save_dir + '/results/freeze data/' + name, exist_ok=True)
     os.makedirs(save_dir + '/results/individual results/' + name, exist_ok=True)
     os.makedirs(save_dir + '/models/' + name, exist_ok=True)
+
+def createSubfolderwithNameInResults(path):
+    os.makedirs(save_dir + '/results/' + path, exist_ok=True)
