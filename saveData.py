@@ -181,17 +181,6 @@ def plotDataScatterByGradient(mAPs, trainingTimes, file="", unfrozenKey = "unfro
     if(unfrozenExists):
         keys.remove(unfrozenKey)
     for grad in keys:
-        # mAPVals = list(mAPs[grad].values())
-        # trainingTimeVals = list(trainingTimes[grad].values())
-
-        # mAPUnfrozenVal = list(mAPs[unfrozenKey].values())
-        # trainingTimeUnfrozenVal = list(trainingTimes[unfrozenKey].values())
-        # print(mAPVals)
-        # if(unfrozenExists):
-        #     for i in mAPVals:
-        #         mAPVals[i] = mAPVals[i]/mAPUnfrozenVal[i]
-        #     for i in trainingTimes:
-        #         trainingTimeVals[i] = trainingTimeVals[i]/trainingTimeUnfrozenVal[i]
         mAPVals = []
         trainingTimeVals = []
 
@@ -211,16 +200,20 @@ def plotDataScatterByGradient(mAPs, trainingTimes, file="", unfrozenKey = "unfro
         colorData = []
         for i in mAPs[grad].keys():
             colorData.append(readyaml.returnClassCountDefaultDir(i))
+        
+        sizeData = []
+        for i in mAPs[grad].keys():
+            sizeData.append(readyaml.returnSizeAverage(i) * 3000)
 
         plt.figure(figsize=(20,15))
-        plt.scatter(trainingTimeVals,mAPVals,c=colorData,s=100,cmap="plasma")
+        plt.scatter(trainingTimeVals,mAPVals,c=colorData,s=sizeData,cmap="plasma")
         plt.xlim([(low2-0.1*(high2-low2)), (high2+0.1*(high2-low2))])
         plt.ylim([(low1-0.1*(high1-low1)), (high1+0.1*(high1-low1))])
 
         plt.xlabel("Training Time")
         plt.ylabel("mAPs")
         for i, txt in enumerate(mAPs[grad].keys()):
-            plt.annotate(txt, (trainingTimeVals[i], mAPVals[i]),ha="center")
+            plt.annotate(f"{txt},s:{round(sizeData[i]/3000,3)},hwr:{round(readyaml.returnHWRatioAverage(txt),3)}", (trainingTimeVals[i], mAPVals[i]),ha="center")
         plt.colorbar()
 
         if(unfrozenExists):

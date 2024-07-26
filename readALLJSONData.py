@@ -115,11 +115,11 @@ for i in datasets:
     if(len(list(SmAPs.keys())) > len(keys)):
         keys = list(SmAPs.keys())
 
-    saveData.saveFile("smap", SmAPs)
+    # saveData.saveFile("smap", SmAPs)
 
-    saveData.plotDataBar(SmAPs,StrainTime, file="Bar ",name=f"dataset/{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-    saveData.plotDataScatter(SmAPs,StrainTime, file="Scatter ",name=f"dataset/{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-    saveData.plotDataCombined(SmAPs,StrainTime, file="Combined ",name=f"dataset/{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    # saveData.plotDataBar(SmAPs,StrainTime, file="Bar ",name=f"dataset/{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    # saveData.plotDataScatter(SmAPs,StrainTime, file="Scatter ",name=f"dataset/{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    # saveData.plotDataCombined(SmAPs,StrainTime, file="Combined ",name=f"dataset/{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
 
 NmAP = {key:{k:allmAP[k][key] for k in allmAP if key in allmAP[k]} for key in keys}
 NTrainT = {key:{k:allTT[k][key] for k in allTT if key in allTT[k]} for key in keys}
