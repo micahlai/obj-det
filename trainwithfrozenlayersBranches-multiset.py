@@ -8,12 +8,12 @@ import colors
 import readyaml
 
 #save data init
-save_dir = '/lab/micah/obj-det/testing runs/7-19 separate branch multidatset'
+save_dir = '/lab/micah/obj-det/testing runs/7-25 separate branch multidatset'
 saveData.initialize(save_dir)
 
 #read freeze set data
 freeze_data = {}
-freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 7-19'
+freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 7-25'
 for root, dirs, files in os.walk(freeze_set_path):
     for f in files:
         if(f.endswith('.txt')):

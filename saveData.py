@@ -213,7 +213,7 @@ def plotDataScatterByGradient(mAPs, trainingTimes, file="", unfrozenKey = "unfro
         plt.xlabel("Training Time")
         plt.ylabel("mAPs")
         for i, txt in enumerate(mAPs[grad].keys()):
-            plt.annotate(f"{txt},s:{round(sizeData[i]/3000,3)},hwr:{round(readyaml.returnHWRatioAverage(txt),3)}", (trainingTimeVals[i], mAPVals[i]),ha="center")
+            plt.annotate(f"{txt},s:{round(readyaml.returnHWRatioSTDev(txt),3)},hwr:{round(readyaml.returnHWRatioSTDev(txt),3)}", (trainingTimeVals[i], mAPVals[i]),ha="center")
         plt.colorbar()
 
         if(unfrozenExists):
