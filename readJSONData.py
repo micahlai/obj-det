@@ -19,10 +19,16 @@ datasets = ['part number',
 freeze_data = freezeDataLookup.getAllData()
 save_dir = "testing runs/7-29 separate branch combined results"
 saveData.initialize(save_dir,keepSubs=False,keepModels=False)
+saveData.createSubfolderwithNameInResults('dataset')
+saveData.createSubfolderwithNameInResults('layer')
 
 def getOrder(key):
     return freeze_data[key]
 
+allmAP = {}
+allTT = {}
+
+keys = []
 
 for i in datasets:
 
@@ -90,10 +96,6 @@ for i in datasets:
     myKeys.extend(x for x in list(mAPs2.keys()) if x not in myKeys)
     myKeys.extend(x for x in list(mAPs3.keys()) if x not in myKeys)
 
-    saveData.saveFile("map1", trainTime1)
-    saveData.saveFile("map2", trainTime2)
-    saveData.saveFile("map3", trainTime3)
-
     for key in myKeys:
         if key in mAPs1:
             mAPs[key] = mAPs1[key]
@@ -111,6 +113,20 @@ for i in datasets:
     SmAPs = {i:mAPs[i]for i in myKeys}
     StrainTime = {i:trainTime[i]for i in myKeys}
 
-    saveData.plotDataBar(SmAPs,StrainTime, file="Bar ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-    saveData.plotDataScatter(SmAPs,StrainTime, file="Scatter ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-    saveData.plotDataCombined(SmAPs,StrainTime, file="Combined ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    allmAP[i] = SmAPs
+    allTT[i] = StrainTime
+
+    if(len(list(SmAPs.keys())) > len(keys)):
+        keys = list(SmAPs.keys())
+
+    saveData.plotDataBar(SmAPs,StrainTime, file="dataset/Bar ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    saveData.plotDataScatter(SmAPs,StrainTime, file="dataset/Scatter ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    saveData.plotDataCombined(SmAPs,StrainTime, file="dataset/Combined ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+
+NmAP = {key:{k:allmAP[k][key] for k in allmAP if key in allmAP[k]} for key in keys}
+NTrainT = {key:{k:allTT[k][key] for k in allTT if key in allTT[k]} for key in keys}
+
+saveData.saveFile("All mAP", NmAP)
+saveData.saveFile("All training", NTrainT)
+saveData.plotDataScatterByGradient(NmAP,NTrainT,file="layer/Relative ")
+saveData.plotDataScatterByGradient(NmAP,NTrainT,relativeToUnfrozen=False,file="layer/")
