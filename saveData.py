@@ -11,6 +11,8 @@ def initialize(sd, keepSubs = True, keepModels = True):
     save_dir = sd
     if(save_dir == ""):
         save_dir = '/lab/micah/obj-det/testing runs/unnamed'
+    
+    os.makedirs(save_dir + '/results/', exist_ok=True)
     if(keepSubs):
         os.makedirs(save_dir + '/results/JSON DATA', exist_ok=True)
         os.makedirs(save_dir + '/results/freeze data', exist_ok=True)
