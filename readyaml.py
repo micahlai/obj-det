@@ -69,6 +69,5 @@ def returnSizeSTDev(name,  home_dir = default_path):
     data = returnSize(name, _home_dir=home_dir)
     return statistics.stdev(data)
 
-print(returnTrainingSetCount('playing cards'))
 
 

@@ -5,6 +5,7 @@ import math
 import matplotlib.cm as cm
 import freezeDataLookup
 import readyaml
+import statistics
 
 def initialize(sd, keepSubs = True, keepModels = True):
     global save_dir
@@ -20,8 +21,6 @@ def initialize(sd, keepSubs = True, keepModels = True):
     if(keepModels):
         os.makedirs(save_dir + '/models', exist_ok=True)
 
-    global freezeData
-    freezeData = freezeDataLookup.getAllData()
 
 #input array
 def plotDataLine(layersToFreeze, mAPs, trainingTimes):
@@ -85,10 +84,14 @@ def plotDataBar(mAPs, trainingTimes, name="",file=""):
 
     plt.close()
 
-def plotDataScatter(mAPs, trainingTimes, name="",file=""):
+def plotDataScatter(mAPs, trainingTimes, name="",file="",origin=False,relative=False,unfrozenKey = "unfrozen"):
+
 
     mAPVals = list(mAPs.values())
     trainingTimeVals = list(trainingTimes.values())
+    if(relative):
+        mAPVals=[x/mAPs[unfrozenKey] for x in mAPVals]
+        trainingTimeVals=[x/trainingTimes[unfrozenKey] for x in trainingTimeVals]
 
     low1 = min(mAPVals)
     high1 = max(mAPVals)
@@ -101,8 +104,13 @@ def plotDataScatter(mAPs, trainingTimes, name="",file=""):
 
     plt.figure(figsize=(20,15))
     plt.scatter(trainingTimeVals,mAPVals,c=colorData,s=100)
-    plt.xlim([(low2-0.1*(high2-low2)), (high2+0.1*(high2-low2))])
-    plt.ylim([(low1-0.1*(high1-low1)), (high1+0.1*(high1-low1))])
+    if(origin):
+        plt.xlim([0, (high2+0.1*(high2-low2))])
+        plt.ylim([0, (high1+0.1*(high1-low1))])
+    else:
+        plt.xlim([(low2-0.1*(high2-low2)), (high2+0.1*(high2-low2))])
+        plt.ylim([(low1-0.1*(high1-low1)), (high1+0.1*(high1-low1))])
+
 
     plt.xlabel("Training Time")
     plt.ylabel("mAPs")
@@ -110,11 +118,14 @@ def plotDataScatter(mAPs, trainingTimes, name="",file=""):
         plt.annotate(txt, (trainingTimeVals[i], mAPVals[i]),ha="center")
     plt.colorbar()
 
-
+    relativeTitle = ""
+    if(relative):
+        relativeTitle = "Relative "
     if(name != ""):
-        plt.suptitle(name, fontsize=14)
+        plt.suptitle(relativeTitle + name, fontsize=14)
         plt.savefig(save_dir + f'/results/{file}results [{name}].jpg', format='jpg')
     else:
+        plt.suptitle(relativeTitle, fontsize=14)
         plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
 
     plt.close()
@@ -280,9 +291,6 @@ def plotDataScatterByGradientTotal(mAPs, trainingTimes, file="", unfrozenKey = "
     plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
     plt.close()
 
-def getOrder(key):
-    return freezeData[key]
-
 def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKey = "unfrozen",datasetAttribute = "size",dontIgnore=[""],ignoreDataset=[""]):
     defaultKeys = list(mAPs.keys())
     unfrozenExists = (unfrozenKey in defaultKeys)
@@ -295,11 +303,13 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
     if(dontIgnore != [""]):
         keys = dontIgnore
 
-    keys = sorted(keys, key=getOrder)
+    freezeData = freezeDataLookup.getAllData()
+    keys = sorted(keys, key=freezeData.get)
 
     plt.figure(figsize=(20,15))
 
     annotations = {}
+    averages = {}
 
     for grad in keys:
         datasets = [x for x in list(mAPs[grad].keys()) if x not in ignoreDataset]
@@ -321,20 +331,17 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
             TTime = trainingTimes[grad][dataset]/trainingTimes[unfrozenKey][dataset]
             yVals.append(mAP/TTime)
 
-            #mAP = mAPs[unfrozenKey][dataset] - mAPs[grad][dataset]
-            #TTime = trainingTimes[grad][dataset] - trainingTimes[unfrozenKey][dataset]
-            #yVals.append(mAP - TTime)
-
             annotations[dataset] = xVal
         
         SyVals = [x for _, x in sorted(zip(xVals,yVals))]
         SxVals = sorted(xVals)
+        averages[grad]=statistics.mean(SyVals)
         
         plt.plot(SxVals,SyVals)
 
 
     for key,val in annotations.items():
-        plt.annotate(key, (val, 0.6),ha="center",fontsize=10,rotation=90)
+        plt.annotate(key, (val, 0.5),ha="center",fontsize=10,rotation=90)
 
     if(datasetAttribute == "size"):
         plt.xlabel("Average Size")
@@ -349,7 +356,10 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
         plt.xlabel("# of Training Images")
         plt.suptitle("Favoribility vs # of Training Images", fontsize=14)
     plt.ylabel("Favoribility")
-    plt.legend([f"{x} ({freezeData[x]})" for x in keys], loc="best")
+
+    legendLabels = keys
+    legendLabels = sorted(keys, key=averages.get)
+    plt.legend([f"{x} ({freezeData[x]},{round(averages[x],3)})" for x in legendLabels], loc="best")
     plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
     plt.close()
 

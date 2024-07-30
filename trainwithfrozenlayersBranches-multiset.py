@@ -6,14 +6,17 @@ import saveData
 import callbackFreezer
 import colors
 import readyaml
+import readJSONData
+
+completeStartTime = time.time()
 
 #save data init
-save_dir = '/lab/micah/obj-det/testing runs/7-30 separate branch multidatset'
+save_dir = '/lab/micah/obj-det/testing runs/7-31 separate branch multidatset'
 saveData.initialize(save_dir)
 
 #read freeze set data
 freeze_data = {}
-freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 7-30'
+freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 7-31'
 for root, dirs, files in os.walk(freeze_set_path):
     for f in files:
         if(f.endswith('.txt')):
@@ -92,4 +95,10 @@ for i in datasets:
         print(colors.bcolors.FAIL + str(e) + colors.bcolors.ENDC)
 
     print(f"{colors.bcolors.OKBLUE}Finished testing [{i}]{colors.bcolors.ENDC}")
-print(f"{colors.bcolors.BOLD}Finished testing all datasets{colors.bcolors.ENDC}")
+
+totalTime = (time.time() - completeStartTime)/3600
+print(f"{colors.bcolors.BOLD}Finished testing all datasets in [{totalTime} hours]{colors.bcolors.ENDC}")
+saveData.saveFile("Total Time", totalTime)
+
+readJSONData.combineResults(additionalTP=[save_dir], save_dir="testing runs/7-31 separate branch combined results")
+
