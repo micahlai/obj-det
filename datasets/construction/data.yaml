@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 29
+names: ['Animal', 'Autobus', 'Boca de incendio', 'Camion volquete', 'Casco de seguridad', 'Chaleco de seguridad', 'Cono de seguridad', 'Escalera', 'Excavadora', 'Gato', 'Guantes', 'Maquinaria', 'Mascarilla', 'Perro', 'Persona', 'SIN Chaleco de seguridad', 'SIN casco', 'SIN mascara', 'SUV', 'camion', 'camion y remolque', 'mini-van', 'pala cargadora', 'person', 'sedan', 'semi', 'trailer', 'van', 'vehiculo']
+
+roboflow:
+  workspace: ale-isjyl
+  project: construction-safety-aszln
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ale-isjyl/construction-safety-aszln/dataset/3
