@@ -119,14 +119,31 @@ for i in datasets:
     if(len(list(SmAPs.keys())) > len(keys)):
         keys = list(SmAPs.keys())
 
-    saveData.plotDataBar(SmAPs,StrainTime, file="dataset/Bar ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-    saveData.plotDataScatter(SmAPs,StrainTime, file="dataset/Scatter ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-    saveData.plotDataCombined(SmAPs,StrainTime, file="dataset/Combined ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    # saveData.plotDataBar(SmAPs,StrainTime, file="dataset/Bar ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    # saveData.plotDataScatter(SmAPs,StrainTime, file="dataset/Scatter ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+    # saveData.plotDataCombined(SmAPs,StrainTime, file="dataset/Combined ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
 
 NmAP = {key:{k:allmAP[k][key] for k in allmAP if key in allmAP[k]} for key in keys}
 NTrainT = {key:{k:allTT[k][key] for k in allTT if key in allTT[k]} for key in keys}
 
 saveData.saveFile("All mAP", NmAP)
 saveData.saveFile("All training", NTrainT)
-saveData.plotDataScatterByGradient(NmAP,NTrainT,file="layer/Relative ")
-saveData.plotDataScatterByGradient(NmAP,NTrainT,relativeToUnfrozen=False,file="layer/")
+saveData.saveFile("Keys",keys)
+
+ig = ['all cv2 after 10 + cv3',
+'first 10',
+'all cv1 after 10',
+'first 10 + 23 cv3',
+'all cv1 after 10 + cv3',
+'all m.2 after 10 + cv3',
+'all m.0 after 10 + cv3',
+'all m.1 after 10 + cv3',
+'all m + cv3',
+'all m after 10',
+'all m after 10 + cv3']
+
+datasetIgnore = ['toyota']
+
+saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Class ",datasetAttribute="classes", dontIgnore = ig,ignoreDataset=datasetIgnore)
+saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Ratio ",datasetAttribute="ratio", dontIgnore = ig,ignoreDataset=datasetIgnore)
+saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Size ",datasetAttribute="size",dontIgnore=ig,ignoreDataset=datasetIgnore)

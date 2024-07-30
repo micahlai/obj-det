@@ -20,6 +20,9 @@ def initialize(sd, keepSubs = True, keepModels = True):
     if(keepModels):
         os.makedirs(save_dir + '/models', exist_ok=True)
 
+    global freezeData
+    freezeData = freezeDataLookup.getAllData()
+
 #input array
 def plotDataLine(layersToFreeze, mAPs, trainingTimes):
     figure, axis = plt.subplots(2,2)
@@ -225,6 +228,126 @@ def plotDataScatterByGradient(mAPs, trainingTimes, file="", unfrozenKey = "unfro
         plt.savefig(save_dir + f'/results/{file}results [{grad}].jpg', format='jpg')
 
         plt.close()
+
+def plotDataScatterByGradientTotal(mAPs, trainingTimes, file="", unfrozenKey = "unfrozen", relativeToUnfrozen = True):
+    defaultKeys = list(mAPs.keys())
+    unfrozenExists = (unfrozenKey in defaultKeys) and relativeToUnfrozen
+    keys = defaultKeys
+
+    low1=0
+    low2=0
+    high1=0
+    high2=0
+
+    if(unfrozenExists):
+        keys.remove(unfrozenKey)
+
+    plt.figure(figsize=(20,15))
+    for grad in keys:
+
+        if(unfrozenExists):
+            for dataset in mAPs[grad]:
+                mAPVals.append(mAPs[grad][dataset]/mAPs[unfrozenKey][dataset])
+                trainingTimeVals.append(trainingTimes[grad][dataset]/trainingTimes[unfrozenKey][dataset])
+        else:
+            mAPVals = list(mAPs[grad].values())
+            trainingTimeVals = list(trainingTimes[grad].values())
+
+        
+        low1 = min(mAPVals + [low1])
+        high1 = max(mAPVals + [high1])
+        low2 = min(trainingTimeVals + [low2])
+        high2 = max(trainingTimeVals + [low2])
+        
+        sizeData = []
+        for i in mAPs[grad].keys():
+            sizeData.append(readyaml.returnSizeAverage(i) * 3000)
+
+        plt.scatter(trainingTimeVals,mAPVals,s=sizeData)
+
+        
+
+    plt.xlim([(low2-0.1*(high2-low2)), (high2+0.1*(high2-low2))])
+    plt.ylim([(low1-0.1*(high1-low1)), (high1+0.1*(high1-low1))])
+    plt.xlabel("Training Time")
+    plt.ylabel("mAPs")
+    plt.legend(keys, loc="best")
+
+    if(unfrozenExists):
+        plt.suptitle(f"Total : Relative to Unfrozen", fontsize=14)
+    else:
+        plt.suptitle("Total", fontsize=14)
+    plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
+    plt.close()
+
+def getOrder(key):
+    return freezeData[key]
+
+def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKey = "unfrozen",datasetAttribute = "size",dontIgnore=[""],ignoreDataset=[""]):
+    defaultKeys = list(mAPs.keys())
+    unfrozenExists = (unfrozenKey in defaultKeys)
+    keys = defaultKeys
+    if(unfrozenExists):
+        keys.remove(unfrozenKey)
+    else:
+        return False
+    
+    if(dontIgnore != [""]):
+        keys = dontIgnore
+
+    keys = sorted(keys, key=getOrder)
+
+    plt.figure(figsize=(20,15))
+
+    annotations = {}
+
+    for grad in keys:
+        datasets = [x for x in list(mAPs[grad].keys()) if x not in ignoreDataset]
+        xVals = []
+        yVals = []
+        for dataset in datasets:
+            xVal = 0
+            if(datasetAttribute == "size"):
+                xVal=(readyaml.returnSizeAverage(dataset))
+            elif(datasetAttribute == "classes"):
+                xVal=(readyaml.returnClassCountDefaultDir(dataset))
+            else:
+                xVal=(readyaml.returnHWRatioSTDev(dataset))
+            xVals.append(xVal)
+
+            mAP = mAPs[grad][dataset]/mAPs[unfrozenKey][dataset]
+            TTime = trainingTimes[grad][dataset]/trainingTimes[unfrozenKey][dataset]
+            yVals.append(mAP/TTime)
+
+            #mAP = mAPs[unfrozenKey][dataset] - mAPs[grad][dataset]
+            #TTime = trainingTimes[grad][dataset] - trainingTimes[unfrozenKey][dataset]
+            #yVals.append(mAP - TTime)
+
+            annotations[dataset] = xVal
+        
+        SyVals = [x for _, x in sorted(zip(xVals,yVals))]
+        SxVals = sorted(xVals)
+        
+        plt.plot(SxVals,SyVals)
+
+
+    for key,val in annotations.items():
+        plt.annotate(key, (val, 0.6),ha="center",fontsize=10,rotation=90)
+
+    if(datasetAttribute == "size"):
+        plt.xlabel("Average Size")
+        plt.suptitle("Favoribility vs Average Bounding Box Size", fontsize=14)
+    elif(datasetAttribute == "ratio"):
+        plt.xlabel("STDev of HW Ratio")
+        plt.suptitle("Favoribility vs STDEV of HW Ratio", fontsize=14)
+    elif(datasetAttribute == "classes"):
+        plt.xlabel("# of classes")
+        plt.suptitle("Favoribility vs # of Classes", fontsize=14)
+    plt.ylabel("Favoribility")
+    plt.legend([f"{x} ({freezeData[x]})" for x in keys], loc="best")
+    plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
+    plt.close()
+
 
 def saveFile(name, data):
     file = open(save_dir + f'/results/{name}.txt','w')
