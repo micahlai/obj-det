@@ -311,6 +311,8 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
                 xVal=(readyaml.returnSizeAverage(dataset))
             elif(datasetAttribute == "classes"):
                 xVal=(readyaml.returnClassCountDefaultDir(dataset))
+            elif(datasetAttribute == "count"):
+                xVal=(readyaml.returnTrainingSetCount(dataset))
             else:
                 xVal=(readyaml.returnHWRatioSTDev(dataset))
             xVals.append(xVal)
@@ -343,6 +345,9 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
     elif(datasetAttribute == "classes"):
         plt.xlabel("# of classes")
         plt.suptitle("Favoribility vs # of Classes", fontsize=14)
+    elif(datasetAttribute == "count"):
+        plt.xlabel("# of Training Images")
+        plt.suptitle("Favoribility vs # of Training Images", fontsize=14)
     plt.ylabel("Favoribility")
     plt.legend([f"{x} ({freezeData[x]})" for x in keys], loc="best")
     plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')

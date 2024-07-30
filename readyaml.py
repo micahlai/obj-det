@@ -16,6 +16,11 @@ def returnClassCountDefaultDir(name, home_dir = default_path):
         data_loaded = yaml.safe_load(stream)
     return data_loaded["nc"]
 
+def returnTrainingSetCount(name, home_dir = default_path):
+    for root,dirs,files in os.walk(f"{home_dir + name}/train/images"):
+        return len(files)
+    
+
 def returnHWData(name, home_dir = default_path):
     HWData = []
     home_path = home_dir + name
@@ -64,5 +69,6 @@ def returnSizeSTDev(name,  home_dir = default_path):
     data = returnSize(name, _home_dir=home_dir)
     return statistics.stdev(data)
 
+print(returnTrainingSetCount('playing cards'))
 
 

@@ -14,7 +14,11 @@ datasets = ['part number',
             'teeth',
             'toyota',
             'hard hat uni',
-            'People in painting']
+            'People in painting',
+            'bodywash',
+            'playing cards',
+            'carbike',
+            'grocery store']
 
 freeze_data = freezeDataLookup.getAllData()
 save_dir = "testing runs/7-29 separate branch combined results"
@@ -147,3 +151,4 @@ datasetIgnore = ['toyota']
 saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Class ",datasetAttribute="classes", dontIgnore = ig,ignoreDataset=datasetIgnore)
 saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Ratio ",datasetAttribute="ratio", dontIgnore = ig,ignoreDataset=datasetIgnore)
 saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Size ",datasetAttribute="size",dontIgnore=ig,ignoreDataset=datasetIgnore)
+saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Count ",datasetAttribute="count",dontIgnore=ig,ignoreDataset=datasetIgnore)
