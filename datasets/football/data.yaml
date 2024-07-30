@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['futbol', 'player', 'referree']
+
+roboflow:
+  workspace: ilyes-talbi-ptwsp
+  project: futbol-players
+  version: 7
+  license: Public Domain
+  url: https://universe.roboflow.com/ilyes-talbi-ptwsp/futbol-players/dataset/7
