@@ -16,7 +16,7 @@ saveData.initialize(save_dir)
 
 #read freeze set data
 freeze_data = {}
-freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 7-31'
+freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 7-30'
 for root, dirs, files in os.walk(freeze_set_path):
     for f in files:
         if(f.endswith('.txt')):
@@ -28,10 +28,13 @@ freeze_data=dict(sorted(freeze_data.items(), key=lambda item:len(item[1])))
 model = YOLOv10.from_pretrained('jameslahm/yolov10l')
 
 dataset_home_dir = '/lab/micah/obj-det/datasets/'
-datasets = ['bodywash',
-            'playing cards',
-            'carbike',
-            'grocery store']
+datasets = ['playing cards',
+            'grocery store',
+            'football',
+            'hazard signs',
+            'construction',
+            'rock paper scissors',
+            'carbike']
 
 defaultEpochs = 100
 
