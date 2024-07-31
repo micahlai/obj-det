@@ -137,3 +137,6 @@ def combineResults(save_dir=d_save_dir,
     saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Ratio ",datasetAttribute="ratio", dontIgnore = ig,ignoreDataset=datasetIgnore)
     saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Size ",datasetAttribute="size",dontIgnore=ig,ignoreDataset=datasetIgnore)
     saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Count ",datasetAttribute="count",dontIgnore=ig,ignoreDataset=datasetIgnore)
+
+if __name__ == "__main__":
+    combineResults()
