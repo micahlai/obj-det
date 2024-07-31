@@ -1,1 +1,1 @@
-/lab/micah/obj-det/beoqueue.pl -q -d -n '/lab/micah/obj-det/nodes.txt' -f '/lab/micah/obj-det/filelist.txt' python '/lab/micah/obj-det/trainwithfrozenlayersBranches-argument.py'
+/home2/micah/obj-det/beoqueue.pl -q -d -n '/lab/micah/obj-det/nodes.txt' -f '/lab/micah/obj-det/filelist.txt' python '/lab/micah/obj-det/trainwithfrozenlayersBranches-argument.py'

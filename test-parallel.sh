@@ -1,1 +1,4 @@
-/lab/micah/obj-det/beoqueue.pl -q -d -n '/lab/micah/obj-det/nodes.txt' -f '/lab/micah/obj-det/filelist.txt' python '/lab/micah/obj-det/test.py'
+#!/bin/bash
+~/.bashrc
+./beoqueue.pl -d -q -n "iGpu2:1 iGpu3:1 iGpu4:1 iGpu5:1 iGpu13:1" 'bash /lab/micah/obj-det/parallel-script.sh' "test1" "test2" "test3" "test4" "test5" "test6"
+

@@ -51,7 +51,7 @@ use POSIX;
 $SIG{CHLD} = \&reaper; $SIG{USR1} = \&error; $SIG{USR2} = \&warning;
 use strict;
 
-my $ter    = "aterm -fn 5x7 -fg black -bg white";    # terminal to use
+my $ter    = "gnome-terminal";    # terminal to use
 my $muname = "/tmp/beoqueue.mutex.$$";     # mutex (may be unnecessary)
 my $procid = POSIX::getpid();
 
@@ -96,7 +96,7 @@ foreach my $nnn (@nods) {
 	my @tmp = split(/:/, $nnn);
 	if ($#tmp == 0) {
 	    # node: specification, let's get the number of cores of that node:
-	    my $ncpu = `ssh -x -n $tmp[0] "cat /proc/cpuinfo | grep \"^processor" | wc -l"` + 0;
+	    my $ncpu = `ssh -x -n -i '/lab/micah/.ssh/ssh_key' $tmp[0] "cat /proc/cpuinfo | grep \"^processor" | wc -l"` + 0;
 	    while($ncpu) { push(@nodes, $tmp[0]); $ncpu --; }
 	} elsif ($#tmp == 1) {
 	    # node:n specification, use that node n times:
@@ -141,7 +141,7 @@ while(my $ar = shift(@jlist)) {
                     if ($nn eq 'localhost') {
                         system("$cmd $ar");
                     } else {
-                        system("ssh -x -n $nn \"$cmd $ar\"");
+                        system("ssh -x -n -i '/lab/micah/.ssh/ssh_key' $nn \"$cmd $ar\"");
                     }
                 } else {      # run in an aterm
                     # figure out where to place the aterm:
@@ -154,7 +154,7 @@ while(my $ar = shift(@jlist)) {
                     if ($nn eq 'localhost') {
                         system("$ter -geometry +$x+$y -title $nn -e $cmd $ar");
                     } else {
-                        system("$ter -geometry +$x+$y -title $nn -e ssh -x -n $nn \"$cmd $ar\"");
+                        system("$ter -geometry +$x+$y -title $nn -e ssh -x -n -i '/lab/micah/.ssh/ssh_key' $nn \"$cmd $ar\"");
                     }
                 }
                 exit 0;

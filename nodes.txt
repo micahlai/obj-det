@@ -1,7 +1,4 @@
 iGpu2:1
-iGpu3:1
-iGpu4:1
-iGpu5:1
 iGpu8:1
 iGpu20:1
 iGpu21:1
