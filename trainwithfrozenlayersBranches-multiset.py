@@ -81,6 +81,8 @@ for i in datasets:
             saveData.saveFile(f"freeze data/{i}/{key}",val)
             saveData.saveJSON(f"{i}/mAP step {step}:{key}",mAPs)
             saveData.saveJSON(f"{i}/time step {step}:{key}",trainingTimes)
+            saveData.saveJSON(f"{i}/FINAL mAP RESULTS",mAPs)
+            saveData.saveJSON(f"{i}/FINAL TRAINING TIME RESULTS",trainingTimes)
 
 
         except Exception as e:
