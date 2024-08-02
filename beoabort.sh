@@ -47,17 +47,15 @@ killcmd="killallmyprocs.pl $*"
 cleancmd='rm -rf /home/tmp/?/process_*'
 
 # find a list of nodes:
-# if [ -s "${HOME}/.beonodes" ]; then nodes="${HOME}/.beonodes"
-# elif [ -s '/etc/beonodes' ]; then nodes='/etc/beonodes'
-# else echo 'Cannot find list of nodes -- ABORT'; exit 1; fi
-
-nodes="iGpu2 iGpu8 iGpu13 iGpu15 iGpu21 iGpu25"
+if [ -s "${HOME}/.beonodes" ]; then nodes="${HOME}/.beonodes"
+elif [ -s '/etc/beonodes' ]; then nodes='/etc/beonodes'
+else echo 'Cannot find list of nodes -- ABORT'; exit 1; fi
 
 # ok, let's kill em all:
 echo -n "Aborting nodes: "
 for n in `/bin/grep -v "#" $nodes`; do
     echo -n "$n "
-    ssh -x -n -i '/lab/micah/.ssh/ssh_key' $n "$killcmd && $cleancmd" > /dev/null 2>&1 &
+    ssh -x -n $n "$killcmd && $cleancmd" > /dev/null 2>&1 &
 done
 echo
 

@@ -14,3 +14,5 @@
 'thermal'
 'aerial-cars'
 'parking-lot'
+'playing cards'
+'bodywash'
