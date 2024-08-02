@@ -1,0 +1,6 @@
+model.0.conv.weight
+model.0.bn.weight
+model.0.bn.bias
+model.1.conv.weight
+model.1.bn.weight
+model.1.bn.bias
