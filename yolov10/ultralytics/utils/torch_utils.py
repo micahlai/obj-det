@@ -67,7 +67,7 @@ def get_cpu_info():
     return string.replace("(R)", "").replace("CPU ", "").replace("@ ", "")
 
 
-def select_device(device="", batch=0, newline=False, verbose=True):
+def select_device(device="", batch=0, newline=False, verbose=False):
     """
     Selects the appropriate PyTorch device based on the provided arguments.
 
@@ -229,7 +229,7 @@ def fuse_deconv_and_bn(deconv, bn):
     return fuseddconv
 
 
-def model_info(model, detailed=False, verbose=True, imgsz=640):
+def model_info(model, detailed=False, verbose=False, imgsz=640):
     """
     Model information.
 

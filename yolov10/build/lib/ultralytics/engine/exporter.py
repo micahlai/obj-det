@@ -755,7 +755,7 @@ class Exporter:
             tf.__version__,
             "<=2.13.1",
             name="tensorflow",
-            verbose=True,
+            verbose=False,
             msg="https://github.com/ultralytics/ultralytics/issues/5161",
         )
         import onnx2tf

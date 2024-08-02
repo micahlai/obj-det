@@ -88,7 +88,7 @@ class AutoBackend(nn.Module):
         fp16=False,
         batch=1,
         fuse=True,
-        verbose=True,
+        verbose=False,
     ):
         """
         Initialize the AutoBackend for inference.

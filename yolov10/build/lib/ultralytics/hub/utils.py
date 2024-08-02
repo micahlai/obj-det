@@ -109,7 +109,7 @@ def requests_with_progress(method, url, **kwargs):
     return response
 
 
-def smart_request(method, url, retry=3, timeout=30, thread=True, code=-1, verbose=True, progress=False, **kwargs):
+def smart_request(method, url, retry=3, timeout=30, thread=True, code=-1, verbose=False, progress=False, **kwargs):
     """
     Makes an HTTP request using the 'requests' library, with exponential backoff retries up to a specified timeout.
 

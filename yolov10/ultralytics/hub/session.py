@@ -211,7 +211,7 @@ class HUBTrainingSession:
         retry=3,
         timeout=30,
         thread=True,
-        verbose=True,
+        verbose=False,
         progress_total=None,
         *args,
         **kwargs,

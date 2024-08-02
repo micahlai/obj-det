@@ -541,7 +541,7 @@ def check_imshow(warn=False):
         return False
 
 
-def check_yolo(verbose=True, device=""):
+def check_yolo(verbose=False, device=""):
     """Return a human-readable YOLO software and hardware summary."""
     import psutil
 

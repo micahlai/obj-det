@@ -50,7 +50,7 @@ def test_model_methods():
     model = YOLO(MODEL)
 
     # Model methods
-    model.info(verbose=True, detailed=True)
+    model.info(verbose=False, detailed=True)
     model = model.reset_weights()
     model = model.load(MODEL)
     model.to("cpu")
@@ -92,7 +92,7 @@ def test_predict_img():
     pose_model = YOLO(WEIGHTS_DIR / "yolov8n-pose.pt")
     obb_model = YOLO(WEIGHTS_DIR / "yolov8n-obb.pt")
     im = cv2.imread(str(SOURCE))
-    assert len(model(source=Image.open(SOURCE), save=True, verbose=True, imgsz=32)) == 1  # PIL
+    assert len(model(source=Image.open(SOURCE), save=True, verbose=False, imgsz=32)) == 1  # PIL
     assert len(model(source=im, save=True, save_txt=True, imgsz=32)) == 1  # ndarray
     assert len(model(source=[im, im], save=True, save_txt=True, imgsz=32)) == 2  # batch
     assert len(list(model(source=[im, im], save=True, stream=True, imgsz=32))) == 2  # stream
@@ -144,7 +144,7 @@ def test_predict_grey_and_4ch():
     model = YOLO(MODEL)
     for f in source_rgba, source_greyscale, source_non_utf, source_spaces:
         for source in Image.open(f), cv2.imread(str(f)), f:
-            results = model(source, save=True, verbose=True, imgsz=32)
+            results = model(source, save=True, verbose=False, imgsz=32)
             assert len(results) == 1  # verify that an image was run
         f.unlink()  # cleanup
 

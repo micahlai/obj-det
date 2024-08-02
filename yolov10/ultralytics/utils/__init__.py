@@ -229,7 +229,7 @@ def plt_settings(rcparams=None, backend="Agg"):
     return decorator
 
 
-def set_logging(name=LOGGING_NAME, verbose=True):
+def set_logging(name=LOGGING_NAME, verbose=False):
     """Sets up logging for the given name with UTF-8 encoding support."""
     level = logging.INFO if verbose and RANK in {-1, 0} else logging.ERROR  # rank in world for Multi-GPU trainings
 
@@ -726,18 +726,18 @@ class TryExcept(contextlib.ContextDecorator):
 
     Examples:
         As a decorator:
-        >>> @TryExcept(msg="Error occurred in func", verbose=True)
+        >>> @TryExcept(msg="Error occurred in func", verbose=False)
         >>> def func():
         >>>    # Function logic here
         >>>     pass
 
         As a context manager:
-        >>> with TryExcept(msg="Error occurred in block", verbose=True):
+        >>> with TryExcept(msg="Error occurred in block", verbose=False):
         >>>     # Code block here
         >>>     pass
     """
 
-    def __init__(self, msg="", verbose=True):
+    def __init__(self, msg="", verbose=False):
         """Initialize TryExcept class with optional message and verbosity settings."""
         self.msg = msg
         self.verbose = verbose

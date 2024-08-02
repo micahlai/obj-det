@@ -9,16 +9,20 @@ import readyaml
 import readJSONData
 
 import sys
+import printWithHost
+        
 
 completeStartTime = time.time()
 
 #save data init
-save_dir = '/lab/micah/obj-det/testing runs/7-31 separate branch multidatset'
+save_dir = '/lab/micah/obj-det/testing runs/8-1 full parallel test'
 saveData.initialize(save_dir)
+printWithHost.initialize(save_dir,log=True)
+saveData.createSubfolderwithNameInResults("failures")
 
 #read freeze set data
 freeze_data = {}
-freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 7-30'
+freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 8-1'
 for root, dirs, files in os.walk(freeze_set_path):
     for f in files:
         if(f.endswith('.txt')):
@@ -27,11 +31,15 @@ for root, dirs, files in os.walk(freeze_set_path):
 freeze_data=dict(sorted(freeze_data.items(), key=lambda item:len(item[1])))
 
 
+os.environ['YOLO_VERBOSE'] = 'False'
 model = YOLOv10.from_pretrained('jameslahm/yolov10l')
 
 dataset_home_dir = '/lab/micah/obj-det/datasets/'
 
-datasetArg = sys.argv[1]
+datasetArg = ""
+for i in range(len(sys.argv)-1):
+    datasetArg += sys.argv[i+1] + " "
+datasetArg = datasetArg.rstrip()
 
 pathExists = False
 for root, dirs, files in os.walk(dataset_home_dir):
@@ -40,13 +48,15 @@ for root, dirs, files in os.walk(dataset_home_dir):
             pathExists=True
 
 if(not pathExists):
+    printWithHost.hostPrint(f"Dataset: {datasetArg} does not exist",colors.bcolors.WARNING)
     exit()
 
-defaultEpochs = 100
+defaultEpochs = 2
 
 def startTimer(trainer):
     global startTS
     startTS = time.time()
+
 
 
 model.add_callback("on_train_start", callbackFreezer.freeze_layer)
@@ -64,18 +74,22 @@ datasetClassCount = readyaml.returnClassCount(yamlpath)
 
 step = 1
 
-print(f"{colors.bcolors.HEADER}Now training [{datasetArg}] : Classes [{datasetClassCount}]{colors.bcolors.ENDC}")
+printWithHost.hostPrint(f"Now training [{datasetArg}] : Classes [{datasetClassCount}]",colors.bcolors.HEADER)
 
+keys = list(freeze_data.keys())
 for key,val in freeze_data.items():
-    print(f"{colors.bcolors.OKCYAN}Now training [{key}] for [{defaultEpochs}] epochs on [{datasetArg}]{colors.bcolors.ENDC}")
+    printWithHost.hostPrint(f"Now training [{key}] for [{defaultEpochs}] epochs on [{datasetArg}] ({keys.index(key)+1}/{len(keys)})",colors.bcolors.OKCYAN)
     callbackFreezer.layersToFreeze = val
+    callbackFreezer.quiet=True
     #train with exception and save the mAP and training time data after each train
     try:
         models[key] = model
         result = model.train(data=yamlpath,
                             epochs=defaultEpochs,
                             project=save_dir + '/models/' + datasetArg,
-                            name=key)
+                            name=key,
+                            verbose=False,
+                            batch=2)
         
         trainingTime = (time.time()-startTS)/3600
 
@@ -91,24 +105,25 @@ for key,val in freeze_data.items():
 
 
     except Exception as e:
-        print(f"{colors.bcolors.WARNING}An error occured when training [{key}] on [{datasetArg}]{colors.bcolors.ENDC}")
-        print(colors.bcolors.FAIL + str(e) + colors.bcolors.ENDC)
+        printWithHost.hostPrint(f"An error occured when training [{key}] on [{datasetArg}]",colors.bcolors.WARNING)
+        printWithHost.hostPrint(str(e),colors.bcolors.FAIL)
+        
+        saveData.saveFile(f"failures/Train {datasetArg}:{key}",str(e))
 
     step += 1
 try:
     saveData.saveJSON(f"{datasetArg}/FINAL mAP RESULTS",mAPs)
     saveData.saveJSON(f"{datasetArg}/FINAL TRAINING TIME RESULTS",trainingTimes)
 
-    saveData.plotDataBar(mAPs,trainingTimes,name=f"{datasetArg} : NC({datasetClassCount})")
+    #saveData.plotDataBar(mAPs,trainingTimes,name=f"{datasetArg} : NC({datasetClassCount})")
 except Exception as e:
-    print(f"{colors.bcolors.WARNING}An error occured when saving results for [{datasetArg}]{colors.bcolors.ENDC}")
-    print(colors.bcolors.FAIL + str(e) + colors.bcolors.ENDC)
-
-print(f"{colors.bcolors.OKBLUE}Finished testing [{datasetArg}]{colors.bcolors.ENDC}")
+    printWithHost.hostPrint(f"An error occured when saving results for [{datasetArg}]",colors.bcolors.WARNING)
+    printWithHost.hostPrint(str(e),colors.bcolors.FAIL)
+    saveData.saveFile(f"failures/Save {datasetArg}:{key}",str(e))
 
 totalTime = (time.time() - completeStartTime)/3600
-print(f"{colors.bcolors.BOLD}Finished testing all datasets in [{totalTime} hours]{colors.bcolors.ENDC}")
-saveData.saveFile("Total Time", totalTime)
+printWithHost.hostPrint(f"Finished testing [{datasetArg}] in [{totalTime} hours]",colors.bcolors.OKBLUE)
+saveData.saveFile(f"Total Time {datasetArg}", str(totalTime))
 
-readJSONData.combineResults(additionalTP=[save_dir], save_dir="testing runs/7-31 separate branch combined results")
+#readJSONData.combineResults(additionalTP=[save_dir], save_dir="testing runs/7-31 separate branch combined results")
 

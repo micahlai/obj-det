@@ -1,4 +1,4 @@
-from yolov10.ultralytics import YOLOv10
+from yolov10.ultralytics import YOLOv10, YOLO
 import time
 import os
 
@@ -11,12 +11,12 @@ import readJSONData
 completeStartTime = time.time()
 
 #save data init
-save_dir = '/lab/micah/obj-det/testing runs/7-31 separate branch multidatset'
+save_dir = '/lab/micah/obj-det/testing runs/8-1 test'
 saveData.initialize(save_dir)
 
 #read freeze set data
 freeze_data = {}
-freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 7-30'
+freeze_set_path = '/lab/micah/obj-det/freeze set/test freeze set'
 for root, dirs, files in os.walk(freeze_set_path):
     for f in files:
         if(f.endswith('.txt')):
@@ -28,15 +28,9 @@ freeze_data=dict(sorted(freeze_data.items(), key=lambda item:len(item[1])))
 model = YOLOv10.from_pretrained('jameslahm/yolov10l')
 
 dataset_home_dir = '/lab/micah/obj-det/datasets/'
-datasets = ['playing cards',
-            'grocery store',
-            'football',
-            'hazard signs',
-            'construction',
-            'rock paper scissors',
-            'carbike']
+datasets = ['playing cards']
 
-defaultEpochs = 100
+defaultEpochs = 2
 
 def startTimer(trainer):
     global startTS
@@ -67,10 +61,12 @@ for i in datasets:
         #train with exception and save the mAP and training time data after each train
         try:
             models[key] = model
+            model.verbose=False
             result = model.train(data=yamlpath,
                                 epochs=defaultEpochs,
                                 project=save_dir + '/models/' + i,
-                                name=key)
+                                name=key,
+                                verbose=False)
             
             trainingTime = (time.time()-startTS)/3600
 
@@ -103,7 +99,7 @@ for i in datasets:
 
 totalTime = (time.time() - completeStartTime)/3600
 print(f"{colors.bcolors.BOLD}Finished testing all datasets in [{totalTime} hours]{colors.bcolors.ENDC}")
-saveData.saveFile("Total Time", totalTime)
+saveData.saveFile("Total Time", str(totalTime))
 
 readJSONData.combineResults(additionalTP=[save_dir], save_dir="testing runs/7-31 separate branch combined results")
 

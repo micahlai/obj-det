@@ -9,19 +9,17 @@ import readJSONData
 completeStartTime = time.time()
 
 #save data init
-save_dir = '/lab/micah/obj-det/testing runs/7-31 different base model test'
+save_dir = '/lab/micah/obj-det/testing runs/8-1 different base model test'
 saveData.initialize(save_dir)
 
 baseModels = {}
 baseModelTemplates = ['n','s','m','b','l','x']
 
 for i in baseModelTemplates:
-    baseModels = YOLOv10.from_pretrained(f'jameslahm/yolov10{i}')
+    baseModels[i] = YOLOv10.from_pretrained(f'jameslahm/yolov10{i}')
 
 dataset_home_dir = '/lab/micah/obj-det/datasets/'
-datasets = ['playing cards',
-            'grocery store',
-            'football',
+datasets = ['football',
             'hazard signs',
             'construction',
             'rock paper scissors',
@@ -33,7 +31,7 @@ def startTimer(trainer):
     global startTS
     startTS = time.time()
 
-for i in baseModels:
+for i in baseModels.values():
     i.add_callback("on_train_start", startTimer)
 
 for i in datasets:

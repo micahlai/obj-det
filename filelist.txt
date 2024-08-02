@@ -1,7 +1,6 @@
-playing cards
-grocery store
-football
-hazard signs
-construction
-rock paper scissors
-carbike
+'grocery store'
+'football'
+'hazard signs'
+'construction'
+'rock paper scissors'
+'carbike'

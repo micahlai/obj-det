@@ -6,6 +6,7 @@ import matplotlib.cm as cm
 import freezeDataLookup
 import readyaml
 import statistics
+from datetime import datetime
 
 def initialize(sd, keepSubs = True, keepModels = True):
     global save_dir
@@ -366,14 +367,22 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
 
 def saveFile(name, data):
     file = open(save_dir + f'/results/{name}.txt','w')
-    if(type(data) is str):
-        file.write(str(data))
-    elif(type(data) is list):
+    if(type(data) is list):
         for i in data:
             file.write(str(i) + '\n')
     elif(type(data) is dict):
         for key, value in data.items():
             file.write('%s:%s\n' % (key,value))
+    else:
+        file.write(str(data))
+    file.close()
+
+def writeLog(data,sd,before=""):
+    file = open(sd + f'/results/log.txt','a')
+    if(before==""):
+        file.write(f"{str(datetime.now())}:{str(data)}\n")
+    else:
+        file.write(f"{before}:{str(datetime.now())}:{str(data)}\n")
     file.close()
 
 def saveJSON(name, data):

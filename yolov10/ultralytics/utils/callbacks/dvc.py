@@ -7,7 +7,7 @@ try:
     assert SETTINGS["dvc"] is True  # verify integration is enabled
     import dvclive
 
-    assert checks.check_version("dvclive", "2.11.0", verbose=True)
+    assert checks.check_version("dvclive", "2.11.0", verbose=False)
 
     import os
     import re
