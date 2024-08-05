@@ -154,7 +154,7 @@ while(my $ar = shift(@jlist)) {
                     if ($nn eq 'localhost') {
                         system("$ter -geometry +$x+$y -title $nn -e $cmd $ar");
                     } else {
-                        system("$ter -geometry +$x+$y -title $nn -e ssh -x -n -i '/lab/micah/.ssh/ssh_key' $nn \"$cmd $ar\"");
+                        system("$ter --title=$nn ssh -x -n -i '/lab/micah/.ssh/ssh_key' $nn \"$cmd $ar\"");
                     }
                 }
                 exit 0;

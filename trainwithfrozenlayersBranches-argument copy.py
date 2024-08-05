@@ -14,14 +14,14 @@ import printWithHost
 completeStartTime = time.time()
 
 #save data init
-save_dir = '/lab/micah/obj-det/testing runs/8-1 no branching'
+save_dir = '/lab/micah/obj-det/testing runs/8-2 parallel test 2'
 saveData.initialize(save_dir)
 printWithHost.initialize(save_dir,log=True)
 saveData.createSubfolderwithNameInResults("failures")
 
 #read freeze set data
 freeze_data = {}
-freeze_set_path = '/lab/micah/obj-det/freeze set/nobranches'
+freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 8-1'
 for root, dirs, files in os.walk(freeze_set_path):
     for f in files:
         if(f.endswith('.txt')):

@@ -7,6 +7,7 @@ import callbackFreezer
 import colors
 import readyaml
 import readJSONData
+import sys
 
 completeStartTime = time.time()
 
@@ -16,7 +17,7 @@ saveData.initialize(save_dir)
 
 #read freeze set data
 freeze_data = {}
-freeze_set_path = '/lab/micah/obj-det/freeze set/test freeze set'
+freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 8-1'
 for root, dirs, files in os.walk(freeze_set_path):
     for f in files:
         if(f.endswith('.txt')):
@@ -28,7 +29,7 @@ freeze_data=dict(sorted(freeze_data.items(), key=lambda item:len(item[1])))
 model = YOLOv10.from_pretrained('jameslahm/yolov10l')
 
 dataset_home_dir = '/lab/micah/obj-det/datasets/'
-datasets = ['playing cards']
+datasets = ['rock-climbing']
 
 defaultEpochs = 2
 
@@ -55,8 +56,9 @@ for i in datasets:
 
     print(f"{colors.bcolors.HEADER}Now training [{i}] : Classes [{datasetClassCount}]{colors.bcolors.ENDC}")
 
+    keys = list(freeze_data.keys())
     for key,val in freeze_data.items():
-        print(f"{colors.bcolors.OKCYAN}Now training [{key}] for [{defaultEpochs}] epochs on [{i}]{colors.bcolors.ENDC}")
+        print(f"{colors.bcolors.OKCYAN}Now training [{key}] for [{defaultEpochs}] epochs on [{i}] ({keys.index(key)+1}/{len(keys)}){colors.bcolors.ENDC}")
         callbackFreezer.layersToFreeze = val
         #train with exception and save the mAP and training time data after each train
         try:

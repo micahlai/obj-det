@@ -1,5 +1,6 @@
 from yolov10.ultralytics import YOLOv10
 import colors
+import printWithHost
 
 layersToFreeze = []
 quiet = False
@@ -18,6 +19,8 @@ def freeze_layer(trainer):
             count += 1
     if(not quiet):
         print(f"{colors.bcolors.OKGREEN}{count} layers are freezed{colors.bcolors.ENDC}")
+    else:
+        printWithHost.hostPrint(f"{count} layers are freezed",colors.bcolors.OKGREEN)
 
 
 

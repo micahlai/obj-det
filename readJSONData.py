@@ -7,8 +7,8 @@ import colors
 d_trialpaths = ["testing runs/7-19 separate branch multidatset",
               "testing runs/7-18 separate branch multidatset",
               "testing runs/7-25 separate branch multidatset",
-              "testing runs/7-30 separate branch multidatset"]
-
+              "testing runs/7-30 separate branch multidatset",
+                "testing runs/8-1 full parallel test take 2"]
 
 d_dataset_home_dir = '/lab/micah/obj-det/datasets/'
 d_datasets = ['part number',
@@ -18,14 +18,24 @@ d_datasets = ['part number',
             'toyota',
             'hard hat uni',
             'People in painting',
-            'bodywash',
+            'grocery store',
             'football',
+            'hazard signs',
             'construction',
             'rock paper scissors',
-            'hazard signs',
-            'playing cards',
             'carbike',
-            'grocery store']
+            'car-dent',
+            'cows',
+            'rock-climbing',
+            'clouds',
+            'mri',
+            'frc',
+            'tesla',
+            'thermal',
+            'aerial-cars',
+            'parking-lot',
+            'playing cards',
+            'bodywash']
 
 d_ig = ['all cv2 after 10 + cv3',
 'first 10',
@@ -40,7 +50,7 @@ d_ig = ['all cv2 after 10 + cv3',
 'all m after 10 + cv3']
 
 d_datasetIgnore = ['toyota','garage dataset']
-d_save_dir = "testing runs/7-30 separate branch combined results"
+d_save_dir = "testing runs/8-5 separate branch combined results"
 
 def combineResults(save_dir=d_save_dir,
                    TP=d_trialpaths,

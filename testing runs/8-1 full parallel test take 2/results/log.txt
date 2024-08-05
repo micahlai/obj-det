@@ -1,0 +1,454 @@
+iGpu2:2024-08-01 20:04:20.510905:Now training [mri] : Classes [2]
+iGpu2:2024-08-01 20:04:20.511854:Now training [clouds] : Classes [4]
+iGpu2:2024-08-01 20:04:20.512562:Now training [unfrozen] for [100] epochs on [mri] (1/15)
+iGpu2:2024-08-01 20:04:20.512553:Now training [parking-lot] : Classes [2]
+iGpu2:2024-08-01 20:04:20.512607:Now training [unfrozen] for [100] epochs on [clouds] (1/15)
+iGpu2:2024-08-01 20:04:20.513335:Now training [unfrozen] for [100] epochs on [parking-lot] (1/15)
+iGpu2:2024-08-01 20:04:20.513959:Now training [tesla] : Classes [5]
+iGpu2:2024-08-01 20:04:20.514010:Now training [football] : Classes [3]
+iGpu2:2024-08-01 20:04:20.514005:Now training [playing cards] : Classes [52]
+iGpu2:2024-08-01 20:04:20.514808:Now training [grocery store] : Classes [41]
+iGpu2:2024-08-01 20:04:20.514841:Now training [thermal] : Classes [2]
+iGpu2:2024-08-01 20:04:20.515437:Now training [unfrozen] for [100] epochs on [playing cards] (1/15)
+iGpu2:2024-08-01 20:04:20.515462:Now training [unfrozen] for [100] epochs on [football] (1/15)
+iGpu2:2024-08-01 20:04:20.515534:Now training [unfrozen] for [100] epochs on [tesla] (1/15)
+iGpu2:2024-08-01 20:04:20.515564:Now training [carbike] : Classes [2]
+iGpu2:2024-08-01 20:04:20.516245:Now training [unfrozen] for [100] epochs on [thermal] (1/15)
+iGpu2:2024-08-01 20:04:20.516149:Now training [unfrozen] for [100] epochs on [grocery store] (1/15)
+iGpu2:2024-08-01 20:04:20.517111:Now training [hazard signs] : Classes [43]
+iGpu2:2024-08-01 20:04:20.517744:Now training [frc] : Classes [2]
+iGpu2:2024-08-01 20:04:20.517767:Now training [aerial-cars] : Classes [4]
+iGpu2:2024-08-01 20:04:20.517811:Now training [unfrozen] for [100] epochs on [carbike] (1/15)
+iGpu2:2024-08-01 20:04:20.517974:Now training [rock paper scissors] : Classes [3]
+iGpu2:2024-08-01 20:04:20.518441:Now training [unfrozen] for [100] epochs on [hazard signs] (1/15)
+iGpu2:2024-08-01 20:04:20.518465:Now training [rock-climbing] : Classes [8]
+iGpu2:2024-08-01 20:04:20.518485:Now training [bodywash] : Classes [31]
+iGpu2:2024-08-01 20:04:20.519791:Now training [unfrozen] for [100] epochs on [aerial-cars] (1/15)
+iGpu2:2024-08-01 20:04:20.519802:Now training [unfrozen] for [100] epochs on [rock paper scissors] (1/15)
+iGpu2:2024-08-01 20:04:20.519863:Now training [unfrozen] for [100] epochs on [frc] (1/15)
+iGpu2:2024-08-01 20:04:20.519903:Now training [car-dent] : Classes [17]
+iGpu2:2024-08-01 20:04:20.519922:Now training [construction] : Classes [29]
+iGpu2:2024-08-01 20:04:20.520657:Now training [unfrozen] for [100] epochs on [rock-climbing] (1/15)
+iGpu2:2024-08-01 20:04:20.520657:Now training [unfrozen] for [100] epochs on [bodywash] (1/15)
+iGpu2:2024-08-01 20:04:20.521662:Now training [cows] : Classes [3]
+iGpu2:2024-08-01 20:04:20.522185:Now training [unfrozen] for [100] epochs on [construction] (1/15)
+iGpu2:2024-08-01 20:04:20.522196:Now training [unfrozen] for [100] epochs on [car-dent] (1/15)
+iGpu2:2024-08-01 20:04:20.523313:Now training [unfrozen] for [100] epochs on [cows] (1/15)
+iGpu2:2024-08-01 20:10:32.660001:Now training [grocery store] : Classes [41]
+iGpu2:2024-08-01 20:10:32.661611:Now training [unfrozen] for [100] epochs on [grocery store] (1/15)
+iGpu8:2024-08-01 20:10:44.198640:Now training [football] : Classes [3]
+iGpu8:2024-08-01 20:10:44.199679:Now training [unfrozen] for [100] epochs on [football] (1/15)
+iGpu21:2024-08-01 20:10:44.507357:Now training [rock paper scissors] : Classes [3]
+iGpu21:2024-08-01 20:10:44.508325:Now training [unfrozen] for [100] epochs on [rock paper scissors] (1/15)
+iGpu13:2024-08-01 20:10:44.529160:Now training [hazard signs] : Classes [43]
+iGpu13:2024-08-01 20:10:44.530038:Now training [unfrozen] for [100] epochs on [hazard signs] (1/15)
+iGpu15:2024-08-01 20:10:45.128596:Now training [construction] : Classes [29]
+iGpu15:2024-08-01 20:10:45.129626:Now training [unfrozen] for [100] epochs on [construction] (1/15)
+iGpu8:2024-08-01 20:11:15.136399:1 layers are freezed
+iGpu15:2024-08-01 20:11:15.665655:1 layers are freezed
+iGpu21:2024-08-01 20:11:18.289028:1 layers are freezed
+iGpu2:2024-08-01 20:11:56.770144:1 layers are freezed
+iGpu21:2024-08-01 20:15:24.172911:An error occured when training [unfrozen] on [rock paper scissors]
+iGpu21:2024-08-01 20:15:24.174401:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:15:24.178266:Now training [all cv2 after 10 + cv3] for [100] epochs on [rock paper scissors] (2/15)
+iGpu2:2024-08-01 20:15:24.379830:An error occured when training [unfrozen] on [grocery store]
+iGpu2:2024-08-01 20:15:24.381829:[Errno 32] Broken pipe
+iGpu2:2024-08-01 20:15:24.386451:Now training [all cv2 after 10 + cv3] for [100] epochs on [grocery store] (2/15)
+iGpu15:2024-08-01 20:15:28.114146:An error occured when training [unfrozen] on [construction]
+iGpu15:2024-08-01 20:15:28.150531:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:15:28.252208:Now training [all cv2 after 10 + cv3] for [100] epochs on [construction] (2/15)
+iGpu21:2024-08-01 20:15:28.283398:An error occured when training [all cv2 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 20:15:28.284337:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:15:28.354555:Now training [first 5] for [100] epochs on [rock paper scissors] (3/15)
+iGpu15:2024-08-01 20:15:30.049934:An error occured when training [all cv2 after 10 + cv3] on [construction]
+iGpu15:2024-08-01 20:15:30.060639:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:15:30.159431:Now training [first 5] for [100] epochs on [construction] (3/15)
+iGpu8:2024-08-01 20:15:30.903498:An error occured when training [unfrozen] on [football]
+iGpu8:2024-08-01 20:15:30.904417:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:15:30.906973:Now training [all cv2 after 10 + cv3] for [100] epochs on [football] (2/15)
+iGpu2:2024-08-01 20:17:13.122257:An error occured when training [all cv2 after 10 + cv3] on [grocery store]
+iGpu2:2024-08-01 20:17:13.123668:[Errno 32] Broken pipe
+iGpu2:2024-08-01 20:17:13.137785:Now training [first 5] for [100] epochs on [grocery store] (3/15)
+iGpu21:2024-08-01 20:17:13.773736:An error occured when training [first 5] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:13.774681:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:13.783304:Now training [first 10] for [100] epochs on [rock paper scissors] (4/15)
+iGpu21:2024-08-01 20:17:15.033936:An error occured when training [first 10] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:15.034997:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:15.041126:Now training [all cv1 after 10] for [100] epochs on [rock paper scissors] (5/15)
+iGpu21:2024-08-01 20:17:16.554937:An error occured when training [all cv1 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:16.556037:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:16.562679:Now training [all m.2 after 10] for [100] epochs on [rock paper scissors] (6/15)
+iGpu21:2024-08-01 20:17:19.256232:An error occured when training [all m.2 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:19.257101:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:19.263423:Now training [all m.0 after 10] for [100] epochs on [rock paper scissors] (7/15)
+iGpu21:2024-08-01 20:17:20.342563:An error occured when training [all m.0 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:20.343553:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:20.350055:Now training [all m.1 after 10] for [100] epochs on [rock paper scissors] (8/15)
+iGpu21:2024-08-01 20:17:21.511505:An error occured when training [all m.1 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:21.512507:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:21.518788:Now training [first 10 + 23 cv3] for [100] epochs on [rock paper scissors] (9/15)
+iGpu8:2024-08-01 20:17:22.334680:An error occured when training [all cv2 after 10 + cv3] on [football]
+iGpu8:2024-08-01 20:17:22.335448:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:22.337191:Now training [first 5] for [100] epochs on [football] (3/15)
+iGpu8:2024-08-01 20:17:23.438090:An error occured when training [first 5] on [football]
+iGpu8:2024-08-01 20:17:23.438831:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:23.440582:Now training [first 10] for [100] epochs on [football] (4/15)
+iGpu21:2024-08-01 20:17:24.385987:An error occured when training [first 10 + 23 cv3] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:24.386921:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:24.394199:Now training [all cv1 after 10 + cv3] for [100] epochs on [rock paper scissors] (10/15)
+iGpu8:2024-08-01 20:17:24.719487:An error occured when training [first 10] on [football]
+iGpu8:2024-08-01 20:17:24.720200:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:24.721691:Now training [all cv1 after 10] for [100] epochs on [football] (5/15)
+iGpu8:2024-08-01 20:17:25.618036:An error occured when training [all cv1 after 10] on [football]
+iGpu8:2024-08-01 20:17:25.618741:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:25.620362:Now training [all m.2 after 10] for [100] epochs on [football] (6/15)
+iGpu8:2024-08-01 20:17:26.812683:An error occured when training [all m.2 after 10] on [football]
+iGpu8:2024-08-01 20:17:26.813391:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:26.814853:Now training [all m.0 after 10] for [100] epochs on [football] (7/15)
+iGpu21:2024-08-01 20:17:26.846543:An error occured when training [all cv1 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:26.847503:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:26.854340:Now training [all m.2 after 10 + cv3] for [100] epochs on [rock paper scissors] (11/15)
+iGpu8:2024-08-01 20:17:28.161504:An error occured when training [all m.0 after 10] on [football]
+iGpu8:2024-08-01 20:17:28.162215:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:28.163713:Now training [all m.1 after 10] for [100] epochs on [football] (8/15)
+iGpu21:2024-08-01 20:17:28.790332:An error occured when training [all m.2 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:28.791334:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:28.797718:Now training [all m.0 after 10 + cv3] for [100] epochs on [rock paper scissors] (12/15)
+iGpu8:2024-08-01 20:17:29.110869:An error occured when training [all m.1 after 10] on [football]
+iGpu8:2024-08-01 20:17:29.111627:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:29.113262:Now training [first 10 + 23 cv3] for [100] epochs on [football] (9/15)
+iGpu8:2024-08-01 20:17:30.402381:An error occured when training [first 10 + 23 cv3] on [football]
+iGpu8:2024-08-01 20:17:30.403097:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:30.404764:Now training [all cv1 after 10 + cv3] for [100] epochs on [football] (10/15)
+iGpu21:2024-08-01 20:17:31.161216:An error occured when training [all m.0 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:31.162158:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:31.170736:Now training [all m.1 after 10 + cv3] for [100] epochs on [rock paper scissors] (13/15)
+iGpu8:2024-08-01 20:17:31.329357:An error occured when training [all cv1 after 10 + cv3] on [football]
+iGpu8:2024-08-01 20:17:31.330039:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:31.331621:Now training [all m.2 after 10 + cv3] for [100] epochs on [football] (11/15)
+iGpu8:2024-08-01 20:17:32.183064:An error occured when training [all m.2 after 10 + cv3] on [football]
+iGpu8:2024-08-01 20:17:32.183759:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:32.185551:Now training [all m.0 after 10 + cv3] for [100] epochs on [football] (12/15)
+iGpu2:2024-08-01 20:17:32.403993:An error occured when training [first 5] on [grocery store]
+iGpu2:2024-08-01 20:17:32.405459:[Errno 32] Broken pipe
+iGpu2:2024-08-01 20:17:32.413457:Now training [first 10] for [100] epochs on [grocery store] (4/15)
+iGpu15:2024-08-01 20:17:32.538678:An error occured when training [first 5] on [construction]
+iGpu15:2024-08-01 20:17:32.539658:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:32.544919:Now training [first 10] for [100] epochs on [construction] (4/15)
+iGpu8:2024-08-01 20:17:33.152714:An error occured when training [all m.0 after 10 + cv3] on [football]
+iGpu8:2024-08-01 20:17:33.153457:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:33.154930:Now training [all m.1 after 10 + cv3] for [100] epochs on [football] (13/15)
+iGpu21:2024-08-01 20:17:33.289648:An error occured when training [all m.1 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:33.290615:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:33.297287:Now training [all m after 10] for [100] epochs on [rock paper scissors] (14/15)
+iGpu15:2024-08-01 20:17:33.608833:An error occured when training [first 10] on [construction]
+iGpu15:2024-08-01 20:17:33.609583:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:33.612448:Now training [all cv1 after 10] for [100] epochs on [construction] (5/15)
+iGpu8:2024-08-01 20:17:34.234946:An error occured when training [all m.1 after 10 + cv3] on [football]
+iGpu8:2024-08-01 20:17:34.235653:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:34.237314:Now training [all m after 10] for [100] epochs on [football] (14/15)
+iGpu21:2024-08-01 20:17:34.899871:An error occured when training [all m after 10] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:34.900799:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:34.901518:An error occured when training [all cv1 after 10] on [construction]
+iGpu15:2024-08-01 20:17:34.902239:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:34.905095:Now training [all m.2 after 10] for [100] epochs on [construction] (6/15)
+iGpu21:2024-08-01 20:17:34.906679:Now training [all m after 10 + cv3] for [100] epochs on [rock paper scissors] (15/15)
+iGpu8:2024-08-01 20:17:35.560234:An error occured when training [all m after 10] on [football]
+iGpu8:2024-08-01 20:17:35.560953:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:35.566587:Now training [all m after 10 + cv3] for [100] epochs on [football] (15/15)
+iGpu21:2024-08-01 20:17:36.084848:An error occured when training [all m after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 20:17:36.085732:[Errno 32] Broken pipe
+iGpu21:2024-08-01 20:17:36.094989:Finished testing [rock paper scissors] in [0.1175763448741701 hours]
+iGpu15:2024-08-01 20:17:36.119666:An error occured when training [all m.2 after 10] on [construction]
+iGpu15:2024-08-01 20:17:36.120462:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:36.123868:Now training [all m.0 after 10] for [100] epochs on [construction] (7/15)
+iGpu8:2024-08-01 20:17:36.629670:An error occured when training [all m after 10 + cv3] on [football]
+iGpu8:2024-08-01 20:17:36.630379:[Errno 32] Broken pipe
+iGpu8:2024-08-01 20:17:36.633732:Finished testing [football] in [0.1177634839879142 hours]
+iGpu2:2024-08-01 20:17:36.851614:An error occured when training [first 10] on [grocery store]
+iGpu2:2024-08-01 20:17:36.853216:[Errno 32] Broken pipe
+iGpu2:2024-08-01 20:17:36.861182:Now training [all cv1 after 10] for [100] epochs on [grocery store] (5/15)
+iGpu15:2024-08-01 20:17:37.741098:An error occured when training [all m.0 after 10] on [construction]
+iGpu15:2024-08-01 20:17:37.741875:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:37.744935:Now training [all m.1 after 10] for [100] epochs on [construction] (8/15)
+iGpu15:2024-08-01 20:17:39.007177:An error occured when training [all m.1 after 10] on [construction]
+iGpu15:2024-08-01 20:17:39.007944:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:39.011146:Now training [first 10 + 23 cv3] for [100] epochs on [construction] (9/15)
+iGpu15:2024-08-01 20:17:40.627839:An error occured when training [first 10 + 23 cv3] on [construction]
+iGpu15:2024-08-01 20:17:40.628609:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:40.635786:Now training [all cv1 after 10 + cv3] for [100] epochs on [construction] (10/15)
+iGpu15:2024-08-01 20:17:41.996761:An error occured when training [all cv1 after 10 + cv3] on [construction]
+iGpu15:2024-08-01 20:17:41.997528:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:42.000820:Now training [all m.2 after 10 + cv3] for [100] epochs on [construction] (11/15)
+iGpu15:2024-08-01 20:17:43.791073:An error occured when training [all m.2 after 10 + cv3] on [construction]
+iGpu15:2024-08-01 20:17:43.791847:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:43.794716:Now training [all m.0 after 10 + cv3] for [100] epochs on [construction] (12/15)
+iGpu2:2024-08-01 20:17:44.329666:An error occured when training [all cv1 after 10] on [grocery store]
+iGpu2:2024-08-01 20:17:44.331224:[Errno 32] Broken pipe
+iGpu2:2024-08-01 20:17:44.338482:Now training [all m.2 after 10] for [100] epochs on [grocery store] (6/15)
+iGpu15:2024-08-01 20:17:45.476869:An error occured when training [all m.0 after 10 + cv3] on [construction]
+iGpu15:2024-08-01 20:17:45.477653:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:45.480888:Now training [all m.1 after 10 + cv3] for [100] epochs on [construction] (13/15)
+iGpu15:2024-08-01 20:17:46.569451:An error occured when training [all m.1 after 10 + cv3] on [construction]
+iGpu15:2024-08-01 20:17:46.570218:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:46.574161:Now training [all m after 10] for [100] epochs on [construction] (14/15)
+iGpu15:2024-08-01 20:17:48.095430:An error occured when training [all m after 10] on [construction]
+iGpu15:2024-08-01 20:17:48.096199:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:48.099192:Now training [all m after 10 + cv3] for [100] epochs on [construction] (15/15)
+iGpu15:2024-08-01 20:17:49.185420:An error occured when training [all m after 10 + cv3] on [construction]
+iGpu15:2024-08-01 20:17:49.186234:[Errno 32] Broken pipe
+iGpu15:2024-08-01 20:17:49.192454:Finished testing [construction] in [0.12109429657459259 hours]
+iGpu14:2024-08-01 20:23:11.799769:Now training [grocery store] : Classes [41]
+iGpu14:2024-08-01 20:23:11.799836:Now training [unfrozen] for [100] epochs on [grocery store] (1/15)
+iGpu14:2024-08-01 20:23:20.658007:1 layers are freezed
+iGpu8:2024-08-01 20:23:25.533296:Now training [hazard signs] : Classes [43]
+iGpu8:2024-08-01 20:23:25.534219:Now training [unfrozen] for [100] epochs on [hazard signs] (1/15)
+iGpu21:2024-08-01 20:23:25.934251:Now training [carbike] : Classes [2]
+iGpu21:2024-08-01 20:23:25.934915:Now training [unfrozen] for [100] epochs on [carbike] (1/15)
+iGpu15:2024-08-01 20:23:26.927551:Now training [rock paper scissors] : Classes [3]
+iGpu15:2024-08-01 20:23:26.929747:Now training [unfrozen] for [100] epochs on [rock paper scissors] (1/15)
+iGpu13:2024-08-01 20:23:34.601645:Now training [construction] : Classes [29]
+iGpu13:2024-08-01 20:23:34.602600:Now training [unfrozen] for [100] epochs on [construction] (1/15)
+iGpu2:2024-08-01 20:23:36.116174:Now training [football] : Classes [3]
+iGpu2:2024-08-01 20:23:36.117667:Now training [unfrozen] for [100] epochs on [football] (1/15)
+iGpu21:2024-08-01 20:23:38.450074:1 layers are freezed
+iGpu15:2024-08-01 20:23:41.552757:1 layers are freezed
+iGpu8:2024-08-01 20:23:42.291101:1 layers are freezed
+iGpu13:2024-08-01 20:23:59.095200:1 layers are freezed
+iGpu2:2024-08-01 20:24:10.916218:1 layers are freezed
+iGpu2:2024-08-01 20:48:19.542428:Now training [all cv2 after 10 + cv3] for [100] epochs on [football] (2/15)
+iGpu2:2024-08-01 20:49:09.187456:78 layers are freezed
+iGpu2:2024-08-01 21:09:37.452517:Now training [first 5] for [100] epochs on [football] (3/15)
+iGpu2:2024-08-01 21:11:26.690205:81 layers are freezed
+iGpu2:2024-08-01 21:32:12.284711:Now training [first 10] for [100] epochs on [football] (4/15)
+iGpu2:2024-08-01 21:34:03.809672:207 layers are freezed
+iGpu2:2024-08-01 21:49:15.338517:Now training [all cv1 after 10] for [100] epochs on [football] (5/15)
+iGpu2:2024-08-01 21:51:08.411894:219 layers are freezed
+iGpu2:2024-08-01 22:06:12.024967:Now training [all m.2 after 10] for [100] epochs on [football] (6/15)
+iGpu2:2024-08-01 22:07:59.868832:241 layers are freezed
+iGpu2:2024-08-01 22:24:55.540678:Now training [all m.0 after 10] for [100] epochs on [football] (7/15)
+iGpu13:2024-08-01 22:25:40.825623:Now training [car-dent] : Classes [17]
+iGpu13:2024-08-01 22:25:40.826724:Now training [unfrozen] for [100] epochs on [car-dent] (1/15)
+iGpu13:2024-08-01 22:26:09.187056:1 layers are freezed
+iGpu2:2024-08-01 22:26:43.362845:243 layers are freezed
+iGpu14:2024-08-01 22:41:42.881642:Now training [all cv2 after 10 + cv3] for [100] epochs on [grocery store] (2/15)
+iGpu2:2024-08-01 22:42:05.643222:Now training [all m.1 after 10] for [100] epochs on [football] (8/15)
+iGpu14:2024-08-01 22:42:27.607306:78 layers are freezed
+iGpu2:2024-08-01 22:43:54.291699:243 layers are freezed
+iGpu2:2024-08-01 22:59:14.529539:Now training [first 10 + 23 cv3] for [100] epochs on [football] (9/15)
+iGpu2:2024-08-01 23:01:04.732743:249 layers are freezed
+iGpu2:2024-08-01 23:16:39.731425:Now training [all cv1 after 10 + cv3] for [100] epochs on [football] (10/15)
+iGpu2:2024-08-01 23:18:29.398464:261 layers are freezed
+iGpu2:2024-08-01 23:32:52.282290:Now training [all m.2 after 10 + cv3] for [100] epochs on [football] (11/15)
+iGpu2:2024-08-01 23:34:40.666514:283 layers are freezed
+iGpu2:2024-08-01 23:49:34.741381:Now training [all m.0 after 10 + cv3] for [100] epochs on [football] (12/15)
+iGpu2:2024-08-01 23:51:23.348007:285 layers are freezed
+iGpu15:2024-08-01 23:54:19.392118:Now training [all cv2 after 10 + cv3] for [100] epochs on [rock paper scissors] (2/15)
+iGpu15:2024-08-01 23:55:07.835500:78 layers are freezed
+iGpu2:2024-08-02 00:05:56.319283:Now training [all m.1 after 10 + cv3] for [100] epochs on [football] (13/15)
+iGpu2:2024-08-02 00:07:45.295490:285 layers are freezed
+iGpu21:2024-08-02 00:09:02.545384:Now training [all cv2 after 10 + cv3] for [100] epochs on [carbike] (2/15)
+iGpu21:2024-08-02 00:09:50.038014:78 layers are freezed
+iGpu2:2024-08-02 00:23:33.682697:Now training [all m after 10] for [100] epochs on [football] (14/15)
+iGpu2:2024-08-02 00:25:22.221816:315 layers are freezed
+iGpu13:2024-08-02 00:27:09.338383:Now training [cows] : Classes [3]
+iGpu13:2024-08-02 00:27:09.339300:Now training [unfrozen] for [100] epochs on [cows] (1/15)
+iGpu13:2024-08-02 00:27:42.778236:1 layers are freezed
+iGpu2:2024-08-02 00:39:30.222821:Now training [all m after 10 + cv3] for [100] epochs on [football] (15/15)
+iGpu2:2024-08-02 00:41:19.734650:357 layers are freezed
+iGpu2:2024-08-02 00:54:55.093266:Finished testing [football] in [4.525003461506632 hours]
+iGpu2:2024-08-02 00:55:17.102730:Now training [rock-climbing] : Classes [8]
+iGpu2:2024-08-02 00:55:17.104920:Now training [unfrozen] for [100] epochs on [rock-climbing] (1/15)
+iGpu2:2024-08-02 00:55:42.650340:1 layers are freezed
+iGpu14:2024-08-02 00:56:33.161522:Now training [first 5] for [100] epochs on [grocery store] (3/15)
+iGpu14:2024-08-02 00:58:28.133939:81 layers are freezed
+iGpu8:2024-08-02 01:09:36.743065:Now training [all cv2 after 10 + cv3] for [100] epochs on [hazard signs] (2/15)
+iGpu8:2024-08-02 01:10:24.260624:78 layers are freezed
+iGpu2:2024-08-02 01:14:49.341419:Now training [all cv2 after 10 + cv3] for [100] epochs on [rock-climbing] (2/15)
+iGpu2:2024-08-02 01:15:38.074507:78 layers are freezed
+iGpu2:2024-08-02 01:32:15.999128:Now training [first 5] for [100] epochs on [rock-climbing] (3/15)
+iGpu2:2024-08-02 01:34:06.417705:81 layers are freezed
+iGpu2:2024-08-02 01:49:58.095020:Now training [first 10] for [100] epochs on [rock-climbing] (4/15)
+iGpu2:2024-08-02 01:51:46.543142:207 layers are freezed
+iGpu2:2024-08-02 02:03:51.868877:Now training [all cv1 after 10] for [100] epochs on [rock-climbing] (5/15)
+iGpu2:2024-08-02 02:05:40.252499:219 layers are freezed
+iGpu2:2024-08-02 02:18:14.000888:Now training [all m.2 after 10] for [100] epochs on [rock-climbing] (6/15)
+iGpu2:2024-08-02 02:20:05.578867:241 layers are freezed
+iGpu13:2024-08-02 02:29:24.885818:Now training [clouds] : Classes [4]
+iGpu13:2024-08-02 02:29:24.887940:Now training [unfrozen] for [100] epochs on [clouds] (1/15)
+iGpu13:2024-08-02 02:30:30.715978:1 layers are freezed
+iGpu2:2024-08-02 02:31:30.777911:Now training [all m.0 after 10] for [100] epochs on [rock-climbing] (7/15)
+iGpu2:2024-08-02 02:33:24.654364:243 layers are freezed
+iGpu2:2024-08-02 02:45:10.703071:Now training [all m.1 after 10] for [100] epochs on [rock-climbing] (8/15)
+iGpu2:2024-08-02 02:47:00.191476:243 layers are freezed
+iGpu14:2024-08-02 02:58:11.528027:Now training [first 10] for [100] epochs on [grocery store] (4/15)
+iGpu2:2024-08-02 02:58:58.424967:Now training [first 10 + 23 cv3] for [100] epochs on [rock-climbing] (9/15)
+iGpu14:2024-08-02 03:00:06.415163:207 layers are freezed
+iGpu2:2024-08-02 03:00:48.222113:249 layers are freezed
+iGpu2:2024-08-02 03:11:52.945912:Now training [all cv1 after 10 + cv3] for [100] epochs on [rock-climbing] (10/15)
+iGpu2:2024-08-02 03:13:43.157177:261 layers are freezed
+iGpu15:2024-08-02 03:18:11.353824:Now training [first 5] for [100] epochs on [rock paper scissors] (3/15)
+iGpu15:2024-08-02 03:20:19.595435:81 layers are freezed
+iGpu2:2024-08-02 03:26:04.160342:Now training [all m.2 after 10 + cv3] for [100] epochs on [rock-climbing] (11/15)
+iGpu2:2024-08-02 03:28:07.034317:283 layers are freezed
+iGpu2:2024-08-02 03:39:16.707944:Now training [all m.0 after 10 + cv3] for [100] epochs on [rock-climbing] (12/15)
+iGpu2:2024-08-02 03:41:06.053507:285 layers are freezed
+iGpu21:2024-08-02 03:46:26.466590:Now training [first 5] for [100] epochs on [carbike] (3/15)
+iGpu21:2024-08-02 03:48:14.105701:81 layers are freezed
+iGpu2:2024-08-02 03:52:05.660923:Now training [all m.1 after 10 + cv3] for [100] epochs on [rock-climbing] (13/15)
+iGpu2:2024-08-02 03:53:58.824760:285 layers are freezed
+iGpu2:2024-08-02 04:05:09.303973:Now training [all m after 10] for [100] epochs on [rock-climbing] (14/15)
+iGpu2:2024-08-02 04:06:58.133393:315 layers are freezed
+iGpu2:2024-08-02 04:18:48.896662:Now training [all m after 10 + cv3] for [100] epochs on [rock-climbing] (15/15)
+iGpu2:2024-08-02 04:20:37.979676:357 layers are freezed
+iGpu2:2024-08-02 04:31:20.079291:Finished testing [rock-climbing] in [3.6024155828025606 hours]
+iGpu2:2024-08-02 04:31:39.420795:Now training [mri] : Classes [2]
+iGpu2:2024-08-02 04:31:39.423084:Now training [unfrozen] for [100] epochs on [mri] (1/15)
+iGpu13:2024-08-02 04:31:59.857787:Now training [frc] : Classes [2]
+iGpu13:2024-08-02 04:31:59.861014:Now training [unfrozen] for [100] epochs on [frc] (1/15)
+iGpu2:2024-08-02 04:32:12.832931:1 layers are freezed
+iGpu13:2024-08-02 04:32:41.207103:1 layers are freezed
+iGpu14:2024-08-02 04:57:04.279033:Now training [all cv1 after 10] for [100] epochs on [grocery store] (5/15)
+iGpu14:2024-08-02 04:58:59.536376:219 layers are freezed
+iGpu8:2024-08-02 05:47:25.031931:Now training [first 5] for [100] epochs on [hazard signs] (3/15)
+iGpu8:2024-08-02 05:49:23.209533:81 layers are freezed
+iGpu15:2024-08-02 06:02:59.980044:Now training [first 10] for [100] epochs on [rock paper scissors] (4/15)
+iGpu15:2024-08-02 06:05:09.771312:207 layers are freezed
+iGpu2:2024-08-02 06:14:23.936782:Now training [all cv2 after 10 + cv3] for [100] epochs on [mri] (2/15)
+iGpu2:2024-08-02 06:15:14.433002:78 layers are freezed
+iGpu13:2024-08-02 06:34:12.206188:Now training [tesla] : Classes [5]
+iGpu13:2024-08-02 06:34:12.208292:Now training [unfrozen] for [100] epochs on [tesla] (1/15)
+iGpu21:2024-08-02 06:40:05.083021:Now training [first 10] for [100] epochs on [carbike] (4/15)
+iGpu21:2024-08-02 06:41:53.588471:207 layers are freezed
+iGpu14:2024-08-02 06:55:16.346685:Now training [all m.2 after 10] for [100] epochs on [grocery store] (6/15)
+iGpu14:2024-08-02 06:57:11.524308:241 layers are freezed
+iGpu2:2024-08-02 07:53:41.165149:Now training [first 5] for [100] epochs on [mri] (3/15)
+iGpu2:2024-08-02 07:55:31.144202:81 layers are freezed
+iGpu15:2024-08-02 08:26:41.143319:Now training [all cv1 after 10] for [100] epochs on [rock paper scissors] (5/15)
+iGpu15:2024-08-02 08:28:48.141835:219 layers are freezed
+iGpu13:2024-08-02 08:36:13.632403:Now training [thermal] : Classes [2]
+iGpu13:2024-08-02 08:36:13.634932:Now training [unfrozen] for [100] epochs on [thermal] (1/15)
+iGpu13:2024-08-02 08:36:35.628613:1 layers are freezed
+iGpu14:2024-08-02 08:53:51.534732:Now training [all m.0 after 10] for [100] epochs on [grocery store] (7/15)
+iGpu14:2024-08-02 08:55:46.797875:243 layers are freezed
+iGpu21:2024-08-02 09:11:24.233740:Now training [all cv1 after 10] for [100] epochs on [carbike] (5/15)
+iGpu21:2024-08-02 09:13:11.787375:219 layers are freezed
+iGpu2:2024-08-02 09:21:12.193070:Now training [first 10] for [100] epochs on [mri] (4/15)
+iGpu2:2024-08-02 09:23:03.903410:207 layers are freezed
+iGpu8:2024-08-02 09:28:13.506474:Now training [first 10] for [100] epochs on [hazard signs] (4/15)
+iGpu8:2024-08-02 09:30:12.496195:207 layers are freezed
+iGpu2:2024-08-02 10:37:15.596847:Now training [all cv1 after 10] for [100] epochs on [mri] (5/15)
+iGpu13:2024-08-02 10:38:19.892685:Now training [aerial-cars] : Classes [4]
+iGpu13:2024-08-02 10:38:19.895112:Now training [unfrozen] for [100] epochs on [aerial-cars] (1/15)
+iGpu13:2024-08-02 10:38:40.980400:1 layers are freezed
+iGpu2:2024-08-02 10:39:06.753789:219 layers are freezed
+iGpu15:2024-08-02 10:47:43.091975:Now training [all m.2 after 10] for [100] epochs on [rock paper scissors] (6/15)
+iGpu15:2024-08-02 10:49:50.449036:241 layers are freezed
+iGpu14:2024-08-02 10:52:34.060096:Now training [all m.1 after 10] for [100] epochs on [grocery store] (8/15)
+iGpu14:2024-08-02 10:54:29.311584:243 layers are freezed
+iGpu21:2024-08-02 11:39:46.096157:Now training [all m.2 after 10] for [100] epochs on [carbike] (6/15)
+iGpu21:2024-08-02 11:41:33.295990:241 layers are freezed
+iGpu2:2024-08-02 11:52:00.876696:Now training [all m.2 after 10] for [100] epochs on [mri] (6/15)
+iGpu2:2024-08-02 11:53:50.994626:241 layers are freezed
+iGpu13:2024-08-02 12:39:39.187866:Now training [parking-lot] : Classes [2]
+iGpu13:2024-08-02 12:39:39.190793:Now training [unfrozen] for [100] epochs on [parking-lot] (1/15)
+iGpu13:2024-08-02 12:40:15.213927:Now training [playing cards] : Classes [52]
+iGpu13:2024-08-02 12:40:15.216329:Now training [unfrozen] for [100] epochs on [playing cards] (1/15)
+iGpu8:2024-08-02 12:40:30.760619:Now training [all cv1 after 10] for [100] epochs on [hazard signs] (5/15)
+iGpu13:2024-08-02 12:40:35.720616:1 layers are freezed
+iGpu8:2024-08-02 12:42:33.426638:219 layers are freezed
+iGpu14:2024-08-02 12:51:14.317709:Now training [first 10 + 23 cv3] for [100] epochs on [grocery store] (9/15)
+iGpu14:2024-08-02 12:53:09.625263:249 layers are freezed
+iGpu2:2024-08-02 13:07:24.794776:Now training [all m.0 after 10] for [100] epochs on [mri] (7/15)
+iGpu15:2024-08-02 13:08:28.257174:Now training [all m.0 after 10] for [100] epochs on [rock paper scissors] (7/15)
+iGpu2:2024-08-02 13:09:16.309877:243 layers are freezed
+iGpu15:2024-08-02 13:10:35.896727:243 layers are freezed
+iGpu21:2024-08-02 14:09:26.563314:Now training [all m.0 after 10] for [100] epochs on [carbike] (7/15)
+iGpu21:2024-08-02 14:11:13.841600:243 layers are freezed
+iGpu2:2024-08-02 14:22:43.508733:Now training [all m.1 after 10] for [100] epochs on [mri] (8/15)
+iGpu2:2024-08-02 14:24:34.453186:243 layers are freezed
+iGpu13:2024-08-02 14:44:02.223920:Now training [bodywash] : Classes [31]
+iGpu13:2024-08-02 14:44:02.226538:Now training [unfrozen] for [100] epochs on [bodywash] (1/15)
+iGpu14:2024-08-02 14:49:40.807001:Now training [all cv1 after 10 + cv3] for [100] epochs on [grocery store] (10/15)
+iGpu14:2024-08-02 14:51:36.038225:261 layers are freezed
+iGpu15:2024-08-02 15:29:48.271984:Now training [all m.1 after 10] for [100] epochs on [rock paper scissors] (8/15)
+iGpu15:2024-08-02 15:31:57.616803:243 layers are freezed
+iGpu2:2024-08-02 15:37:12.780865:Now training [first 10 + 23 cv3] for [100] epochs on [mri] (9/15)
+iGpu2:2024-08-02 15:39:04.657618:249 layers are freezed
+iGpu8:2024-08-02 15:49:48.067414:Now training [all m.2 after 10] for [100] epochs on [hazard signs] (6/15)
+iGpu8:2024-08-02 15:51:48.799304:241 layers are freezed
+iGpu21:2024-08-02 16:38:21.539289:Now training [all m.1 after 10] for [100] epochs on [carbike] (8/15)
+iGpu21:2024-08-02 16:40:09.140084:243 layers are freezed
+iGpu14:2024-08-02 16:48:03.675813:Now training [all m.2 after 10 + cv3] for [100] epochs on [grocery store] (11/15)
+iGpu14:2024-08-02 16:49:58.740027:283 layers are freezed
+iGpu2:2024-08-02 16:50:54.828243:Now training [all cv1 after 10 + cv3] for [100] epochs on [mri] (10/15)
+iGpu2:2024-08-02 16:52:55.675641:261 layers are freezed
+iGpu15:2024-08-02 17:50:37.319732:Now training [first 10 + 23 cv3] for [100] epochs on [rock paper scissors] (9/15)
+iGpu15:2024-08-02 17:52:46.741908:249 layers are freezed
+iGpu2:2024-08-02 18:04:20.839956:Now training [all m.2 after 10 + cv3] for [100] epochs on [mri] (11/15)
+iGpu2:2024-08-02 18:06:11.911376:283 layers are freezed
+iGpu14:2024-08-02 18:46:18.628388:Now training [all m.0 after 10 + cv3] for [100] epochs on [grocery store] (12/15)
+iGpu14:2024-08-02 18:48:13.976871:285 layers are freezed
+iGpu8:2024-08-02 18:59:28.744211:Now training [all m.0 after 10] for [100] epochs on [hazard signs] (7/15)
+iGpu8:2024-08-02 19:01:27.778389:243 layers are freezed
+iGpu21:2024-08-02 19:07:23.056882:Now training [first 10 + 23 cv3] for [100] epochs on [carbike] (9/15)
+iGpu21:2024-08-02 19:09:11.856225:249 layers are freezed
+iGpu2:2024-08-02 19:17:57.784814:Now training [all m.0 after 10 + cv3] for [100] epochs on [mri] (12/15)
+iGpu2:2024-08-02 19:19:48.230322:285 layers are freezed
+iGpu15:2024-08-02 20:11:49.599924:Now training [all cv1 after 10 + cv3] for [100] epochs on [rock paper scissors] (10/15)
+iGpu15:2024-08-02 20:13:57.024401:261 layers are freezed
+iGpu2:2024-08-02 20:31:42.673564:Now training [all m.1 after 10 + cv3] for [100] epochs on [mri] (13/15)
+iGpu2:2024-08-02 20:33:32.868263:285 layers are freezed
+iGpu14:2024-08-02 20:44:59.103808:Now training [all m.1 after 10 + cv3] for [100] epochs on [grocery store] (13/15)
+iGpu14:2024-08-02 20:46:54.402601:285 layers are freezed
+iGpu21:2024-08-02 21:36:44.437578:Now training [all cv1 after 10 + cv3] for [100] epochs on [carbike] (10/15)
+iGpu21:2024-08-02 21:38:32.073053:261 layers are freezed
+iGpu2:2024-08-02 21:45:38.216706:Now training [all m after 10] for [100] epochs on [mri] (14/15)
+iGpu2:2024-08-02 21:47:30.307697:315 layers are freezed
+iGpu8:2024-08-02 22:08:46.904676:Now training [all m.1 after 10] for [100] epochs on [hazard signs] (8/15)
+iGpu8:2024-08-02 22:10:45.218327:243 layers are freezed
+iGpu15:2024-08-02 22:30:36.521197:Now training [all m.2 after 10 + cv3] for [100] epochs on [rock paper scissors] (11/15)
+iGpu15:2024-08-02 22:32:43.726601:283 layers are freezed
+iGpu14:2024-08-02 22:43:11.301754:Now training [all m after 10] for [100] epochs on [grocery store] (14/15)
+iGpu14:2024-08-02 22:45:07.039880:315 layers are freezed
+iGpu2:2024-08-02 22:58:50.009298:Now training [all m after 10 + cv3] for [100] epochs on [mri] (15/15)
+iGpu2:2024-08-02 23:00:41.679265:357 layers are freezed
+iGpu21:2024-08-03 00:02:54.710494:Now training [all m.2 after 10 + cv3] for [100] epochs on [carbike] (11/15)
+iGpu21:2024-08-03 00:04:43.036615:283 layers are freezed
+iGpu2:2024-08-03 00:10:52.798819:Finished testing [mri] in [19.655262851516405 hours]
+iGpu14:2024-08-03 00:41:00.757487:Now training [all m after 10 + cv3] for [100] epochs on [grocery store] (15/15)
+iGpu14:2024-08-03 00:42:56.172138:357 layers are freezed
+iGpu15:2024-08-03 00:50:09.775464:Now training [all m.0 after 10 + cv3] for [100] epochs on [rock paper scissors] (12/15)
+iGpu15:2024-08-03 00:52:19.474828:285 layers are freezed
+iGpu8:2024-08-03 01:18:04.883426:Now training [first 10 + 23 cv3] for [100] epochs on [hazard signs] (9/15)
+iGpu8:2024-08-03 01:20:03.703269:249 layers are freezed
+iGpu21:2024-08-03 02:29:56.941656:Now training [all m.0 after 10 + cv3] for [100] epochs on [carbike] (12/15)
+iGpu21:2024-08-03 02:31:45.497303:285 layers are freezed
+iGpu14:2024-08-03 02:38:33.093651:Finished testing [grocery store] in [30.256211053993965 hours]
+iGpu15:2024-08-03 03:08:41.641376:Now training [all m.1 after 10 + cv3] for [100] epochs on [rock paper scissors] (13/15)
+iGpu15:2024-08-03 03:10:48.453963:285 layers are freezed
+iGpu8:2024-08-03 04:27:30.641685:Now training [all cv1 after 10 + cv3] for [100] epochs on [hazard signs] (10/15)
+iGpu8:2024-08-03 04:29:30.945504:261 layers are freezed
+iGpu21:2024-08-03 04:56:31.563449:Now training [all m.1 after 10 + cv3] for [100] epochs on [carbike] (13/15)
+iGpu21:2024-08-03 04:58:20.389185:285 layers are freezed
+iGpu15:2024-08-03 05:27:38.285217:Now training [all m after 10] for [100] epochs on [rock paper scissors] (14/15)
+iGpu15:2024-08-03 05:29:47.078632:315 layers are freezed
+iGpu21:2024-08-03 07:22:47.823646:Now training [all m after 10] for [100] epochs on [carbike] (14/15)
+iGpu21:2024-08-03 07:24:35.703664:315 layers are freezed
+iGpu8:2024-08-03 07:33:49.715080:Now training [all m.2 after 10 + cv3] for [100] epochs on [hazard signs] (11/15)
+iGpu8:2024-08-03 07:35:47.818795:283 layers are freezed
+iGpu15:2024-08-03 07:44:16.937979:Now training [all m after 10 + cv3] for [100] epochs on [rock paper scissors] (15/15)
+iGpu15:2024-08-03 07:46:25.397617:357 layers are freezed
+iGpu21:2024-08-03 09:47:42.510173:Now training [all m after 10 + cv3] for [100] epochs on [carbike] (15/15)
+iGpu21:2024-08-03 09:49:30.394010:357 layers are freezed
+iGpu15:2024-08-03 09:59:36.426815:Finished testing [rock paper scissors] in [37.60404179069731 hours]
+iGpu8:2024-08-03 10:40:26.722350:Now training [all m.0 after 10 + cv3] for [100] epochs on [hazard signs] (12/15)
+iGpu8:2024-08-03 10:42:24.498231:285 layers are freezed
+iGpu21:2024-08-03 12:09:51.556822:Finished testing [carbike] in [39.77498701148563 hours]
+iGpu8:2024-08-03 13:46:28.597541:Now training [all m.1 after 10 + cv3] for [100] epochs on [hazard signs] (13/15)
+iGpu8:2024-08-03 13:48:26.118855:285 layers are freezed
+iGpu8:2024-08-03 16:52:32.009136:Now training [all m after 10] for [100] epochs on [hazard signs] (14/15)
+iGpu8:2024-08-03 16:54:29.652079:315 layers are freezed
+iGpu8:2024-08-03 19:55:53.781194:Now training [all m after 10 + cv3] for [100] epochs on [hazard signs] (15/15)
+iGpu8:2024-08-03 19:57:50.925127:357 layers are freezed
+iGpu8:2024-08-03 22:57:04.318778:Finished testing [hazard signs] in [50.56197571588887 hours]

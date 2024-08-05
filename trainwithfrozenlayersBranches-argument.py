@@ -14,7 +14,7 @@ import printWithHost
 completeStartTime = time.time()
 
 #save data init
-save_dir = '/lab/micah/obj-det/testing runs/8-1 full parallel test'
+save_dir = '/lab/micah/obj-det/testing runs/8-1 full parallel test take 2'
 saveData.initialize(save_dir)
 printWithHost.initialize(save_dir,log=True)
 saveData.createSubfolderwithNameInResults("failures")
@@ -87,8 +87,7 @@ for key,val in freeze_data.items():
                             epochs=defaultEpochs,
                             project=save_dir + '/models/' + datasetArg,
                             name=key,
-                            verbose=False,
-                            batch=2)
+                            verbose=False)
         
         trainingTime = (time.time()-startTS)/3600
 

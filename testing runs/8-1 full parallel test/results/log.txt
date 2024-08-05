@@ -1,0 +1,340 @@
+iGpu8:2024-08-01 18:47:25.187300:Now training [football] : Classes [3]
+iGpu8:2024-08-01 18:47:25.191238:Now training [unfrozen] for [100] epochs on [football] (1/15)
+iGpu8:2024-08-01 18:47:29.246481:An error occured when training [unfrozen] on [football]
+iGpu8:2024-08-01 18:47:29.247429:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:29.252666:Now training [all cv2 after 10 + cv3] for [100] epochs on [football] (2/15)
+iGpu8:2024-08-01 18:47:30.366015:An error occured when training [all cv2 after 10 + cv3] on [football]
+iGpu8:2024-08-01 18:47:30.366755:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:30.368635:Now training [first 5] for [100] epochs on [football] (3/15)
+iGpu8:2024-08-01 18:47:31.267266:An error occured when training [first 5] on [football]
+iGpu8:2024-08-01 18:47:31.267987:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:31.269663:Now training [first 10] for [100] epochs on [football] (4/15)
+iGpu8:2024-08-01 18:47:32.161334:An error occured when training [first 10] on [football]
+iGpu8:2024-08-01 18:47:32.162084:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:32.164974:Now training [all cv1 after 10] for [100] epochs on [football] (5/15)
+iGpu8:2024-08-01 18:47:33.156857:An error occured when training [all cv1 after 10] on [football]
+iGpu8:2024-08-01 18:47:33.157591:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:33.159180:Now training [all m.2 after 10] for [100] epochs on [football] (6/15)
+iGpu21:2024-08-01 18:47:33.790470:Now training [rock paper scissors] : Classes [3]
+iGpu21:2024-08-01 18:47:33.791870:Now training [unfrozen] for [100] epochs on [rock paper scissors] (1/15)
+iGpu13:2024-08-01 18:47:33.814872:Now training [hazard signs] : Classes [43]
+iGpu13:2024-08-01 18:47:33.816874:Now training [unfrozen] for [100] epochs on [hazard signs] (1/15)
+iGpu8:2024-08-01 18:47:34.648646:An error occured when training [all m.2 after 10] on [football]
+iGpu8:2024-08-01 18:47:34.649359:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:34.650981:Now training [all m.0 after 10] for [100] epochs on [football] (7/15)
+iGpu2:2024-08-01 18:47:35.408024:Now training [grocery store] : Classes [41]
+iGpu2:2024-08-01 18:47:35.410422:Now training [unfrozen] for [100] epochs on [grocery store] (1/15)
+iGpu8:2024-08-01 18:47:35.686553:An error occured when training [all m.0 after 10] on [football]
+iGpu8:2024-08-01 18:47:35.687420:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:35.689248:Now training [all m.1 after 10] for [100] epochs on [football] (8/15)
+iGpu8:2024-08-01 18:47:36.909308:An error occured when training [all m.1 after 10] on [football]
+iGpu8:2024-08-01 18:47:36.912673:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:36.915065:Now training [first 10 + 23 cv3] for [100] epochs on [football] (9/15)
+iGpu8:2024-08-01 18:47:38.130445:An error occured when training [first 10 + 23 cv3] on [football]
+iGpu8:2024-08-01 18:47:38.133575:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:38.139620:Now training [all cv1 after 10 + cv3] for [100] epochs on [football] (10/15)
+iGpu8:2024-08-01 18:47:39.381425:An error occured when training [all cv1 after 10 + cv3] on [football]
+iGpu8:2024-08-01 18:47:39.384809:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:39.386799:Now training [all m.2 after 10 + cv3] for [100] epochs on [football] (11/15)
+iGpu8:2024-08-01 18:47:40.274376:An error occured when training [all m.2 after 10 + cv3] on [football]
+iGpu8:2024-08-01 18:47:40.277597:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:40.284372:Now training [all m.0 after 10 + cv3] for [100] epochs on [football] (12/15)
+iGpu8:2024-08-01 18:47:41.597038:An error occured when training [all m.0 after 10 + cv3] on [football]
+iGpu8:2024-08-01 18:47:41.600655:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:41.606156:Now training [all m.1 after 10 + cv3] for [100] epochs on [football] (13/15)
+iGpu8:2024-08-01 18:47:42.759477:An error occured when training [all m.1 after 10 + cv3] on [football]
+iGpu8:2024-08-01 18:47:42.761724:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:42.768302:Now training [all m after 10] for [100] epochs on [football] (14/15)
+iGpu8:2024-08-01 18:47:43.736773:An error occured when training [all m after 10] on [football]
+iGpu8:2024-08-01 18:47:43.740266:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:43.748172:Now training [all m after 10 + cv3] for [100] epochs on [football] (15/15)
+iGpu8:2024-08-01 18:47:45.023962:An error occured when training [all m after 10 + cv3] on [football]
+iGpu8:2024-08-01 18:47:45.027288:[Errno 32] Broken pipe
+iGpu8:2024-08-01 18:47:45.040793:Finished testing [football] in [0.007153314219580756 hours]
+iGpu21:2024-08-01 18:47:55.830413:An error occured when training [unfrozen] on [rock paper scissors]
+iGpu21:2024-08-01 18:47:55.833833:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:47:55.847280:Now training [all cv2 after 10 + cv3] for [100] epochs on [rock paper scissors] (2/15)
+iGpu13:2024-08-01 18:47:58.931275:An error occured when training [unfrozen] on [hazard signs]
+iGpu13:2024-08-01 18:47:58.933428:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:47:58.946704:Now training [all cv2 after 10 + cv3] for [100] epochs on [hazard signs] (2/15)
+iGpu21:2024-08-01 18:48:01.199423:An error occured when training [all cv2 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:01.200349:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:01.207980:Now training [first 5] for [100] epochs on [rock paper scissors] (3/15)
+iGpu13:2024-08-01 18:48:02.019695:An error occured when training [all cv2 after 10 + cv3] on [hazard signs]
+iGpu13:2024-08-01 18:48:02.020602:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:02.029063:Now training [first 5] for [100] epochs on [hazard signs] (3/15)
+iGpu2:2024-08-01 18:48:03.658737:An error occured when training [unfrozen] on [grocery store]
+iGpu2:2024-08-01 18:48:03.659987:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:48:03.666472:Now training [all cv2 after 10 + cv3] for [100] epochs on [grocery store] (2/15)
+iGpu13:2024-08-01 18:48:04.374270:An error occured when training [first 5] on [hazard signs]
+iGpu13:2024-08-01 18:48:04.375170:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:04.386047:Now training [first 10] for [100] epochs on [hazard signs] (4/15)
+iGpu13:2024-08-01 18:48:05.871076:An error occured when training [first 10] on [hazard signs]
+iGpu13:2024-08-01 18:48:05.871950:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:05.885553:Now training [all cv1 after 10] for [100] epochs on [hazard signs] (5/15)
+iGpu13:2024-08-01 18:48:07.286970:An error occured when training [all cv1 after 10] on [hazard signs]
+iGpu13:2024-08-01 18:48:07.287792:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:07.297167:Now training [all m.2 after 10] for [100] epochs on [hazard signs] (6/15)
+iGpu13:2024-08-01 18:48:08.677589:An error occured when training [all m.2 after 10] on [hazard signs]
+iGpu13:2024-08-01 18:48:08.678241:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:08.685167:Now training [all m.0 after 10] for [100] epochs on [hazard signs] (7/15)
+iGpu2:2024-08-01 18:48:09.999703:An error occured when training [all cv2 after 10 + cv3] on [grocery store]
+iGpu2:2024-08-01 18:48:10.001183:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:48:10.008313:Now training [first 5] for [100] epochs on [grocery store] (3/15)
+iGpu13:2024-08-01 18:48:10.218744:An error occured when training [all m.0 after 10] on [hazard signs]
+iGpu13:2024-08-01 18:48:10.219608:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:10.226997:Now training [all m.1 after 10] for [100] epochs on [hazard signs] (8/15)
+iGpu21:2024-08-01 18:48:10.554961:An error occured when training [first 5] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:10.555821:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:10.562031:Now training [first 10] for [100] epochs on [rock paper scissors] (4/15)
+iGpu13:2024-08-01 18:48:12.029760:An error occured when training [all m.1 after 10] on [hazard signs]
+iGpu13:2024-08-01 18:48:12.030677:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:12.037887:Now training [first 10 + 23 cv3] for [100] epochs on [hazard signs] (9/15)
+iGpu21:2024-08-01 18:48:13.626145:An error occured when training [first 10] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:13.627093:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:13.634636:Now training [all cv1 after 10] for [100] epochs on [rock paper scissors] (5/15)
+iGpu21:2024-08-01 18:48:15.171299:An error occured when training [all cv1 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:15.172130:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:15.177292:Now training [all m.2 after 10] for [100] epochs on [rock paper scissors] (6/15)
+iGpu13:2024-08-01 18:48:16.380841:An error occured when training [first 10 + 23 cv3] on [hazard signs]
+iGpu13:2024-08-01 18:48:16.381990:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:16.394837:Now training [all cv1 after 10 + cv3] for [100] epochs on [hazard signs] (10/15)
+iGpu21:2024-08-01 18:48:16.690496:An error occured when training [all m.2 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:16.691599:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:16.697031:Now training [all m.0 after 10] for [100] epochs on [rock paper scissors] (7/15)
+iGpu13:2024-08-01 18:48:17.583511:An error occured when training [all cv1 after 10 + cv3] on [hazard signs]
+iGpu13:2024-08-01 18:48:17.584508:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:17.592123:Now training [all m.2 after 10 + cv3] for [100] epochs on [hazard signs] (11/15)
+iGpu21:2024-08-01 18:48:17.844486:An error occured when training [all m.0 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:17.845352:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:17.851004:Now training [all m.1 after 10] for [100] epochs on [rock paper scissors] (8/15)
+iGpu2:2024-08-01 18:48:18.180361:An error occured when training [first 5] on [grocery store]
+iGpu2:2024-08-01 18:48:18.182307:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:48:18.189142:Now training [first 10] for [100] epochs on [grocery store] (4/15)
+iGpu13:2024-08-01 18:48:19.158428:An error occured when training [all m.2 after 10 + cv3] on [hazard signs]
+iGpu13:2024-08-01 18:48:19.159563:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:19.172749:Now training [all m.0 after 10 + cv3] for [100] epochs on [hazard signs] (12/15)
+iGpu21:2024-08-01 18:48:19.738922:An error occured when training [all m.1 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:19.739856:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:19.745956:Now training [first 10 + 23 cv3] for [100] epochs on [rock paper scissors] (9/15)
+iGpu13:2024-08-01 18:48:20.169052:An error occured when training [all m.0 after 10 + cv3] on [hazard signs]
+iGpu13:2024-08-01 18:48:20.170058:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:20.180615:Now training [all m.1 after 10 + cv3] for [100] epochs on [hazard signs] (13/15)
+iGpu21:2024-08-01 18:48:21.245493:An error occured when training [first 10 + 23 cv3] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:21.246421:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:21.251962:Now training [all cv1 after 10 + cv3] for [100] epochs on [rock paper scissors] (10/15)
+iGpu13:2024-08-01 18:48:21.495021:An error occured when training [all m.1 after 10 + cv3] on [hazard signs]
+iGpu13:2024-08-01 18:48:21.495888:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:21.503427:Now training [all m after 10] for [100] epochs on [hazard signs] (14/15)
+iGpu13:2024-08-01 18:48:22.502650:An error occured when training [all m after 10] on [hazard signs]
+iGpu13:2024-08-01 18:48:22.503586:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:22.513898:Now training [all m after 10 + cv3] for [100] epochs on [hazard signs] (15/15)
+iGpu21:2024-08-01 18:48:22.776347:An error occured when training [all cv1 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:22.777467:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:22.783680:Now training [all m.2 after 10 + cv3] for [100] epochs on [rock paper scissors] (11/15)
+iGpu13:2024-08-01 18:48:23.763411:An error occured when training [all m after 10 + cv3] on [hazard signs]
+iGpu13:2024-08-01 18:48:23.764475:[Errno 32] Broken pipe
+iGpu13:2024-08-01 18:48:23.775513:Finished testing [hazard signs] in [0.016620061993598938 hours]
+iGpu21:2024-08-01 18:48:24.795358:An error occured when training [all m.2 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:24.797345:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:24.807171:Now training [all m.0 after 10 + cv3] for [100] epochs on [rock paper scissors] (12/15)
+iGpu21:2024-08-01 18:48:25.903579:An error occured when training [all m.0 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:25.904610:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:25.910389:Now training [all m.1 after 10 + cv3] for [100] epochs on [rock paper scissors] (13/15)
+iGpu21:2024-08-01 18:48:27.016398:An error occured when training [all m.1 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:27.017327:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:27.023085:Now training [all m after 10] for [100] epochs on [rock paper scissors] (14/15)
+iGpu21:2024-08-01 18:48:28.185146:An error occured when training [all m after 10] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:28.186007:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:28.191372:Now training [all m after 10 + cv3] for [100] epochs on [rock paper scissors] (15/15)
+iGpu21:2024-08-01 18:48:30.016098:An error occured when training [all m after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 18:48:30.016965:[Errno 32] Broken pipe
+iGpu21:2024-08-01 18:48:30.024974:Finished testing [rock paper scissors] in [0.018514532380633886 hours]
+iGpu2:2024-08-01 18:48:30.115330:An error occured when training [first 10] on [grocery store]
+iGpu2:2024-08-01 18:48:30.117173:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:48:30.125118:Now training [all cv1 after 10] for [100] epochs on [grocery store] (5/15)
+iGpu2:2024-08-01 18:48:37.330638:An error occured when training [all cv1 after 10] on [grocery store]
+iGpu2:2024-08-01 18:48:37.332610:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:48:37.340159:Now training [all m.2 after 10] for [100] epochs on [grocery store] (6/15)
+iGpu2:2024-08-01 18:48:43.042520:An error occured when training [all m.2 after 10] on [grocery store]
+iGpu2:2024-08-01 18:48:43.044280:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:48:43.053890:Now training [all m.0 after 10] for [100] epochs on [grocery store] (7/15)
+iGpu2:2024-08-01 18:48:51.064453:An error occured when training [all m.0 after 10] on [grocery store]
+iGpu2:2024-08-01 18:48:51.066279:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:48:51.073294:Now training [all m.1 after 10] for [100] epochs on [grocery store] (8/15)
+iGpu2:2024-08-01 18:48:59.104625:An error occured when training [all m.1 after 10] on [grocery store]
+iGpu2:2024-08-01 18:48:59.106025:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:48:59.113075:Now training [first 10 + 23 cv3] for [100] epochs on [grocery store] (9/15)
+iGpu2:2024-08-01 18:49:07.899985:An error occured when training [first 10 + 23 cv3] on [grocery store]
+iGpu2:2024-08-01 18:49:07.901494:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:49:07.909339:Now training [all cv1 after 10 + cv3] for [100] epochs on [grocery store] (10/15)
+iGpu2:2024-08-01 18:49:19.369953:An error occured when training [all cv1 after 10 + cv3] on [grocery store]
+iGpu2:2024-08-01 18:49:19.371938:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:49:19.378714:Now training [all m.2 after 10 + cv3] for [100] epochs on [grocery store] (11/15)
+iGpu2:2024-08-01 18:49:22.609635:An error occured when training [all m.2 after 10 + cv3] on [grocery store]
+iGpu2:2024-08-01 18:49:22.611330:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:49:22.618095:Now training [all m.0 after 10 + cv3] for [100] epochs on [grocery store] (12/15)
+iGpu2:2024-08-01 18:49:25.492660:An error occured when training [all m.0 after 10 + cv3] on [grocery store]
+iGpu2:2024-08-01 18:49:25.493939:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:49:25.502496:Now training [all m.1 after 10 + cv3] for [100] epochs on [grocery store] (13/15)
+iGpu2:2024-08-01 18:49:32.883733:An error occured when training [all m.1 after 10 + cv3] on [grocery store]
+iGpu2:2024-08-01 18:49:32.885362:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:49:32.892021:Now training [all m after 10] for [100] epochs on [grocery store] (14/15)
+iGpu2:2024-08-01 18:49:38.845861:An error occured when training [all m after 10] on [grocery store]
+iGpu2:2024-08-01 18:49:38.848019:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:49:38.856767:Now training [all m after 10 + cv3] for [100] epochs on [grocery store] (15/15)
+iGpu2:2024-08-01 18:49:43.109460:An error occured when training [all m after 10 + cv3] on [grocery store]
+iGpu2:2024-08-01 18:49:43.111412:[Errno 32] Broken pipe
+iGpu2:2024-08-01 18:49:43.122993:Finished testing [grocery store] in [0.03877433114581638 hours]
+iGpu8:2024-08-01 18:51:39.051950:Now training [football] : Classes [3]
+iGpu8:2024-08-01 18:51:39.053048:Now training [unfrozen] for [100] epochs on [football] (1/15)
+iGpu13:2024-08-01 18:51:39.078348:Now training [hazard signs] : Classes [43]
+iGpu13:2024-08-01 18:51:39.079199:Now training [unfrozen] for [100] epochs on [hazard signs] (1/15)
+iGpu2:2024-08-01 18:51:41.348414:Now training [grocery store] : Classes [41]
+iGpu2:2024-08-01 18:51:41.351497:Now training [unfrozen] for [100] epochs on [grocery store] (1/15)
+iGpu21:2024-08-01 18:51:41.410577:Now training [rock paper scissors] : Classes [3]
+iGpu21:2024-08-01 18:51:41.411467:Now training [unfrozen] for [100] epochs on [rock paper scissors] (1/15)
+iGpu15:2024-08-01 18:51:47.631015:Now training [construction] : Classes [29]
+iGpu15:2024-08-01 18:51:47.632028:Now training [unfrozen] for [100] epochs on [construction] (1/15)
+iGpu8:2024-08-01 19:16:16.086728:Now training [all cv2 after 10 + cv3] for [100] epochs on [football] (2/15)
+iGpu8:2024-08-01 19:30:02.404927:An error occured when training [all cv2 after 10 + cv3] on [football]
+iGpu8:2024-08-01 19:30:02.409170:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:30:02.415610:Now training [first 5] for [100] epochs on [football] (3/15)
+iGpu21:2024-08-01 19:30:02.439192:An error occured when training [unfrozen] on [rock paper scissors]
+iGpu21:2024-08-01 19:30:02.440406:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:30:02.444461:Now training [all cv2 after 10 + cv3] for [100] epochs on [rock paper scissors] (2/15)
+iGpu2:2024-08-01 19:30:02.467178:An error occured when training [unfrozen] on [grocery store]
+iGpu2:2024-08-01 19:30:02.468916:[Errno 32] Broken pipe
+iGpu2:2024-08-01 19:30:02.473711:Now training [all cv2 after 10 + cv3] for [100] epochs on [grocery store] (2/15)
+iGpu15:2024-08-01 19:30:07.023331:An error occured when training [unfrozen] on [construction]
+iGpu15:2024-08-01 19:30:07.024264:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:30:07.027272:Now training [all cv2 after 10 + cv3] for [100] epochs on [construction] (2/15)
+iGpu21:2024-08-01 19:30:07.617939:An error occured when training [all cv2 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 19:30:07.618843:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:30:07.628288:Now training [first 5] for [100] epochs on [rock paper scissors] (3/15)
+iGpu2:2024-08-01 19:30:08.308945:An error occured when training [all cv2 after 10 + cv3] on [grocery store]
+iGpu2:2024-08-01 19:30:08.310354:[Errno 32] Broken pipe
+iGpu2:2024-08-01 19:30:08.318253:Now training [first 5] for [100] epochs on [grocery store] (3/15)
+iGpu15:2024-08-01 19:30:08.588121:An error occured when training [all cv2 after 10 + cv3] on [construction]
+iGpu15:2024-08-01 19:30:08.589269:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:30:08.593469:Now training [first 5] for [100] epochs on [construction] (3/15)
+iGpu15:2024-08-01 19:30:10.116538:An error occured when training [first 5] on [construction]
+iGpu15:2024-08-01 19:30:10.117281:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:30:10.120497:Now training [first 10] for [100] epochs on [construction] (4/15)
+iGpu2:2024-08-01 19:30:12.510320:An error occured when training [first 5] on [grocery store]
+iGpu2:2024-08-01 19:30:12.512326:[Errno 32] Broken pipe
+iGpu2:2024-08-01 19:30:12.521153:Now training [first 10] for [100] epochs on [grocery store] (4/15)
+iGpu21:2024-08-01 19:31:51.450462:An error occured when training [first 5] on [rock paper scissors]
+iGpu21:2024-08-01 19:31:51.451360:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:31:51.460409:Now training [first 10] for [100] epochs on [rock paper scissors] (4/15)
+iGpu21:2024-08-01 19:31:52.732099:An error occured when training [first 10] on [rock paper scissors]
+iGpu21:2024-08-01 19:31:52.732766:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:31:52.740132:Now training [all cv1 after 10] for [100] epochs on [rock paper scissors] (5/15)
+iGpu8:2024-08-01 19:31:54.361539:An error occured when training [first 5] on [football]
+iGpu8:2024-08-01 19:31:54.362336:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:31:54.364811:Now training [first 10] for [100] epochs on [football] (4/15)
+iGpu21:2024-08-01 19:31:54.815571:An error occured when training [all cv1 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 19:31:54.816653:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:31:54.823115:Now training [all m.2 after 10] for [100] epochs on [rock paper scissors] (6/15)
+iGpu8:2024-08-01 19:31:55.261723:An error occured when training [first 10] on [football]
+iGpu8:2024-08-01 19:31:55.262435:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:31:55.264365:Now training [all cv1 after 10] for [100] epochs on [football] (5/15)
+iGpu8:2024-08-01 19:31:56.382305:An error occured when training [all cv1 after 10] on [football]
+iGpu8:2024-08-01 19:31:56.383060:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:31:56.384883:Now training [all m.2 after 10] for [100] epochs on [football] (6/15)
+iGpu8:2024-08-01 19:31:57.308937:An error occured when training [all m.2 after 10] on [football]
+iGpu8:2024-08-01 19:31:57.309651:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:31:57.311584:Now training [all m.0 after 10] for [100] epochs on [football] (7/15)
+iGpu8:2024-08-01 19:31:58.208567:An error occured when training [all m.0 after 10] on [football]
+iGpu8:2024-08-01 19:31:58.209336:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:31:58.211198:Now training [all m.1 after 10] for [100] epochs on [football] (8/15)
+iGpu21:2024-08-01 19:31:59.315076:An error occured when training [all m.2 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 19:31:59.316011:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:31:59.322609:Now training [all m.0 after 10] for [100] epochs on [rock paper scissors] (7/15)
+iGpu8:2024-08-01 19:31:59.368257:An error occured when training [all m.1 after 10] on [football]
+iGpu8:2024-08-01 19:31:59.368960:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:31:59.370799:Now training [first 10 + 23 cv3] for [100] epochs on [football] (9/15)
+iGpu8:2024-08-01 19:32:00.248494:An error occured when training [first 10 + 23 cv3] on [football]
+iGpu8:2024-08-01 19:32:00.249247:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:32:00.251175:Now training [all cv1 after 10 + cv3] for [100] epochs on [football] (10/15)
+iGpu21:2024-08-01 19:32:00.612724:An error occured when training [all m.0 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 19:32:00.613584:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:32:00.620453:Now training [all m.1 after 10] for [100] epochs on [rock paper scissors] (8/15)
+iGpu8:2024-08-01 19:32:01.245643:An error occured when training [all cv1 after 10 + cv3] on [football]
+iGpu8:2024-08-01 19:32:01.246376:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:32:01.248188:Now training [all m.2 after 10 + cv3] for [100] epochs on [football] (11/15)
+iGpu21:2024-08-01 19:32:01.759758:An error occured when training [all m.1 after 10] on [rock paper scissors]
+iGpu21:2024-08-01 19:32:01.760720:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:32:01.767281:Now training [first 10 + 23 cv3] for [100] epochs on [rock paper scissors] (9/15)
+iGpu8:2024-08-01 19:32:02.385487:An error occured when training [all m.2 after 10 + cv3] on [football]
+iGpu8:2024-08-01 19:32:02.386199:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:32:02.388135:Now training [all m.0 after 10 + cv3] for [100] epochs on [football] (12/15)
+iGpu21:2024-08-01 19:32:02.831114:An error occured when training [first 10 + 23 cv3] on [rock paper scissors]
+iGpu21:2024-08-01 19:32:02.831935:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:32:02.838543:Now training [all cv1 after 10 + cv3] for [100] epochs on [rock paper scissors] (10/15)
+iGpu8:2024-08-01 19:32:03.269528:An error occured when training [all m.0 after 10 + cv3] on [football]
+iGpu8:2024-08-01 19:32:03.270227:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:32:03.272167:Now training [all m.1 after 10 + cv3] for [100] epochs on [football] (13/15)
+iGpu21:2024-08-01 19:32:05.315788:An error occured when training [all cv1 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 19:32:05.316889:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:32:05.323649:Now training [all m.2 after 10 + cv3] for [100] epochs on [rock paper scissors] (11/15)
+iGpu8:2024-08-01 19:32:05.597291:An error occured when training [all m.1 after 10 + cv3] on [football]
+iGpu8:2024-08-01 19:32:05.598021:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:32:05.599865:Now training [all m after 10] for [100] epochs on [football] (14/15)
+iGpu8:2024-08-01 19:32:06.469217:An error occured when training [all m after 10] on [football]
+iGpu8:2024-08-01 19:32:06.469934:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:32:06.471827:Now training [all m after 10 + cv3] for [100] epochs on [football] (15/15)
+iGpu21:2024-08-01 19:32:06.494975:An error occured when training [all m.2 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 19:32:06.495889:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:32:06.502221:Now training [all m.0 after 10 + cv3] for [100] epochs on [rock paper scissors] (12/15)
+iGpu8:2024-08-01 19:32:07.449397:An error occured when training [all m after 10 + cv3] on [football]
+iGpu8:2024-08-01 19:32:07.450117:[Errno 32] Broken pipe
+iGpu8:2024-08-01 19:32:07.454097:Finished testing [football] in [0.6756865494118797 hours]
+iGpu21:2024-08-01 19:32:09.219862:An error occured when training [all m.0 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 19:32:09.220716:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:32:09.227302:Now training [all m.1 after 10 + cv3] for [100] epochs on [rock paper scissors] (13/15)
+iGpu21:2024-08-01 19:32:11.304558:An error occured when training [all m.1 after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 19:32:11.305401:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:32:11.312558:Now training [all m after 10] for [100] epochs on [rock paper scissors] (14/15)
+iGpu21:2024-08-01 19:32:12.866342:An error occured when training [all m after 10] on [rock paper scissors]
+iGpu21:2024-08-01 19:32:12.867224:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:32:12.873393:Now training [all m after 10 + cv3] for [100] epochs on [rock paper scissors] (15/15)
+iGpu15:2024-08-01 19:32:13.109196:An error occured when training [first 10] on [construction]
+iGpu15:2024-08-01 19:32:13.110041:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:13.113757:Now training [all cv1 after 10] for [100] epochs on [construction] (5/15)
+iGpu21:2024-08-01 19:32:14.661607:An error occured when training [all m after 10 + cv3] on [rock paper scissors]
+iGpu21:2024-08-01 19:32:14.662716:[Errno 32] Broken pipe
+iGpu21:2024-08-01 19:32:14.671991:Finished testing [rock paper scissors] in [0.6772981805271573 hours]
+iGpu15:2024-08-01 19:32:14.780176:An error occured when training [all cv1 after 10] on [construction]
+iGpu15:2024-08-01 19:32:14.780923:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:14.784609:Now training [all m.2 after 10] for [100] epochs on [construction] (6/15)
+iGpu15:2024-08-01 19:32:16.072820:An error occured when training [all m.2 after 10] on [construction]
+iGpu15:2024-08-01 19:32:16.073578:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:16.076288:Now training [all m.0 after 10] for [100] epochs on [construction] (7/15)
+iGpu15:2024-08-01 19:32:17.175114:An error occured when training [all m.0 after 10] on [construction]
+iGpu15:2024-08-01 19:32:17.175840:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:17.178452:Now training [all m.1 after 10] for [100] epochs on [construction] (8/15)
+iGpu15:2024-08-01 19:32:18.681544:An error occured when training [all m.1 after 10] on [construction]
+iGpu15:2024-08-01 19:32:18.682287:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:18.685172:Now training [first 10 + 23 cv3] for [100] epochs on [construction] (9/15)
+iGpu15:2024-08-01 19:32:20.917484:An error occured when training [first 10 + 23 cv3] on [construction]
+iGpu15:2024-08-01 19:32:20.918363:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:20.921618:Now training [all cv1 after 10 + cv3] for [100] epochs on [construction] (10/15)
+iGpu15:2024-08-01 19:32:21.947112:An error occured when training [all cv1 after 10 + cv3] on [construction]
+iGpu15:2024-08-01 19:32:21.947916:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:21.951253:Now training [all m.2 after 10 + cv3] for [100] epochs on [construction] (11/15)
+iGpu15:2024-08-01 19:32:23.907161:An error occured when training [all m.2 after 10 + cv3] on [construction]
+iGpu15:2024-08-01 19:32:23.907922:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:23.911151:Now training [all m.0 after 10 + cv3] for [100] epochs on [construction] (12/15)
+iGpu15:2024-08-01 19:32:24.899658:An error occured when training [all m.0 after 10 + cv3] on [construction]
+iGpu15:2024-08-01 19:32:24.900433:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:24.903570:Now training [all m.1 after 10 + cv3] for [100] epochs on [construction] (13/15)
+iGpu15:2024-08-01 19:32:26.040830:An error occured when training [all m.1 after 10 + cv3] on [construction]
+iGpu15:2024-08-01 19:32:26.042038:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:26.045725:Now training [all m after 10] for [100] epochs on [construction] (14/15)
+iGpu15:2024-08-01 19:32:27.536013:An error occured when training [all m after 10] on [construction]
+iGpu15:2024-08-01 19:32:27.537012:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:27.539937:Now training [all m after 10 + cv3] for [100] epochs on [construction] (15/15)
+iGpu15:2024-08-01 19:32:28.854237:An error occured when training [all m after 10 + cv3] on [construction]
+iGpu15:2024-08-01 19:32:28.855102:[Errno 32] Broken pipe
+iGpu15:2024-08-01 19:32:28.860136:Finished testing [construction] in [0.6805107631285985 hours]

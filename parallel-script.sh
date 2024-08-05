@@ -5,4 +5,4 @@
 source .bashrc
 conda activate yolov10
 
-python3 '/lab/micah/obj-det/trainwithfrozenlayersBranches-argument.py' $1
+python3 -B '/lab/micah/obj-det/trainwithfrozenlayersBranches-argument.py' $1
