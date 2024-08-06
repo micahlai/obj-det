@@ -371,6 +371,7 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff
     annotations = {}
     averages = {}
     lines = []
+    lines = []
 
     for i, grad in enumerate(keys):
         datasets = [x for x in list(mAPs[grad].keys())]
@@ -454,8 +455,20 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff
         ylim = [min(MyVals),max(MyVals)]
         plt.ylim([(ylim[0]-0.1*(ylim[1]-ylim[0])), (ylim[1]+0.1*(ylim[1]-ylim[0]))])
 
+    if(yLimToLSRL):
+        xMinMax = plt.xlim()
+        
+        MyVals = []
+        for lin in lines:
+            MyVals.append(lin(xMinMax[0]))
+            MyVals.append(lin(xMinMax[1]))
+        ylim = [min(MyVals),max(MyVals)]
+        plt.ylim([(ylim[0]-0.1*(ylim[1]-ylim[0])), (ylim[1]+0.1*(ylim[1]-ylim[0]))])
+
     legendLabels = keys
     legendLabels = sorted(keys, key=averages.get)
+    #plt.legend([f"{x} ({freezeData[x]},{round(averages[x],3)})" for x in legendLabels], loc="best")
+    plt.legend(loc="best")
     #plt.legend([f"{x} ({freezeData[x]},{round(averages[x],3)})" for x in legendLabels], loc="best")
     plt.legend(loc="best")
     plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
