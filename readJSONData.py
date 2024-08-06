@@ -143,10 +143,24 @@ def combineResults(save_dir=d_save_dir,
 
 
     #saveData.plotDataScatterByGradient(NmAP,NTrainT,file="layer/Relative ")
-    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Class ",datasetAttribute="classes", dontIgnore = ig,ignoreDataset=datasetIgnore)
-    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Ratio ",datasetAttribute="ratio", dontIgnore = ig,ignoreDataset=datasetIgnore)
-    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Size ",datasetAttribute="size",dontIgnore=ig,ignoreDataset=datasetIgnore)
-    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Count ",datasetAttribute="count",dontIgnore=ig,ignoreDataset=datasetIgnore)
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Class ",datasetAttribute="classes", dontIgnore = ig,ignoreDataset=datasetIgnore)
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Ratio ",datasetAttribute="ratio", dontIgnore = ig,ignoreDataset=datasetIgnore)
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Size ",datasetAttribute="size",dontIgnore=ig,ignoreDataset=datasetIgnore)
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Count ",datasetAttribute="count",dontIgnore=ig,ignoreDataset=datasetIgnore)
+
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative LSRL Class ",yLimToLSRL=True,datasetAttribute="classes", dontIgnore = ig,ignoreDataset=datasetIgnore)
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative LSRL Ratio ",yLimToLSRL=True,datasetAttribute="ratio", dontIgnore = ig,ignoreDataset=datasetIgnore)
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative LSRL Size ",yLimToLSRL=True,datasetAttribute="size",dontIgnore=ig,ignoreDataset=datasetIgnore)
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative LSRL Count ",yLimToLSRL=True,datasetAttribute="count",dontIgnore=ig,ignoreDataset=datasetIgnore)
+
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Cutoff Class ",correCutoff=0.5,yLimToLSRL=True,datasetAttribute="classes",ignoreDataset=datasetIgnore)
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Cutoff Ratio ",correCutoff=0.5,yLimToLSRL=True,datasetAttribute="ratio",ignoreDataset=datasetIgnore)
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Cutoff Size ",correCutoff=0.5,yLimToLSRL=True,datasetAttribute="size",ignoreDataset=datasetIgnore)
+    # saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Cutoff Count ",correCutoff=0.5,yLimToLSRL=True,datasetAttribute="count",ignoreDataset=datasetIgnore)
+
+    saveData.plotBarByGradientTotal(NmAP,NTrainT,yVal="fav",file="Overall Fav ")
+    saveData.plotBarByGradientTotal(NmAP,NTrainT,yVal="time",file="Overall Time ")
+    saveData.plotBarByGradientTotal(NmAP,NTrainT,yVal="mAP",file="Overall mAP ")
 
 if __name__ == "__main__":
     combineResults()

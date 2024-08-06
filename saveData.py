@@ -293,7 +293,65 @@ def plotDataScatterByGradientTotal(mAPs, trainingTimes, file="", unfrozenKey = "
     plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
     plt.close()
 
-def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKey = "unfrozen",datasetAttribute = "size",dontIgnore=[""],ignoreDataset=[""]):
+def plotBarByGradientTotal(mAPs,trainingTimes,name="",file="",unfrozenKey="unfrozen",yVal = "fav"):
+    defaultKeys = list(mAPs.keys())
+    unfrozenExists = (unfrozenKey in defaultKeys)
+    keys = defaultKeys
+    if(unfrozenExists):
+        keys.remove(unfrozenKey)
+    else:
+        return False
+    
+    data = {}
+
+    freezeData = freezeDataLookup.getAllData()
+    keys = sorted(keys, key=freezeData.get)
+
+    plt.figure(figsize=(20,15))
+
+    for grad in keys:
+        datasets = [x for x in list(mAPs[grad].keys())]
+        vals = []
+        for dataset in datasets:
+            mAP = mAPs[grad][dataset]/mAPs[unfrozenKey][dataset]
+            TTime = trainingTimes[grad][dataset]/trainingTimes[unfrozenKey][dataset]
+            if(yVal == "fav"):
+                vals.append(mAP/TTime)
+            elif(yVal == "mAP"):
+                vals.append(mAP)
+            else:
+                vals.append(TTime)
+        data[grad]=statistics.mean(vals)
+
+    names = list(data.keys())
+    values = list(data.values())
+
+    plt.bar(range(len(data)),values,tick_label=[f"{x} ({freezeData[x]})" for x in names])
+    plt.xticks(rotation=90)
+    plt.xlabel("Freeze Set")
+    plt.ylim([(min(values)-0.1*(max(values)-min(values))), (max(values)+0.1*(max(values)-min(values)))])
+    if(yVal == "fav"):
+        plt.suptitle("Average Favoribility vs Freeze Set", fontsize=14)
+        plt.ylabel("Average Favoribility")
+    elif(yVal == "mAP"):
+        plt.suptitle("Average Relative mAP vs Freeze Set", fontsize=14)
+        plt.ylabel("Average Relative mAP")
+    else:
+        plt.suptitle("Average Relative Training Time vs Freeze Set", fontsize=14)
+        plt.ylabel("Average Relative Training Time")
+        
+
+
+    for i in range(len(names)):
+        plt.text(i, values[i], round(values[i],4), ha='center')
+
+    plt.tight_layout()
+    plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
+    plt.close()
+
+
+
+def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff=0, yLimToLSRL = False,unfrozenKey = "unfrozen",datasetAttribute = "size",dontIgnore=[""],ignoreDataset=[""]):
     defaultKeys = list(mAPs.keys())
     unfrozenExists = (unfrozenKey in defaultKeys)
     keys = defaultKeys
@@ -312,6 +370,7 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
 
     annotations = {}
     averages = {}
+    lines = []
 
     for i, grad in enumerate(keys):
         datasets = [x for x in list(mAPs[grad].keys())]
@@ -345,13 +404,27 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
         z=np.polyfit(NxVals,NyVals,1)
         p=np.poly1d(z)
 
-        Cmap=cm.get_cmap('hsv',len(keys))
+        Cmap=cm.get_cmap('Spectral',len(keys))
 
 
         x = np.linspace(SxVals[0],SxVals[-1],5000)
 
-        plt.scatter(SxVals,SyVals,c=Cmap(i))
-        plt.plot(x,p(x),linestyle='dashed',c=Cmap(i))
+        corrCoe = np.corrcoef(NxVals,NyVals)
+        # if(abs(corrCoe[1][0])>correCutoff):
+        #     plt.scatter(SxVals,SyVals,c=Cmap(i),label=f"{grad} ({round(corrCoe[1][0],5)}) ({freezeData[grad]})")
+        #     plt.plot(x,p(x),c=Cmap(i))
+
+        #     lines.append(p)
+        
+        plt.scatter(SxVals,SyVals,c=Cmap(i),label=f"{grad} ({round(corrCoe[1][0],5)}) ({freezeData[grad]})")
+        if(abs(corrCoe[1][0])>correCutoff):
+            plt.plot(x,p(x),c=Cmap(i))
+        else:
+            plt.plot(x,p(x),c=Cmap(i),linestyle=(0,(5,10)))
+        lines.append(p)
+    
+    if(len(lines) == 0):
+        return
 
 
     # for key,val in annotations.items():
@@ -371,9 +444,20 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
         plt.suptitle("Favoribility vs # of Training Images", fontsize=14)
     plt.ylabel("Favoribility")
 
+    if(yLimToLSRL):
+        xMinMax = plt.xlim()
+        
+        MyVals = []
+        for lin in lines:
+            MyVals.append(lin(xMinMax[0]))
+            MyVals.append(lin(xMinMax[1]))
+        ylim = [min(MyVals),max(MyVals)]
+        plt.ylim([(ylim[0]-0.1*(ylim[1]-ylim[0])), (ylim[1]+0.1*(ylim[1]-ylim[0]))])
+
     legendLabels = keys
     legendLabels = sorted(keys, key=averages.get)
-    plt.legend([f"{x} ({freezeData[x]},{round(averages[x],3)})" for x in legendLabels], loc="best")
+    #plt.legend([f"{x} ({freezeData[x]},{round(averages[x],3)})" for x in legendLabels], loc="best")
+    plt.legend(loc="best")
     plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
     plt.close()
 
