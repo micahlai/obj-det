@@ -1,4 +1,6 @@
 'grocery store'
+'Resistors'
+'part number'
 'football'
 'hazard signs'
 'construction'
