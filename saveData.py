@@ -7,6 +7,7 @@ import freezeDataLookup
 import readyaml
 import statistics
 from datetime import datetime
+import numpy as np
 
 def initialize(sd, keepSubs = True, keepModels = True):
     global save_dir
@@ -312,8 +313,8 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
     annotations = {}
     averages = {}
 
-    for grad in keys:
-        datasets = [x for x in list(mAPs[grad].keys()) if x not in ignoreDataset]
+    for i, grad in enumerate(keys):
+        datasets = [x for x in list(mAPs[grad].keys())]
         xVals = []
         yVals = []
         for dataset in datasets:
@@ -338,11 +339,23 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
         SxVals = sorted(xVals)
         averages[grad]=statistics.mean(SyVals)
         
-        plt.plot(SxVals,SyVals)
+        NxVals = np.array(SxVals)
+        NyVals = np.array(SyVals)
+
+        z=np.polyfit(NxVals,NyVals,1)
+        p=np.poly1d(z)
+
+        Cmap=cm.get_cmap('hsv',len(keys))
 
 
-    for key,val in annotations.items():
-        plt.annotate(key, (val, 0.5),ha="center",fontsize=10,rotation=90)
+        x = np.linspace(SxVals[0],SxVals[-1],5000)
+
+        plt.scatter(SxVals,SyVals,c=Cmap(i))
+        plt.plot(x,p(x),linestyle='dashed',c=Cmap(i))
+
+
+    # for key,val in annotations.items():
+    #     plt.annotate(key, (val, 0.5),ha="center",fontsize=10,rotation=90)
 
     if(datasetAttribute == "size"):
         plt.xlabel("Average Size")

@@ -49,7 +49,7 @@ d_ig = ['all cv2 after 10 + cv3',
 'all m after 10',
 'all m after 10 + cv3']
 
-d_datasetIgnore = ['toyota','garage dataset']
+d_datasetIgnore = ['toyota','garage dataset','rock-climbing']
 d_save_dir = "testing runs/8-5 separate branch combined results"
 
 def combineResults(save_dir=d_save_dir,
@@ -123,15 +123,15 @@ def combineResults(save_dir=d_save_dir,
         if(len(list(SmAPs.keys())) > len(keys)):
             keys = list(SmAPs.keys())
 
-        try:
-            saveData.plotDataBar(SmAPs,StrainTime, file="dataset/Bar ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-            saveData.plotDataScatter(SmAPs,StrainTime, file="dataset/Scatter ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-            saveData.plotDataScatter(SmAPs,StrainTime, relative=True,origin=True,file="dataset/Relative Scatter ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-            saveData.plotDataScatter(SmAPs,StrainTime, relative=True,origin=False,file="dataset/Relative Scatter N-O ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-            saveData.plotDataScatter(SmAPs,StrainTime, relative=False,origin=True,file="dataset/Scatter O ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-            saveData.plotDataCombined(SmAPs,StrainTime, file="dataset/Combined ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
-        except Exception as e:
-            print(f"{colors.bcolors.FAIL}{e}{colors.bcolors.ENDC}")
+        # try:
+        #     saveData.plotDataBar(SmAPs,StrainTime, file="dataset/Bar ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+        #     saveData.plotDataScatter(SmAPs,StrainTime, file="dataset/Scatter ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+        #     saveData.plotDataScatter(SmAPs,StrainTime, relative=True,origin=True,file="dataset/Relative Scatter ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+        #     saveData.plotDataScatter(SmAPs,StrainTime, relative=True,origin=False,file="dataset/Relative Scatter N-O ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+        #     saveData.plotDataScatter(SmAPs,StrainTime, relative=False,origin=True,file="dataset/Scatter O ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+        #     saveData.plotDataCombined(SmAPs,StrainTime, file="dataset/Combined ",name=f"{i} : NC({readyaml.returnClassCount(dataset_home_dir + i + '/data.yaml')})")
+        # except Exception as e:
+        #     print(f"{colors.bcolors.FAIL}{e}{colors.bcolors.ENDC}")
 
     NmAP = {key:{k:allmAP[k][key] for k in allmAP if key in allmAP[k]} for key in keys}
     NTrainT = {key:{k:allTT[k][key] for k in allTT if key in allTT[k]} for key in keys}
@@ -142,7 +142,7 @@ def combineResults(save_dir=d_save_dir,
 
 
 
-    saveData.plotDataScatterByGradient(NmAP,NTrainT,file="layer/Relative ")
+    #saveData.plotDataScatterByGradient(NmAP,NTrainT,file="layer/Relative ")
     saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Class ",datasetAttribute="classes", dontIgnore = ig,ignoreDataset=datasetIgnore)
     saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Ratio ",datasetAttribute="ratio", dontIgnore = ig,ignoreDataset=datasetIgnore)
     saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Size ",datasetAttribute="size",dontIgnore=ig,ignoreDataset=datasetIgnore)
