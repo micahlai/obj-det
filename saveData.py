@@ -293,7 +293,7 @@ def plotDataScatterByGradientTotal(mAPs, trainingTimes, file="", unfrozenKey = "
     plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
     plt.close()
 
-def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKey = "unfrozen",datasetAttribute = "size",dontIgnore=[""],ignoreDataset=[""]):
+def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff=0, yLimToLSRL = False,unfrozenKey = "unfrozen",datasetAttribute = "size",dontIgnore=[""],ignoreDataset=[""]):
     defaultKeys = list(mAPs.keys())
     unfrozenExists = (unfrozenKey in defaultKeys)
     keys = defaultKeys
@@ -312,6 +312,7 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
 
     annotations = {}
     averages = {}
+    lines = []
 
     for i, grad in enumerate(keys):
         datasets = [x for x in list(mAPs[grad].keys())]
@@ -345,13 +346,20 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
         z=np.polyfit(NxVals,NyVals,1)
         p=np.poly1d(z)
 
-        Cmap=cm.get_cmap('hsv',len(keys))
+        Cmap=cm.get_cmap('Set1',len(keys))
 
 
         x = np.linspace(SxVals[0],SxVals[-1],5000)
 
-        plt.scatter(SxVals,SyVals,c=Cmap(i))
-        plt.plot(x,p(x),linestyle='dashed',c=Cmap(i))
+        corrCoe = np.corrcoef(NxVals,NyVals)
+        if(abs(corrCoe[1][0])>correCutoff):
+            plt.scatter(SxVals,SyVals,c=Cmap(i),label=f"{grad} ({round(corrCoe[1][0],5)}) ({freezeData[grad]})")
+            plt.plot(x,p(x),c=Cmap(i))
+
+            lines.append(p)
+    
+    if(len(lines) == 0):
+        return
 
 
     # for key,val in annotations.items():
@@ -371,9 +379,20 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="", unfrozenKe
         plt.suptitle("Favoribility vs # of Training Images", fontsize=14)
     plt.ylabel("Favoribility")
 
+    if(yLimToLSRL):
+        xMinMax = plt.xlim()
+        
+        MyVals = []
+        for lin in lines:
+            MyVals.append(lin(xMinMax[0]))
+            MyVals.append(lin(xMinMax[1]))
+        ylim = [min(MyVals),max(MyVals)]
+        plt.ylim([(ylim[0]-0.1*(ylim[1]-ylim[0])), (ylim[1]+0.1*(ylim[1]-ylim[0]))])
+
     legendLabels = keys
     legendLabels = sorted(keys, key=averages.get)
-    plt.legend([f"{x} ({freezeData[x]},{round(averages[x],3)})" for x in legendLabels], loc="best")
+    #plt.legend([f"{x} ({freezeData[x]},{round(averages[x],3)})" for x in legendLabels], loc="best")
+    plt.legend(loc="best")
     plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
     plt.close()
 

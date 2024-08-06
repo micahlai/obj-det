@@ -148,5 +148,15 @@ def combineResults(save_dir=d_save_dir,
     saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Size ",datasetAttribute="size",dontIgnore=ig,ignoreDataset=datasetIgnore)
     saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Count ",datasetAttribute="count",dontIgnore=ig,ignoreDataset=datasetIgnore)
 
+    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative LSRL Class ",yLimToLSRL=True,datasetAttribute="classes", dontIgnore = ig,ignoreDataset=datasetIgnore)
+    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative LSRL Ratio ",yLimToLSRL=True,datasetAttribute="ratio", dontIgnore = ig,ignoreDataset=datasetIgnore)
+    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative LSRL Size ",yLimToLSRL=True,datasetAttribute="size",dontIgnore=ig,ignoreDataset=datasetIgnore)
+    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative LSRL Count ",yLimToLSRL=True,datasetAttribute="count",dontIgnore=ig,ignoreDataset=datasetIgnore)
+
+    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Cutoff Class ",correCutoff=0.5,yLimToLSRL=True,datasetAttribute="classes",ignoreDataset=datasetIgnore)
+    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Cutoff Ratio ",correCutoff=0.5,yLimToLSRL=True,datasetAttribute="ratio",ignoreDataset=datasetIgnore)
+    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Cutoff Size ",correCutoff=0.5,yLimToLSRL=True,datasetAttribute="size",ignoreDataset=datasetIgnore)
+    saveData.plotDataLineByGradientTotal(NmAP,NTrainT,file="Relative Cutoff Count ",correCutoff=0.5,yLimToLSRL=True,datasetAttribute="count",ignoreDataset=datasetIgnore)
+
 if __name__ == "__main__":
     combineResults()
