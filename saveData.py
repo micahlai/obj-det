@@ -351,7 +351,7 @@ def plotBarByGradientTotal(mAPs,trainingTimes,name="",file="",unfrozenKey="unfro
 
 
 
-def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff=0, yLimToLSRL = False,unfrozenKey = "unfrozen",datasetAttribute = "size",dontIgnore=[""],ignoreDataset=[""]):
+def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff=0, cuttoffDotted = True,yLimToLSRL = False,unfrozenKey = "unfrozen",datasetAttribute = "size",dontIgnore=[""],ignoreDataset=[""]):
     defaultKeys = list(mAPs.keys())
     unfrozenExists = (unfrozenKey in defaultKeys)
     keys = defaultKeys
@@ -417,15 +417,17 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff
 
         #     lines.append(p)
         
-        plt.scatter(SxVals,SyVals,c=Cmap(i),label=f"{grad} ({round(corrCoe[1][0],5)}) ({freezeData[grad]})")
+        plt.scatter(SxVals,SyVals,c=Cmap(i))
         if(abs(corrCoe[1][0])>correCutoff):
-            plt.plot(x,p(x),c=Cmap(i))
-        else:
-            plt.plot(x,p(x),c=Cmap(i),linestyle=(0,(5,10)))
-        lines.append(p)
-    
+            plt.plot(x,p(x),c=Cmap(i),label=f"{grad} ({round(corrCoe[1][0],5)}) ({freezeData[grad]})")
+            lines.append(p)
+        elif(cuttoffDotted):
+            plt.plot(x,p(x),c=Cmap(i),linestyle=(0,(5,10)),label=f"{grad} ({round(corrCoe[1][0],5)}) ({freezeData[grad]})")
+            lines.append(p)
+
     if(len(lines) == 0):
         return
+
 
 
     # for key,val in annotations.items():
@@ -444,16 +446,6 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff
         plt.xlabel("# of Training Images")
         plt.suptitle("Favoribility vs # of Training Images", fontsize=14)
     plt.ylabel("Favoribility")
-
-    if(yLimToLSRL):
-        xMinMax = plt.xlim()
-        
-        MyVals = []
-        for lin in lines:
-            MyVals.append(lin(xMinMax[0]))
-            MyVals.append(lin(xMinMax[1]))
-        ylim = [min(MyVals),max(MyVals)]
-        plt.ylim([(ylim[0]-0.1*(ylim[1]-ylim[0])), (ylim[1]+0.1*(ylim[1]-ylim[0]))])
 
     if(yLimToLSRL):
         xMinMax = plt.xlim()
