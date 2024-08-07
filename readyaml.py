@@ -16,6 +16,18 @@ def returnClassCountDefaultDir(name, home_dir = default_path):
         data_loaded = yaml.safe_load(stream)
     return data_loaded["nc"]
 
+def returnURL(name,home_dir=default_path):
+    yamlpath = home_dir + name + '/data.yaml'
+    with open(yamlpath, 'r') as stream:
+        data_loaded = yaml.safe_load(stream)
+    return data_loaded["roboflow"]["url"]
+
+def returnProjectName(name,home_dir=default_path):
+    yamlpath = home_dir + name + '/data.yaml'
+    with open(yamlpath, 'r') as stream:
+        data_loaded = yaml.safe_load(stream)
+    return data_loaded["roboflow"]["project"]
+
 def returnTrainingSetCount(name, home_dir = default_path):
     for root,dirs,files in os.walk(f"{home_dir + name}/train/images"):
         return len(files)

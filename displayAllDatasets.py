@@ -1,5 +1,6 @@
 import os
 import readyaml
+import pandas as pd
 
 save_dir = '/lab/micah/obj-det/datasets'
 
@@ -22,16 +23,36 @@ home_dir = '/lab/micah/obj-det/datasets'
 
 d=home_dir
 subdirs = [os.path.join(d, o) for o in os.listdir(d) if os.path.isdir(os.path.join(d,o))]
+subdirs.remove(home_dir + '/dataset-info')
 
 namelist = []
 for i in subdirs:
     namelist.append(i.replace(d+'/',""))
 
-saveFile("dataset names", namelist)
+saveFile("dataset-info/dataset names", namelist)
+
 
 datasetData = {}
 for i in namelist:
     datasetData[i] = [readyaml.returnClassCountDefaultDir(i),readyaml.returnTrainingSetCount(i)]
 
 datasetData = {k: v for k, v in sorted(datasetData.items(), key=lambda item: item[1][1])}
-saveFile("dataset info", datasetData)
+saveFile("dataset-info/dataset info", datasetData)
+
+datasetLinks = {}
+for i in namelist:
+    datasetLinks[i] = [readyaml.returnProjectName(i),readyaml.returnURL(i)]
+
+saveFile("dataset-info/dataset urls", datasetLinks)
+
+
+totalDatasetData = {}
+for i in namelist:
+    totalDatasetData[i] = [readyaml.returnProjectName(i),readyaml.returnClassCountDefaultDir(i),readyaml.returnTrainingSetCount(i),readyaml.returnURL(i)]
+
+newData = {}
+for key,val in totalDatasetData.items():
+    newData[key]=tuple(val)
+
+df = pd.DataFrame.from_dict(newData)
+df.transpose().to_csv('datasets/dataset-info/all dataset info.csv')
