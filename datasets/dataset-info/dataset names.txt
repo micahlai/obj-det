@@ -1,0 +1,35 @@
+part number
+football
+teeth
+grocery store
+rock paper scissors
+go-positions
+car types
+hazard signs
+car-dent
+hard hat uni
+aerial-cars
+rockets
+tesla
+playing cards
+People in painting
+Resistors
+garage dataset
+bodywash
+chess
+face-detection
+forklift
+helipad
+carbike
+toyota
+frc
+Fall detection
+rock-climbing
+construction
+thermal
+cows
+rocket-league
+clouds
+parking-lot
+mri
+uno-deck
