@@ -1,4 +1,4 @@
-,0,1,2,3
+,project name,class count,training set count,roboflow url
 part number,partnumber-jzh7a,1,399,https://universe.roboflow.com/seiji/partnumber-jzh7a/dataset/2
 football,futbol-players,3,114,https://universe.roboflow.com/ilyes-talbi-ptwsp/futbol-players/dataset/7
 teeth,fornt-intraoral-tooth-numbering,33,882,https://universe.roboflow.com/dentalmate6v/fornt-intraoral-tooth-numbering/dataset/1

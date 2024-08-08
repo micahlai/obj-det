@@ -55,4 +55,6 @@ for key,val in totalDatasetData.items():
     newData[key]=tuple(val)
 
 df = pd.DataFrame.from_dict(newData)
-df.transpose().to_csv('datasets/dataset-info/all dataset info.csv')
+dft = df.transpose()
+dfc = dft.set_axis(['project name','class count','training set count','roboflow url'],axis=1)
+dfc.to_csv('datasets/dataset-info/all dataset info.csv')
