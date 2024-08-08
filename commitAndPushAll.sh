@@ -1,3 +1,4 @@
 git add commitAndPushAll.sh
 git commit -m "$1"
-git push -u https://<$2>:<$3>@<github.com/micahlai/obj-det.git> main
+url=github.com/micahlai/obj-det.git
+git push -u https://<$2>:<$3>@<$url> main
