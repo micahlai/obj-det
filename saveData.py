@@ -293,7 +293,7 @@ def plotDataScatterByGradientTotal(mAPs, trainingTimes, file="", unfrozenKey = "
     plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
     plt.close()
 
-def plotBarByGradientTotal(mAPs,trainingTimes,name="",file="",unfrozenKey="unfrozen",yVal = "fav"):
+def plotBarByGradientTotal(mAPs,trainingTimes,name="",file="",unfrozenKey="unfrozen",yVal = "fav",ignoreDataset=[""]):
     defaultKeys = list(mAPs.keys())
     unfrozenExists = (unfrozenKey in defaultKeys)
     keys = defaultKeys
@@ -302,6 +302,7 @@ def plotBarByGradientTotal(mAPs,trainingTimes,name="",file="",unfrozenKey="unfro
     else:
         return False
     
+
     data = {}
 
     freezeData = freezeDataLookup.getAllData()
@@ -311,6 +312,9 @@ def plotBarByGradientTotal(mAPs,trainingTimes,name="",file="",unfrozenKey="unfro
 
     for grad in keys:
         datasets = [x for x in list(mAPs[grad].keys())]
+        for i in datasets:
+            if(i in ignoreDataset):
+                datasets.remove(i)
         vals = []
         for dataset in datasets:
             mAP = mAPs[grad][dataset]/mAPs[unfrozenKey][dataset]
@@ -349,6 +353,61 @@ def plotBarByGradientTotal(mAPs,trainingTimes,name="",file="",unfrozenKey="unfro
     plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
     plt.close()
 
+def plotLineNoBranches(mAPs,trainingTimes,name="",file="",unfrozenKey="unfrozen",yVal = "fav",ignoreDataset=[""]):
+    defaultKeys = list(mAPs.keys())
+    unfrozenExists = (unfrozenKey in defaultKeys)
+    keys = defaultKeys
+    if(unfrozenExists):
+        keys.remove(unfrozenKey)
+    else:
+        return False
+    
+
+    data = {}
+
+    freezeData = freezeDataLookup.getAllData()
+    keys = sorted(keys, key=freezeData.get)
+
+    plt.figure(figsize=(20,15))
+
+    for grad in keys:
+        datasets = [x for x in list(mAPs[grad].keys())]
+        for i in datasets:
+            if(i in ignoreDataset):
+                datasets.remove(i)
+        vals = []
+        for dataset in datasets:
+            mAP = mAPs[grad][dataset]/mAPs[unfrozenKey][dataset]
+            TTime = trainingTimes[grad][dataset]/trainingTimes[unfrozenKey][dataset]
+            if(yVal == "fav"):
+                vals.append(mAP/TTime)
+            elif(yVal == "mAP"):
+                vals.append(mAP)
+            else:
+                vals.append(TTime)
+        data[grad]=statistics.mean(vals)
+
+    names = list(data.keys())
+    xValues = [int(x) for x in names]
+    values = list(data.values())
+
+    plt.plot(xValues,values)
+    plt.xlabel("Layers Frozen")
+    if(yVal == "fav"):
+        plt.suptitle("Average Favoribility vs Freeze Set", fontsize=14)
+        plt.ylabel("Average Favoribility")
+    elif(yVal == "mAP"):
+        plt.suptitle("Average Relative mAP vs Freeze Set", fontsize=14)
+        plt.ylabel("Average Relative mAP")
+    else:
+        plt.suptitle("Average Relative Training Time vs Freeze Set", fontsize=14)
+        plt.ylabel("Average Relative Training Time")
+    
+
+    plt.tight_layout()
+    plt.savefig(save_dir + f'/results/{file}results.jpg', format='jpg')
+    plt.close()
+
 
 
 def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff=0, cuttoffDotted = True,yLimToLSRL = False,unfrozenKey = "unfrozen",datasetAttribute = "size",dontIgnore=[""],ignoreDataset=[""]):
@@ -362,6 +421,7 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff
     
     if(dontIgnore != [""]):
         keys = dontIgnore
+    
 
     freezeData = freezeDataLookup.getAllData()
     keys = sorted(keys, key=freezeData.get)
@@ -375,6 +435,9 @@ def plotDataLineByGradientTotal(mAPs, trainingTimes, name="",file="",correCutoff
 
     for i, grad in enumerate(keys):
         datasets = [x for x in list(mAPs[grad].keys())]
+        for i in datasets:
+            if(i in ignoreDataset):
+                datasets.remove(i)
         xVals = []
         yVals = []
         for dataset in datasets:

@@ -286,3 +286,27 @@ iGpu15:2024-08-08 18:18:06.166436:Now training [8] for [100] epochs on [chess] (
 iGpu15:2024-08-08 18:18:08.081234:An error occured when training [8] on [chess]
 iGpu15:2024-08-08 18:18:08.082517:[Errno 32] Broken pipe
 iGpu15:2024-08-08 18:18:08.102188:Now training [9] for [100] epochs on [chess] (10/17)
+iGpu15:2024-08-08 18:20:18.659649:An error occured when training [9] on [chess]
+iGpu15:2024-08-08 18:20:18.660608:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:20:18.720954:Now training [10] for [100] epochs on [chess] (11/17)
+iGpu15:2024-08-08 18:20:20.411843:An error occured when training [10] on [chess]
+iGpu15:2024-08-08 18:20:20.412941:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:20:20.433994:Now training [13] for [100] epochs on [chess] (12/17)
+iGpu15:2024-08-08 18:20:22.296394:An error occured when training [13] on [chess]
+iGpu15:2024-08-08 18:20:22.297373:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:20:22.318640:Now training [16] for [100] epochs on [chess] (13/17)
+iGpu15:2024-08-08 18:20:24.004634:An error occured when training [16] on [chess]
+iGpu15:2024-08-08 18:20:24.005646:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:20:24.026757:Now training [17] for [100] epochs on [chess] (14/17)
+iGpu15:2024-08-08 18:20:25.426540:An error occured when training [17] on [chess]
+iGpu15:2024-08-08 18:20:25.427611:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:20:25.448231:Now training [19] for [100] epochs on [chess] (15/17)
+iGpu15:2024-08-08 18:20:26.974688:An error occured when training [19] on [chess]
+iGpu15:2024-08-08 18:20:26.975629:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:20:26.996271:Now training [20] for [100] epochs on [chess] (16/17)
+iGpu15:2024-08-08 18:20:28.440001:An error occured when training [20] on [chess]
+iGpu15:2024-08-08 18:20:28.440854:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:20:28.461579:Now training [22] for [100] epochs on [chess] (17/17)
+iGpu15:2024-08-08 18:20:29.965731:An error occured when training [22] on [chess]
+iGpu15:2024-08-08 18:20:29.966692:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:20:29.991127:Finished testing [chess] in [52.86110275917583 hours]
