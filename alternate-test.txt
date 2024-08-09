@@ -1,4 +1,4 @@
-'playing-cards'
+'playing cards'
 'aerial-cars'
 'bodywash'
 'car-dent'

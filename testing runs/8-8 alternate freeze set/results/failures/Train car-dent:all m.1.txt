@@ -1,0 +1,1 @@
+Command '['/lab/micah/anaconda3/envs/yolov10/bin/python3', '-m', 'torch.distributed.run', '--nproc_per_node', '2', '--master_port', '35587', '/lab/micah/.config/yolov10/DDP/_temp_fwookeew140527076336976.py']' returned non-zero exit status 120.
