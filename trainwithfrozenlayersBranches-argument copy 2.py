@@ -87,7 +87,8 @@ for key,val in freeze_data.items():
                             epochs=defaultEpochs,
                             project=save_dir + '/models/' + datasetArg,
                             name=key,
-                            verbose=False)
+                            verbose=False,
+                            batch=12)
         
         trainingTime = (time.time()-startTS)/3600
 
