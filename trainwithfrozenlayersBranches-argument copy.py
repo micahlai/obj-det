@@ -21,7 +21,7 @@ saveData.createSubfolderwithNameInResults("failures")
 
 #read freeze set data
 freeze_data = {}
-freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 7-19'
+freeze_set_path = '/lab/micah/obj-det/freeze set/freeze sets 8-8'
 for root, dirs, files in os.walk(freeze_set_path):
     for f in files:
         if(f.endswith('.txt')):
@@ -87,9 +87,7 @@ for key,val in freeze_data.items():
                             epochs=defaultEpochs,
                             project=save_dir + '/models/' + datasetArg,
                             name=key,
-                            verbose=False,
-                            device=[0,1],
-                            data_parallel=True)
+                            verbose=False)
         
         trainingTime = (time.time()-startTS)/3600
 
