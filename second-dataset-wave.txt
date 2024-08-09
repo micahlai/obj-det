@@ -1,0 +1,7 @@
+'chess'
+'go-positions'
+'forklift'
+'rocket-league'
+'beverages'
+'face-detection'
+'rockets'
