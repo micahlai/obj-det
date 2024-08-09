@@ -1,1 +1,1 @@
-./commitAndPushAll
+./commitAndPushAll.sh nobranches

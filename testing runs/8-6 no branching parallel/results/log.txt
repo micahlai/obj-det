@@ -1,0 +1,288 @@
+iGpu8:2024-08-06 13:28:58.951749:Now training [go-positions] : Classes [3]
+iGpu8:2024-08-06 13:28:58.952771:Now training [0] for [100] epochs on [go-positions] (1/17)
+iGpu15:2024-08-06 13:29:01.188730:Now training [chess] : Classes [12]
+iGpu15:2024-08-06 13:29:01.190081:Now training [0] for [100] epochs on [chess] (1/17)
+iGpu8:2024-08-06 13:29:17.466801:3 layers are freezed
+iGpu15:2024-08-06 13:29:26.985136:3 layers are freezed
+iGpu8:2024-08-06 13:29:31.514461:An error occured when training [0] on [go-positions]
+iGpu8:2024-08-06 13:29:31.517608:CUDA out of memory. Tried to allocate 2.18 GiB (GPU 0; 23.69 GiB total capacity; 13.27 GiB already allocated; 2.18 GiB free; 16.45 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+iGpu8:2024-08-06 13:29:31.526109:Now training [1] for [100] epochs on [go-positions] (2/17)
+iGpu13:2024-08-06 13:30:02.054232:Now training [forklift] : Classes [1]
+iGpu13:2024-08-06 13:30:02.057199:Now training [0] for [100] epochs on [forklift] (1/17)
+iGpu21:2024-08-06 13:30:07.916244:Now training [rocket-league] : Classes [2]
+iGpu21:2024-08-06 13:30:07.917082:Now training [0] for [100] epochs on [rocket-league] (1/17)
+iGpu2:2024-08-06 13:30:10.539040:Now training [car-dent] : Classes [17]
+iGpu2:2024-08-06 13:30:10.540447:Now training [0] for [100] epochs on [car-dent] (1/17)
+iGpu21:2024-08-06 13:31:16.727055:3 layers are freezed
+iGpu13:2024-08-06 13:31:17.174802:3 layers are freezed
+iGpu2:2024-08-06 13:31:17.923004:3 layers are freezed
+iGpu8:2024-08-06 13:31:32.116531:6 layers are freezed
+iGpu13:2024-08-06 13:31:58.150139:An error occured when training [0] on [forklift]
+iGpu13:2024-08-06 13:31:58.172341:DataLoader worker (pid 12481) is killed by signal: Segmentation fault. 
+iGpu13:2024-08-06 13:31:58.334179:Now training [1] for [100] epochs on [forklift] (2/17)
+iGpu21:2024-08-06 14:10:30.639473:Now training [1] for [100] epochs on [rocket-league] (2/17)
+iGpu21:2024-08-06 14:11:17.115338:6 layers are freezed
+iGpu8:2024-08-06 14:32:51.637507:An error occured when training [1] on [go-positions]
+iGpu8:2024-08-06 14:32:51.638271:CUDA out of memory. Tried to allocate 2.29 GiB (GPU 0; 23.69 GiB total capacity; 13.16 GiB already allocated; 2.09 GiB free; 16.54 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+iGpu8:2024-08-06 14:32:51.644904:Now training [2] for [100] epochs on [go-positions] (3/17)
+iGpu8:2024-08-06 14:34:52.574106:30 layers are freezed
+iGpu21:2024-08-06 14:50:38.130072:Now training [2] for [100] epochs on [rocket-league] (3/17)
+iGpu21:2024-08-06 14:52:23.363808:30 layers are freezed
+iGpu2:2024-08-06 15:16:11.206416:Now training [1] for [100] epochs on [car-dent] (2/17)
+iGpu2:2024-08-06 15:17:02.389811:6 layers are freezed
+iGpu21:2024-08-06 15:28:35.292469:Now training [3] for [100] epochs on [rocket-league] (4/17)
+iGpu21:2024-08-06 15:30:20.553900:33 layers are freezed
+iGpu13:2024-08-06 15:32:51.453635:Now training [face-detection] : Classes [1]
+iGpu13:2024-08-06 15:32:51.455329:Now training [0] for [100] epochs on [face-detection] (1/17)
+iGpu13:2024-08-06 15:32:52.899565:An error occured when training [0] on [face-detection]
+iGpu13:2024-08-06 15:32:52.901180:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:52.905016:Now training [1] for [100] epochs on [face-detection] (2/17)
+iGpu13:2024-08-06 15:32:52.963035:An error occured when training [1] on [face-detection]
+iGpu13:2024-08-06 15:32:52.964201:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:52.968039:Now training [2] for [100] epochs on [face-detection] (3/17)
+iGpu13:2024-08-06 15:32:53.021314:An error occured when training [2] on [face-detection]
+iGpu13:2024-08-06 15:32:53.022471:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:53.026319:Now training [3] for [100] epochs on [face-detection] (4/17)
+iGpu13:2024-08-06 15:32:53.080438:An error occured when training [3] on [face-detection]
+iGpu13:2024-08-06 15:32:53.081926:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:53.086066:Now training [4] for [100] epochs on [face-detection] (5/17)
+iGpu13:2024-08-06 15:32:53.140923:An error occured when training [4] on [face-detection]
+iGpu13:2024-08-06 15:32:53.142117:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:53.145982:Now training [5] for [100] epochs on [face-detection] (6/17)
+iGpu13:2024-08-06 15:32:53.200790:An error occured when training [5] on [face-detection]
+iGpu13:2024-08-06 15:32:53.202032:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:53.205004:Now training [6] for [100] epochs on [face-detection] (7/17)
+iGpu13:2024-08-06 15:32:53.261333:An error occured when training [6] on [face-detection]
+iGpu13:2024-08-06 15:32:53.262607:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:53.265866:Now training [7] for [100] epochs on [face-detection] (8/17)
+iGpu13:2024-08-06 15:32:53.541403:An error occured when training [7] on [face-detection]
+iGpu13:2024-08-06 15:32:53.542766:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:53.546276:Now training [8] for [100] epochs on [face-detection] (9/17)
+iGpu13:2024-08-06 15:32:53.604135:An error occured when training [8] on [face-detection]
+iGpu13:2024-08-06 15:32:53.605238:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:53.608772:Now training [9] for [100] epochs on [face-detection] (10/17)
+iGpu13:2024-08-06 15:32:53.687065:An error occured when training [9] on [face-detection]
+iGpu13:2024-08-06 15:32:53.716398:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:53.747110:Now training [10] for [100] epochs on [face-detection] (11/17)
+iGpu13:2024-08-06 15:32:53.808541:An error occured when training [10] on [face-detection]
+iGpu13:2024-08-06 15:32:53.861755:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:53.864634:Now training [13] for [100] epochs on [face-detection] (12/17)
+iGpu13:2024-08-06 15:32:53.920973:An error occured when training [13] on [face-detection]
+iGpu13:2024-08-06 15:32:53.979138:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:54.013841:Now training [16] for [100] epochs on [face-detection] (13/17)
+iGpu13:2024-08-06 15:32:54.142499:An error occured when training [16] on [face-detection]
+iGpu13:2024-08-06 15:32:54.242658:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:54.245090:Now training [17] for [100] epochs on [face-detection] (14/17)
+iGpu13:2024-08-06 15:32:54.299068:An error occured when training [17] on [face-detection]
+iGpu13:2024-08-06 15:32:54.357148:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:54.403424:Now training [19] for [100] epochs on [face-detection] (15/17)
+iGpu13:2024-08-06 15:32:54.460796:An error occured when training [19] on [face-detection]
+iGpu13:2024-08-06 15:32:54.461747:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:54.464137:Now training [20] for [100] epochs on [face-detection] (16/17)
+iGpu13:2024-08-06 15:32:54.521510:An error occured when training [20] on [face-detection]
+iGpu13:2024-08-06 15:32:54.588429:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:54.649824:Now training [22] for [100] epochs on [face-detection] (17/17)
+iGpu13:2024-08-06 15:32:54.719869:An error occured when training [22] on [face-detection]
+iGpu13:2024-08-06 15:32:54.773951:Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'
+iGpu13:2024-08-06 15:32:54.834824:Finished testing [face-detection] in [0.005179714096917047 hours]
+iGpu13:2024-08-06 15:33:10.570767:Now training [rockets] : Classes [3]
+iGpu13:2024-08-06 15:33:10.572038:Now training [0] for [100] epochs on [rockets] (1/17)
+iGpu13:2024-08-06 15:33:45.200891:3 layers are freezed
+iGpu21:2024-08-06 16:05:37.232119:Now training [4] for [100] epochs on [rocket-league] (5/17)
+iGpu21:2024-08-06 16:07:21.943811:75 layers are freezed
+iGpu8:2024-08-06 16:08:24.082210:Now training [3] for [100] epochs on [go-positions] (4/17)
+iGpu8:2024-08-06 16:09:14.916417:33 layers are freezed
+iGpu21:2024-08-06 16:40:19.138333:Now training [5] for [100] epochs on [rocket-league] (6/17)
+iGpu21:2024-08-06 16:42:04.844197:81 layers are freezed
+iGpu2:2024-08-06 16:58:34.904337:Now training [2] for [100] epochs on [car-dent] (3/17)
+iGpu2:2024-08-06 17:00:26.212457:30 layers are freezed
+iGpu21:2024-08-06 17:14:19.458396:Now training [6] for [100] epochs on [rocket-league] (7/17)
+iGpu21:2024-08-06 17:16:04.833409:123 layers are freezed
+iGpu13:2024-08-06 17:34:29.555793:Now training [tesla] : Classes [5]
+iGpu13:2024-08-06 17:34:29.557364:Now training [0] for [100] epochs on [tesla] (1/17)
+iGpu13:2024-08-06 17:34:56.237778:3 layers are freezed
+iGpu8:2024-08-06 17:42:38.685897:Now training [4] for [100] epochs on [go-positions] (5/17)
+iGpu21:2024-08-06 17:43:34.749161:Now training [7] for [100] epochs on [rocket-league] (8/17)
+iGpu8:2024-08-06 17:44:39.969944:75 layers are freezed
+iGpu21:2024-08-06 17:45:20.486460:129 layers are freezed
+iGpu21:2024-08-06 18:13:08.307293:Now training [8] for [100] epochs on [rocket-league] (9/17)
+iGpu21:2024-08-06 18:14:53.660087:180 layers are freezed
+iGpu2:2024-08-06 18:34:57.313274:Now training [3] for [100] epochs on [car-dent] (4/17)
+iGpu2:2024-08-06 18:36:48.776819:33 layers are freezed
+iGpu21:2024-08-06 18:41:51.320055:Now training [9] for [100] epochs on [rocket-league] (10/17)
+iGpu21:2024-08-06 18:43:36.515563:186 layers are freezed
+iGpu21:2024-08-06 19:10:32.303292:Now training [10] for [100] epochs on [rocket-league] (11/17)
+iGpu8:2024-08-06 19:11:28.487090:Now training [5] for [100] epochs on [go-positions] (6/17)
+iGpu21:2024-08-06 19:12:17.846486:207 layers are freezed
+iGpu8:2024-08-06 19:13:30.481031:81 layers are freezed
+iGpu21:2024-08-06 19:37:49.118026:Now training [13] for [100] epochs on [rocket-league] (12/17)
+iGpu13:2024-08-06 19:38:21.901568:Now training [thermal] : Classes [2]
+iGpu13:2024-08-06 19:38:21.902758:Now training [0] for [100] epochs on [thermal] (1/17)
+iGpu21:2024-08-06 19:39:34.282781:258 layers are freezed
+iGpu21:2024-08-06 20:04:26.469390:Now training [16] for [100] epochs on [rocket-league] (13/17)
+iGpu21:2024-08-06 20:06:11.663710:282 layers are freezed
+iGpu2:2024-08-06 20:12:03.657382:Now training [4] for [100] epochs on [car-dent] (5/17)
+iGpu2:2024-08-06 20:13:55.119214:75 layers are freezed
+iGpu21:2024-08-06 20:28:44.448640:Now training [17] for [100] epochs on [rocket-league] (14/17)
+iGpu21:2024-08-06 20:30:29.734378:285 layers are freezed
+iGpu8:2024-08-06 20:39:02.899637:Now training [6] for [100] epochs on [go-positions] (7/17)
+iGpu8:2024-08-06 20:41:03.855702:123 layers are freezed
+iGpu21:2024-08-06 20:52:51.400692:Now training [19] for [100] epochs on [rocket-league] (15/17)
+iGpu21:2024-08-06 20:54:37.179593:336 layers are freezed
+iGpu21:2024-08-06 21:15:03.741115:Now training [20] for [100] epochs on [rocket-league] (16/17)
+iGpu21:2024-08-06 21:16:48.858105:342 layers are freezed
+iGpu21:2024-08-06 21:36:30.229174:Now training [22] for [100] epochs on [rocket-league] (17/17)
+iGpu21:2024-08-06 21:38:16.217218:393 layers are freezed
+iGpu13:2024-08-06 21:39:13.411810:Now training [aerial-cars] : Classes [4]
+iGpu13:2024-08-06 21:39:13.413439:Now training [0] for [100] epochs on [aerial-cars] (1/17)
+iGpu13:2024-08-06 21:39:35.077080:3 layers are freezed
+iGpu2:2024-08-06 21:41:05.275662:Now training [5] for [100] epochs on [car-dent] (6/17)
+iGpu2:2024-08-06 21:42:54.575851:81 layers are freezed
+iGpu21:2024-08-06 21:56:42.087079:Finished testing [rocket-league] in [8.453443100982241 hours]
+iGpu21:2024-08-06 21:57:03.468823:Now training [frc] : Classes [2]
+iGpu21:2024-08-06 21:57:03.470319:Now training [0] for [100] epochs on [frc] (1/17)
+iGpu21:2024-08-06 21:57:15.827762:3 layers are freezed
+iGpu8:2024-08-06 21:58:47.194810:Now training [7] for [100] epochs on [go-positions] (8/17)
+iGpu8:2024-08-06 21:59:01.898646:129 layers are freezed
+iGpu15:2024-08-06 23:08:10.625048:Now training [1] for [100] epochs on [chess] (2/17)
+iGpu15:2024-08-06 23:09:07.258560:6 layers are freezed
+iGpu2:2024-08-06 23:09:35.363813:Now training [6] for [100] epochs on [car-dent] (7/17)
+iGpu2:2024-08-06 23:11:25.356092:123 layers are freezed
+iGpu8:2024-08-06 23:14:45.926749:Now training [8] for [100] epochs on [go-positions] (9/17)
+iGpu8:2024-08-06 23:16:47.990591:180 layers are freezed
+iGpu13:2024-08-06 23:41:01.678068:Now training [parking-lot] : Classes [2]
+iGpu13:2024-08-06 23:41:01.679738:Now training [0] for [100] epochs on [parking-lot] (1/17)
+iGpu13:2024-08-06 23:41:24.511106:3 layers are freezed
+iGpu2:2024-08-07 00:30:19.679720:Now training [7] for [100] epochs on [car-dent] (8/17)
+iGpu8:2024-08-07 00:32:08.495385:Now training [9] for [100] epochs on [go-positions] (10/17)
+iGpu2:2024-08-07 00:32:10.782969:129 layers are freezed
+iGpu8:2024-08-07 00:34:09.490464:186 layers are freezed
+iGpu21:2024-08-07 01:27:05.472798:Now training [1] for [100] epochs on [frc] (2/17)
+iGpu21:2024-08-07 01:27:53.359728:6 layers are freezed
+iGpu13:2024-08-07 01:46:54.365540:Now training [bodywash] : Classes [31]
+iGpu13:2024-08-07 01:46:54.368221:Now training [0] for [100] epochs on [bodywash] (1/17)
+iGpu13:2024-08-07 01:47:27.498367:3 layers are freezed
+iGpu8:2024-08-07 01:48:42.620032:Now training [10] for [100] epochs on [go-positions] (11/17)
+iGpu2:2024-08-07 01:49:19.939468:Now training [8] for [100] epochs on [car-dent] (9/17)
+iGpu8:2024-08-07 01:50:44.747111:207 layers are freezed
+iGpu2:2024-08-07 01:51:11.426452:180 layers are freezed
+iGpu8:2024-08-07 03:03:57.182735:Now training [13] for [100] epochs on [go-positions] (12/17)
+iGpu8:2024-08-07 03:05:58.580475:258 layers are freezed
+iGpu2:2024-08-07 03:07:57.226954:Now training [9] for [100] epochs on [car-dent] (10/17)
+iGpu2:2024-08-07 03:09:50.313429:186 layers are freezed
+iGpu13:2024-08-07 03:49:36.285061:Now training [clouds] : Classes [4]
+iGpu13:2024-08-07 03:49:36.287835:Now training [0] for [100] epochs on [clouds] (1/17)
+iGpu13:2024-08-07 03:50:13.654033:3 layers are freezed
+iGpu8:2024-08-07 04:16:09.898988:Now training [16] for [100] epochs on [go-positions] (13/17)
+iGpu8:2024-08-07 04:18:12.146630:282 layers are freezed
+iGpu2:2024-08-07 04:25:09.524547:Now training [10] for [100] epochs on [car-dent] (11/17)
+iGpu2:2024-08-07 04:27:03.205958:207 layers are freezed
+iGpu21:2024-08-07 04:55:07.456520:Now training [2] for [100] epochs on [frc] (3/17)
+iGpu21:2024-08-07 04:56:56.525344:30 layers are freezed
+iGpu8:2024-08-07 05:23:17.407397:Now training [17] for [100] epochs on [go-positions] (14/17)
+iGpu8:2024-08-07 05:25:19.364098:285 layers are freezed
+iGpu2:2024-08-07 05:40:23.661109:Now training [13] for [100] epochs on [car-dent] (12/17)
+iGpu2:2024-08-07 05:42:13.574322:258 layers are freezed
+iGpu13:2024-08-07 05:52:40.859369:Now training [cows] : Classes [3]
+iGpu13:2024-08-07 05:52:40.862322:Now training [0] for [100] epochs on [cows] (1/17)
+iGpu13:2024-08-07 05:53:05.083135:3 layers are freezed
+iGpu8:2024-08-07 06:30:09.962576:Now training [19] for [100] epochs on [go-positions] (15/17)
+iGpu8:2024-08-07 06:32:12.037078:336 layers are freezed
+iGpu2:2024-08-07 06:53:05.700838:Now training [16] for [100] epochs on [car-dent] (13/17)
+iGpu2:2024-08-07 06:54:58.003559:282 layers are freezed
+iGpu8:2024-08-07 07:33:37.661182:Now training [20] for [100] epochs on [go-positions] (16/17)
+iGpu8:2024-08-07 07:35:39.789786:342 layers are freezed
+iGpu2:2024-08-07 08:04:33.481780:Now training [17] for [100] epochs on [car-dent] (14/17)
+iGpu21:2024-08-07 08:06:10.754882:Now training [3] for [100] epochs on [frc] (4/17)
+iGpu2:2024-08-07 08:06:28.994425:285 layers are freezed
+iGpu21:2024-08-07 08:07:59.906758:33 layers are freezed
+iGpu15:2024-08-07 08:29:44.244091:Now training [2] for [100] epochs on [chess] (3/17)
+iGpu15:2024-08-07 08:32:01.075136:30 layers are freezed
+iGpu8:2024-08-07 08:37:20.732602:Now training [22] for [100] epochs on [go-positions] (17/17)
+iGpu8:2024-08-07 08:39:22.391610:393 layers are freezed
+iGpu2:2024-08-07 09:16:06.898387:Now training [19] for [100] epochs on [car-dent] (15/17)
+iGpu2:2024-08-07 09:17:59.693571:336 layers are freezed
+iGpu8:2024-08-07 09:39:27.411175:Finished testing [go-positions] in [20.177502606709798 hours]
+iGpu2:2024-08-07 10:26:49.129597:Now training [20] for [100] epochs on [car-dent] (16/17)
+iGpu2:2024-08-07 10:28:40.174672:342 layers are freezed
+iGpu21:2024-08-07 11:15:41.795110:Now training [4] for [100] epochs on [frc] (5/17)
+iGpu21:2024-08-07 11:17:29.746278:75 layers are freezed
+iGpu2:2024-08-07 11:36:18.831958:Now training [22] for [100] epochs on [car-dent] (17/17)
+iGpu2:2024-08-07 11:38:08.513852:393 layers are freezed
+iGpu2:2024-08-07 12:43:27.027353:Finished testing [car-dent] in [23.232593041327263 hours]
+iGpu21:2024-08-07 14:06:49.954033:Now training [5] for [100] epochs on [frc] (6/17)
+iGpu21:2024-08-07 14:08:36.434931:81 layers are freezed
+iGpu21:2024-08-07 16:56:37.737701:Now training [6] for [100] epochs on [frc] (7/17)
+iGpu21:2024-08-07 16:58:24.888858:123 layers are freezed
+iGpu15:2024-08-07 17:01:36.717159:Now training [3] for [100] epochs on [chess] (4/17)
+iGpu15:2024-08-07 17:03:55.899026:33 layers are freezed
+iGpu21:2024-08-07 19:32:06.110137:Now training [7] for [100] epochs on [frc] (8/17)
+iGpu21:2024-08-07 19:33:53.641613:129 layers are freezed
+iGpu21:2024-08-07 22:06:32.451093:Now training [8] for [100] epochs on [frc] (9/17)
+iGpu21:2024-08-07 22:08:21.353166:180 layers are freezed
+iGpu21:2024-08-08 00:38:33.070479:Now training [9] for [100] epochs on [frc] (10/17)
+iGpu21:2024-08-08 00:40:20.138480:186 layers are freezed
+iGpu15:2024-08-08 01:29:09.678727:Now training [4] for [100] epochs on [chess] (5/17)
+iGpu15:2024-08-08 01:31:27.154630:75 layers are freezed
+iGpu21:2024-08-08 03:09:31.847922:Now training [10] for [100] epochs on [frc] (11/17)
+iGpu21:2024-08-08 03:11:18.842882:207 layers are freezed
+iGpu21:2024-08-08 05:38:32.042515:Now training [13] for [100] epochs on [frc] (12/17)
+iGpu21:2024-08-08 05:40:20.172270:258 layers are freezed
+iGpu21:2024-08-08 07:58:30.432979:Now training [16] for [100] epochs on [frc] (13/17)
+iGpu21:2024-08-08 08:00:18.003407:282 layers are freezed
+iGpu15:2024-08-08 09:10:15.851607:Now training [5] for [100] epochs on [chess] (6/17)
+iGpu15:2024-08-08 09:12:34.964455:81 layers are freezed
+iGpu21:2024-08-08 10:08:42.911778:Now training [17] for [100] epochs on [frc] (14/17)
+iGpu21:2024-08-08 10:10:29.936335:285 layers are freezed
+iGpu21:2024-08-08 12:17:29.184473:Now training [19] for [100] epochs on [frc] (15/17)
+iGpu21:2024-08-08 12:19:18.586981:336 layers are freezed
+iGpu21:2024-08-08 14:19:14.315743:Now training [20] for [100] epochs on [frc] (16/17)
+iGpu21:2024-08-08 14:21:00.956679:342 layers are freezed
+iGpu21:2024-08-08 16:19:53.984749:Now training [22] for [100] epochs on [frc] (17/17)
+iGpu21:2024-08-08 16:21:40.647706:393 layers are freezed
+iGpu15:2024-08-08 16:45:25.811737:Now training [6] for [100] epochs on [chess] (7/17)
+iGpu15:2024-08-08 16:47:45.659878:123 layers are freezed
+iGpu21:2024-08-08 18:17:40.666958:Finished testing [frc] in [44.34630813492669 hours]
+iGpu15:2024-08-08 18:17:57.541740:An error occured when training [6] on [chess]
+iGpu15:2024-08-08 18:17:57.542594:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:17:57.578050:Now training [7] for [100] epochs on [chess] (8/17)
+iGpu15:2024-08-08 18:18:06.141056:An error occured when training [7] on [chess]
+iGpu15:2024-08-08 18:18:06.142555:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:18:06.166436:Now training [8] for [100] epochs on [chess] (9/17)
+iGpu15:2024-08-08 18:18:08.081234:An error occured when training [8] on [chess]
+iGpu15:2024-08-08 18:18:08.082517:[Errno 32] Broken pipe
+iGpu15:2024-08-08 18:18:08.102188:Now training [9] for [100] epochs on [chess] (10/17)

@@ -1,0 +1,3 @@
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' error ❌ 
+Dataset '/lab/micah/obj-det/datasets/face-detection/data.yaml' images not found ⚠️, missing path '/lab/micah/obj-det/datasets/face-detection/valid/images'
+Note dataset download directory is '/lab/micah/datasets'. You can update this in '/lab/micah/.config/yolov10/settings.yaml'

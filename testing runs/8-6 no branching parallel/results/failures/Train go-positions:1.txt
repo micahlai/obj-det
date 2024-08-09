@@ -1,0 +1,1 @@
+CUDA out of memory. Tried to allocate 2.29 GiB (GPU 0; 23.69 GiB total capacity; 13.16 GiB already allocated; 2.09 GiB free; 16.54 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
