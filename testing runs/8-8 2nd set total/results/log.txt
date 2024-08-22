@@ -1,0 +1,486 @@
+iGpu14:2024-08-08 19:24:23.069098:Now training [rockets] : Classes [3]
+iGpu14:2024-08-08 19:24:23.069161:Now training [unfrozen] for [100] epochs on [rockets] (1/35)
+iGpu21:2024-08-08 19:24:31.211936:Now training [chess] : Classes [12]
+iGpu21:2024-08-08 19:24:31.212889:Now training [unfrozen] for [100] epochs on [chess] (1/35)
+iGpu14:2024-08-08 19:24:33.451645:1 layers are freezed
+iGpu15:2024-08-08 19:24:34.341171:Now training [go-positions] : Classes [3]
+iGpu15:2024-08-08 19:24:34.342135:Now training [unfrozen] for [100] epochs on [go-positions] (1/35)
+iGpu8:2024-08-08 19:24:34.920343:Now training [rocket-league] : Classes [2]
+iGpu8:2024-08-08 19:24:34.921270:Now training [unfrozen] for [100] epochs on [rocket-league] (1/35)
+iGpu21:2024-08-08 19:24:43.799816:1 layers are freezed
+iGpu8:2024-08-08 19:24:45.755144:1 layers are freezed
+iGpu15:2024-08-08 19:24:54.127037:1 layers are freezed
+iGpu2:2024-08-08 19:25:00.085538:An error occured when training [13 m] on [forklift]
+iGpu2:2024-08-08 19:25:00.088476:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:25:00.170250:Now training [first 15] for [100] epochs on [forklift] (19/35)
+iGpu2:2024-08-08 19:25:04.064758:1 layers are freezed
+iGpu2:2024-08-08 19:25:04.301922:An error occured when training [first 15] on [forklift]
+iGpu2:2024-08-08 19:25:04.303406:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:25:04.312554:Now training [13] for [100] epochs on [forklift] (20/35)
+iGpu2:2024-08-08 19:25:08.309522:An error occured when training [13] on [forklift]
+iGpu2:2024-08-08 19:25:08.310869:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:25:08.324441:Now training [16 cv1] for [100] epochs on [forklift] (21/35)
+iGpu2:2024-08-08 19:25:13.586711:An error occured when training [16 cv1] on [forklift]
+iGpu2:2024-08-08 19:25:13.668352:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:25:13.689775:Now training [16 cv2] for [100] epochs on [forklift] (22/35)
+iGpu2:2024-08-08 19:25:23.913097:An error occured when training [16 cv2] on [forklift]
+iGpu2:2024-08-08 19:25:23.941011:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:25:23.980728:Now training [all cv1 after 10 + cv3] for [100] epochs on [forklift] (23/35)
+iGpu2:2024-08-08 19:25:31.773199:An error occured when training [all cv1 after 10 + cv3] on [forklift]
+iGpu2:2024-08-08 19:25:31.774627:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:25:31.784037:Now training [16 m.0] for [100] epochs on [forklift] (24/35)
+iGpu2:2024-08-08 19:25:42.711756:An error occured when training [16 m.0] on [forklift]
+iGpu2:2024-08-08 19:25:42.713415:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:25:42.723479:Now training [16 m.1] for [100] epochs on [forklift] (25/35)
+iGpu2:2024-08-08 19:25:51.207256:An error occured when training [16 m.1] on [forklift]
+iGpu2:2024-08-08 19:25:51.208874:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:25:51.218056:Now training [16 m.2] for [100] epochs on [forklift] (26/35)
+iGpu2:2024-08-08 19:25:53.642878:An error occured when training [unfrozen] on [forklift]
+iGpu2:2024-08-08 19:25:53.644281:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/models/forklift/unfrozen2/results.csv'
+iGpu2:2024-08-08 19:25:53.648004:Now training [all cv1] for [100] epochs on [forklift] (2/35)
+iGpu2:2024-08-08 19:25:54.955837:An error occured when training [16 m.2] on [forklift]
+iGpu2:2024-08-08 19:25:54.957094:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:25:54.975824:Now training [first 10 + 23 one2one] for [100] epochs on [forklift] (27/35)
+iGpu2:2024-08-08 19:26:05.947323:An error occured when training [first 10 + 23 one2one] on [forklift]
+iGpu2:2024-08-08 19:26:05.949005:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:26:05.958350:Now training [16 m] for [100] epochs on [forklift] (28/35)
+iGpu2:2024-08-08 19:26:15.562527:An error occured when training [16 m] on [forklift]
+iGpu2:2024-08-08 19:26:15.564695:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:26:15.574242:Now training [16] for [100] epochs on [forklift] (29/35)
+iGpu2:2024-08-08 19:26:24.359912:An error occured when training [16] on [forklift]
+iGpu2:2024-08-08 19:26:24.374922:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:26:24.395874:Now training [all m.2 after 10 + cv3] for [100] epochs on [forklift] (30/35)
+iGpu2:2024-08-08 19:26:30.873599:An error occured when training [all m.2 after 10 + cv3] on [forklift]
+iGpu2:2024-08-08 19:26:30.875350:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:26:30.884511:Now training [all m.0 after 10 + cv3] for [100] epochs on [forklift] (31/35)
+iGpu2:2024-08-08 19:26:34.436931:An error occured when training [all m.0 after 10 + cv3] on [forklift]
+iGpu2:2024-08-08 19:26:34.438825:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:26:34.448466:Now training [all m.1 after 10 + cv3] for [100] epochs on [forklift] (32/35)
+iGpu2:2024-08-08 19:26:47.902643:An error occured when training [all m.1 after 10 + cv3] on [forklift]
+iGpu2:2024-08-08 19:26:47.904572:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:26:47.913802:Now training [all m after 10] for [100] epochs on [forklift] (33/35)
+iGpu2:2024-08-08 19:26:54.430353:An error occured when training [all m after 10] on [forklift]
+iGpu2:2024-08-08 19:26:54.432120:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:26:54.440776:Now training [17] for [100] epochs on [forklift] (34/35)
+iGpu2:2024-08-08 19:27:02.473979:An error occured when training [17] on [forklift]
+iGpu2:2024-08-08 19:27:02.475634:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:27:02.484312:Now training [all m after 10 + cv3] for [100] epochs on [forklift] (35/35)
+iGpu2:2024-08-08 19:27:09.258009:An error occured when training [all m after 10 + cv3] on [forklift]
+iGpu2:2024-08-08 19:27:09.267100:[Errno 32] Broken pipe
+iGpu2:2024-08-08 19:27:09.290634:An error occured when saving results for [forklift]
+iGpu2:2024-08-08 19:27:09.292430:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/JSON DATA/forklift/FINAL mAP RESULTS.json'
+iGpu2:2024-08-08 19:27:09.297927:Finished testing [forklift] in [0.08169669912921058 hours]
+iGpu2:2024-08-08 19:27:42.939937:36 layers are freezed
+iGpu8:2024-08-08 20:06:39.668109:Now training [all cv1] for [100] epochs on [rocket-league] (2/35)
+iGpu8:2024-08-08 20:07:24.609356:36 layers are freezed
+iGpu2:2024-08-08 20:37:42.667652:An error occured when training [all cv1] on [forklift]
+iGpu2:2024-08-08 20:37:42.669208:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all cv1.txt'
+iGpu2:2024-08-08 20:37:42.673247:Now training [all cv2] for [100] epochs on [forklift] (3/35)
+iGpu2:2024-08-08 20:38:31.963873:36 layers are freezed
+iGpu8:2024-08-08 20:46:48.367724:Now training [all cv2] for [100] epochs on [rocket-league] (3/35)
+iGpu8:2024-08-08 20:48:43.953519:36 layers are freezed
+iGpu15:2024-08-08 21:09:04.574254:Now training [all cv1] for [100] epochs on [go-positions] (2/35)
+iGpu15:2024-08-08 21:09:57.019928:36 layers are freezed
+iGpu8:2024-08-08 21:27:55.203102:Now training [all cv2 after 10] for [100] epochs on [rocket-league] (4/35)
+iGpu8:2024-08-08 21:29:50.934795:36 layers are freezed
+iGpu2:2024-08-08 21:32:14.128699:An error occured when training [all cv2] on [forklift]
+iGpu2:2024-08-08 21:32:14.129764:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all cv2.txt'
+iGpu2:2024-08-08 21:32:14.132473:Now training [all cv2 after 10] for [100] epochs on [forklift] (4/35)
+iGpu2:2024-08-08 21:34:04.176750:36 layers are freezed
+iGpu8:2024-08-08 22:09:11.874276:Now training [all m.2] for [100] epochs on [rocket-league] (5/35)
+iGpu8:2024-08-08 22:11:07.557384:67 layers are freezed
+iGpu2:2024-08-08 22:28:12.512525:An error occured when training [all cv2 after 10] on [forklift]
+iGpu2:2024-08-08 22:28:12.513740:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all cv2 after 10.txt'
+iGpu2:2024-08-08 22:28:12.516772:Now training [all m.2] for [100] epochs on [forklift] (5/35)
+iGpu2:2024-08-08 22:30:01.457373:67 layers are freezed
+iGpu8:2024-08-08 22:50:47.373329:Now training [all m.1] for [100] epochs on [rocket-league] (6/35)
+iGpu15:2024-08-08 22:52:15.850451:Now training [all cv2] for [100] epochs on [go-positions] (3/35)
+iGpu8:2024-08-08 22:52:42.648824:69 layers are freezed
+iGpu15:2024-08-08 22:54:28.677857:36 layers are freezed
+iGpu2:2024-08-08 23:24:56.194352:An error occured when training [all m.2] on [forklift]
+iGpu2:2024-08-08 23:24:56.241138:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m.2.txt'
+iGpu2:2024-08-08 23:24:56.243987:Now training [all m.1] for [100] epochs on [forklift] (6/35)
+iGpu2:2024-08-08 23:26:45.080273:69 layers are freezed
+iGpu8:2024-08-08 23:32:33.849319:Now training [all m.0] for [100] epochs on [rocket-league] (7/35)
+iGpu8:2024-08-08 23:34:28.837600:69 layers are freezed
+iGpu8:2024-08-09 00:12:54.347700:Now training [all cv2 after 10 + cv3] for [100] epochs on [rocket-league] (8/35)
+iGpu8:2024-08-09 00:14:50.158236:78 layers are freezed
+iGpu2:2024-08-09 00:20:05.719422:An error occured when training [all m.1] on [forklift]
+iGpu2:2024-08-09 00:20:05.720879:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m.1.txt'
+iGpu2:2024-08-09 00:20:05.724668:Now training [all m.0] for [100] epochs on [forklift] (7/35)
+iGpu2:2024-08-09 00:21:54.718335:69 layers are freezed
+iGpu15:2024-08-09 00:33:49.727557:Now training [all cv2 after 10] for [100] epochs on [go-positions] (4/35)
+iGpu15:2024-08-09 00:36:03.485302:36 layers are freezed
+iGpu8:2024-08-09 00:53:15.858521:Now training [first 5] for [100] epochs on [rocket-league] (9/35)
+iGpu8:2024-08-09 00:55:11.541936:81 layers are freezed
+iGpu2:2024-08-09 01:15:36.120423:An error occured when training [all m.0] on [forklift]
+iGpu2:2024-08-09 01:15:36.121478:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m.0.txt'
+iGpu2:2024-08-09 01:15:36.124050:Now training [all cv2 after 10 + cv3] for [100] epochs on [forklift] (8/35)
+iGpu2:2024-08-09 01:17:25.771894:78 layers are freezed
+iGpu8:2024-08-09 01:30:19.041238:Now training [first 10] for [100] epochs on [rocket-league] (10/35)
+iGpu8:2024-08-09 01:32:14.942498:207 layers are freezed
+iGpu8:2024-08-09 01:59:32.520028:Now training [all cv1 after 10] for [100] epochs on [rocket-league] (11/35)
+iGpu8:2024-08-09 02:01:27.783098:219 layers are freezed
+iGpu2:2024-08-09 02:09:58.570634:An error occured when training [all cv2 after 10 + cv3] on [forklift]
+iGpu2:2024-08-09 02:09:58.572086:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all cv2 after 10 + cv3.txt'
+iGpu2:2024-08-09 02:09:58.575677:Now training [first 5] for [100] epochs on [forklift] (9/35)
+iGpu2:2024-08-09 02:11:49.819081:81 layers are freezed
+iGpu15:2024-08-09 02:15:12.393486:Now training [all m.2] for [100] epochs on [go-positions] (5/35)
+iGpu15:2024-08-09 02:17:25.695209:67 layers are freezed
+iGpu8:2024-08-09 02:27:29.741935:Now training [first 10 + 23 cv2] for [100] epochs on [rocket-league] (12/35)
+iGpu8:2024-08-09 02:29:25.384178:231 layers are freezed
+iGpu8:2024-08-09 02:55:44.965626:Now training [all m.2 after 10] for [100] epochs on [rocket-league] (13/35)
+iGpu8:2024-08-09 02:57:40.168892:241 layers are freezed
+iGpu2:2024-08-09 03:04:32.735112:An error occured when training [first 5] on [forklift]
+iGpu2:2024-08-09 03:04:32.736189:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/first 5.txt'
+iGpu2:2024-08-09 03:04:32.738942:Now training [first 10] for [100] epochs on [forklift] (10/35)
+iGpu2:2024-08-09 03:06:21.731326:207 layers are freezed
+iGpu8:2024-08-09 03:24:36.185024:Now training [all m.0 after 10] for [100] epochs on [rocket-league] (14/35)
+iGpu8:2024-08-09 03:26:31.359953:243 layers are freezed
+iGpu2:2024-08-09 03:51:33.206170:An error occured when training [first 10] on [forklift]
+iGpu2:2024-08-09 03:51:33.207484:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/first 10.txt'
+iGpu2:2024-08-09 03:51:33.210612:Now training [all cv1 after 10] for [100] epochs on [forklift] (11/35)
+iGpu8:2024-08-09 03:52:31.940212:Now training [all m] for [100] epochs on [rocket-league] (15/35)
+iGpu2:2024-08-09 03:53:23.655692:219 layers are freezed
+iGpu8:2024-08-09 03:54:27.497493:243 layers are freezed
+iGpu15:2024-08-09 03:57:31.465493:Now training [all m.1] for [100] epochs on [go-positions] (6/35)
+iGpu15:2024-08-09 03:59:44.112072:69 layers are freezed
+iGpu8:2024-08-09 04:27:02.656624:Now training [all m.1 after 10] for [100] epochs on [rocket-league] (16/35)
+iGpu8:2024-08-09 04:28:58.070916:243 layers are freezed
+iGpu2:2024-08-09 04:38:16.806435:An error occured when training [all cv1 after 10] on [forklift]
+iGpu2:2024-08-09 04:38:16.998889:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all cv1 after 10.txt'
+iGpu2:2024-08-09 04:38:17.110904:Now training [first 10 + 23 cv2] for [100] epochs on [forklift] (12/35)
+iGpu2:2024-08-09 04:40:06.616365:231 layers are freezed
+iGpu8:2024-08-09 04:55:17.685627:Now training [first 10 + 23 cv3] for [100] epochs on [rocket-league] (17/35)
+iGpu8:2024-08-09 04:57:13.670949:249 layers are freezed
+iGpu8:2024-08-09 05:23:34.028463:Now training [13 m] for [100] epochs on [rocket-league] (18/35)
+iGpu2:2024-08-09 05:25:08.767414:An error occured when training [first 10 + 23 cv2] on [forklift]
+iGpu2:2024-08-09 05:25:08.768405:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/first 10 + 23 cv2.txt'
+iGpu2:2024-08-09 05:25:08.771036:Now training [all m.2 after 10] for [100] epochs on [forklift] (13/35)
+iGpu8:2024-08-09 05:25:29.355487:252 layers are freezed
+iGpu2:2024-08-09 05:27:02.146217:241 layers are freezed
+iGpu15:2024-08-09 05:38:48.880687:Now training [all m.0] for [100] epochs on [go-positions] (7/35)
+iGpu15:2024-08-09 05:41:02.271049:69 layers are freezed
+iGpu8:2024-08-09 05:51:00.989962:Now training [first 15] for [100] epochs on [rocket-league] (19/35)
+iGpu8:2024-08-09 05:52:56.209958:258 layers are freezed
+iGpu21:2024-08-09 05:54:35.266445:Now training [all cv1] for [100] epochs on [chess] (2/35)
+iGpu21:2024-08-09 05:55:33.578198:36 layers are freezed
+iGpu2:2024-08-09 06:12:33.959643:An error occured when training [all m.2 after 10] on [forklift]
+iGpu2:2024-08-09 06:12:33.961219:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m.2 after 10.txt'
+iGpu2:2024-08-09 06:12:33.965241:Now training [all m.0 after 10] for [100] epochs on [forklift] (14/35)
+iGpu2:2024-08-09 06:14:24.050588:243 layers are freezed
+iGpu8:2024-08-09 06:17:36.043657:Now training [13] for [100] epochs on [rocket-league] (20/35)
+iGpu8:2024-08-09 06:19:32.633021:258 layers are freezed
+iGpu8:2024-08-09 06:44:03.848491:Now training [16 cv1] for [100] epochs on [rocket-league] (21/35)
+iGpu8:2024-08-09 06:45:59.090384:261 layers are freezed
+iGpu2:2024-08-09 06:59:48.088438:An error occured when training [all m.0 after 10] on [forklift]
+iGpu2:2024-08-09 06:59:48.089731:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m.0 after 10.txt'
+iGpu2:2024-08-09 06:59:48.092839:Now training [all m] for [100] epochs on [forklift] (15/35)
+iGpu2:2024-08-09 07:01:38.158927:243 layers are freezed
+iGpu8:2024-08-09 07:10:57.374694:Now training [16 cv2] for [100] epochs on [rocket-league] (22/35)
+iGpu8:2024-08-09 07:12:52.707123:261 layers are freezed
+iGpu15:2024-08-09 07:20:43.734515:Now training [all cv2 after 10 + cv3] for [100] epochs on [go-positions] (8/35)
+iGpu15:2024-08-09 07:22:56.676383:78 layers are freezed
+iGpu8:2024-08-09 07:37:57.587686:Now training [all cv1 after 10 + cv3] for [100] epochs on [rocket-league] (23/35)
+iGpu8:2024-08-09 07:39:53.227659:261 layers are freezed
+iGpu2:2024-08-09 07:47:42.788585:An error occured when training [all m] on [forklift]
+iGpu2:2024-08-09 07:47:42.789847:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m.txt'
+iGpu2:2024-08-09 07:47:42.792820:Now training [all m.1 after 10] for [100] epochs on [forklift] (16/35)
+iGpu2:2024-08-09 07:49:32.008041:243 layers are freezed
+iGpu14:2024-08-09 07:58:06.115249:Now training [all cv1] for [100] epochs on [rockets] (2/35)
+iGpu14:2024-08-09 07:58:52.462697:36 layers are freezed
+iGpu8:2024-08-09 08:06:10.045466:Now training [16 m.0] for [100] epochs on [rocket-league] (24/35)
+iGpu8:2024-08-09 08:08:05.457107:264 layers are freezed
+iGpu8:2024-08-09 08:32:38.732511:Now training [16 m.1] for [100] epochs on [rocket-league] (25/35)
+iGpu8:2024-08-09 08:34:34.181694:264 layers are freezed
+iGpu2:2024-08-09 08:35:02.397449:An error occured when training [all m.1 after 10] on [forklift]
+iGpu2:2024-08-09 08:35:02.398738:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m.1 after 10.txt'
+iGpu2:2024-08-09 08:35:02.401880:Now training [first 10 + 23 cv3] for [100] epochs on [forklift] (17/35)
+iGpu2:2024-08-09 08:36:52.935769:249 layers are freezed
+iGpu8:2024-08-09 08:59:01.495610:Now training [16 m.2] for [100] epochs on [rocket-league] (26/35)
+iGpu15:2024-08-09 09:00:35.167455:Now training [first 5] for [100] epochs on [go-positions] (9/35)
+iGpu8:2024-08-09 09:00:57.298105:264 layers are freezed
+iGpu15:2024-08-09 09:02:49.076642:81 layers are freezed
+iGpu2:2024-08-09 09:22:14.251025:An error occured when training [first 10 + 23 cv3] on [forklift]
+iGpu2:2024-08-09 09:22:14.252174:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/first 10 + 23 cv3.txt'
+iGpu2:2024-08-09 09:22:14.254975:Now training [13 m] for [100] epochs on [forklift] (18/35)
+iGpu2:2024-08-09 09:24:07.218418:252 layers are freezed
+iGpu8:2024-08-09 09:25:45.737870:Now training [first 10 + 23 one2one] for [100] epochs on [rocket-league] (27/35)
+iGpu8:2024-08-09 09:27:41.494389:274 layers are freezed
+iGpu8:2024-08-09 09:54:02.637481:Now training [16 m] for [100] epochs on [rocket-league] (28/35)
+iGpu8:2024-08-09 09:55:59.061481:276 layers are freezed
+iGpu2:2024-08-09 10:09:46.615455:An error occured when training [13 m] on [forklift]
+iGpu2:2024-08-09 10:09:46.616957:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/13 m.txt'
+iGpu2:2024-08-09 10:09:46.621282:Now training [first 15] for [100] epochs on [forklift] (19/35)
+iGpu2:2024-08-09 10:11:36.432845:258 layers are freezed
+iGpu8:2024-08-09 10:20:02.957418:Now training [16] for [100] epochs on [rocket-league] (29/35)
+iGpu8:2024-08-09 10:21:58.847911:282 layers are freezed
+iGpu15:2024-08-09 10:30:39.200742:Now training [first 10] for [100] epochs on [go-positions] (10/35)
+iGpu15:2024-08-09 10:32:52.274803:207 layers are freezed
+iGpu8:2024-08-09 10:45:12.797605:Now training [all m.2 after 10 + cv3] for [100] epochs on [rocket-league] (30/35)
+iGpu8:2024-08-09 10:47:08.657819:283 layers are freezed
+iGpu2:2024-08-09 10:55:50.753145:An error occured when training [first 15] on [forklift]
+iGpu2:2024-08-09 10:55:50.754152:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/first 15.txt'
+iGpu2:2024-08-09 10:55:50.757815:Now training [13] for [100] epochs on [forklift] (20/35)
+iGpu2:2024-08-09 10:57:41.404448:258 layers are freezed
+iGpu8:2024-08-09 11:12:51.995618:Now training [all m.0 after 10 + cv3] for [100] epochs on [rocket-league] (31/35)
+iGpu8:2024-08-09 11:14:47.906605:285 layers are freezed
+iGpu8:2024-08-09 11:39:48.953827:Now training [all m.1 after 10 + cv3] for [100] epochs on [rocket-league] (32/35)
+iGpu2:2024-08-09 11:41:26.227021:An error occured when training [13] on [forklift]
+iGpu2:2024-08-09 11:41:26.228037:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/13.txt'
+iGpu2:2024-08-09 11:41:26.230822:Now training [16 cv1] for [100] epochs on [forklift] (21/35)
+iGpu8:2024-08-09 11:41:45.209629:285 layers are freezed
+iGpu2:2024-08-09 11:43:17.859674:261 layers are freezed
+iGpu15:2024-08-09 11:49:18.197335:Now training [all cv1 after 10] for [100] epochs on [go-positions] (11/35)
+iGpu15:2024-08-09 11:51:31.357297:219 layers are freezed
+iGpu8:2024-08-09 12:06:59.321063:Now training [all m after 10] for [100] epochs on [rocket-league] (33/35)
+iGpu8:2024-08-09 12:08:55.420099:315 layers are freezed
+iGpu2:2024-08-09 12:27:38.451949:An error occured when training [16 cv1] on [forklift]
+iGpu2:2024-08-09 12:27:38.452912:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/16 cv1.txt'
+iGpu2:2024-08-09 12:27:38.455551:Now training [16 cv2] for [100] epochs on [forklift] (22/35)
+iGpu2:2024-08-09 12:29:28.258859:261 layers are freezed
+iGpu8:2024-08-09 12:33:48.955665:Now training [17] for [100] epochs on [rocket-league] (34/35)
+iGpu8:2024-08-09 12:35:44.926317:342 layers are freezed
+iGpu8:2024-08-09 12:56:05.716261:Now training [all m after 10 + cv3] for [100] epochs on [rocket-league] (35/35)
+iGpu8:2024-08-09 12:58:01.446586:357 layers are freezed
+iGpu15:2024-08-09 13:07:03.061979:Now training [first 10 + 23 cv2] for [100] epochs on [go-positions] (12/35)
+iGpu15:2024-08-09 13:09:17.717851:231 layers are freezed
+iGpu2:2024-08-09 13:14:23.515024:An error occured when training [16 cv2] on [forklift]
+iGpu2:2024-08-09 13:14:23.516161:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/16 cv2.txt'
+iGpu2:2024-08-09 13:14:23.519769:Now training [all cv1 after 10 + cv3] for [100] epochs on [forklift] (23/35)
+iGpu2:2024-08-09 13:16:14.692571:261 layers are freezed
+iGpu8:2024-08-09 13:22:56.567266:Finished testing [rocket-league] in [17.97520142548614 hours]
+iGpu2:2024-08-09 13:59:35.733303:An error occured when training [all cv1 after 10 + cv3] on [forklift]
+iGpu2:2024-08-09 13:59:35.735035:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all cv1 after 10 + cv3.txt'
+iGpu2:2024-08-09 13:59:35.739120:Now training [16 m.0] for [100] epochs on [forklift] (24/35)
+iGpu2:2024-08-09 14:01:25.897522:264 layers are freezed
+iGpu15:2024-08-09 14:24:32.824961:Now training [all m.2 after 10] for [100] epochs on [go-positions] (13/35)
+iGpu15:2024-08-09 14:26:46.784178:241 layers are freezed
+iGpu2:2024-08-09 14:46:36.840881:An error occured when training [16 m.0] on [forklift]
+iGpu2:2024-08-09 14:46:36.882987:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/16 m.0.txt'
+iGpu2:2024-08-09 14:46:36.957582:Now training [16 m.1] for [100] epochs on [forklift] (25/35)
+iGpu2:2024-08-09 14:48:27.237071:264 layers are freezed
+iGpu2:2024-08-09 15:31:49.466456:An error occured when training [16 m.1] on [forklift]
+iGpu2:2024-08-09 15:31:49.467563:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/16 m.1.txt'
+iGpu2:2024-08-09 15:31:49.470284:Now training [16 m.2] for [100] epochs on [forklift] (26/35)
+iGpu15:2024-08-09 15:33:00.149388:Now training [all m.0 after 10] for [100] epochs on [go-positions] (14/35)
+iGpu2:2024-08-09 15:33:39.049776:264 layers are freezed
+iGpu15:2024-08-09 15:35:13.652616:243 layers are freezed
+iGpu21:2024-08-09 16:06:23.825054:Now training [all cv2] for [100] epochs on [chess] (3/35)
+iGpu21:2024-08-09 16:08:19.069101:36 layers are freezed
+iGpu2:2024-08-09 16:16:46.799777:An error occured when training [16 m.2] on [forklift]
+iGpu2:2024-08-09 16:16:46.800894:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/16 m.2.txt'
+iGpu2:2024-08-09 16:16:46.803759:Now training [first 10 + 23 one2one] for [100] epochs on [forklift] (27/35)
+iGpu2:2024-08-09 16:18:36.367521:274 layers are freezed
+iGpu15:2024-08-09 16:41:14.886835:Now training [all m] for [100] epochs on [go-positions] (15/35)
+iGpu15:2024-08-09 16:43:28.835540:243 layers are freezed
+iGpu2:2024-08-09 17:02:16.558140:An error occured when training [first 10 + 23 one2one] on [forklift]
+iGpu2:2024-08-09 17:02:16.559330:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/first 10 + 23 one2one.txt'
+iGpu2:2024-08-09 17:02:16.562343:Now training [16 m] for [100] epochs on [forklift] (28/35)
+iGpu2:2024-08-09 17:04:10.753915:276 layers are freezed
+iGpu2:2024-08-09 17:46:42.173005:An error occured when training [16 m] on [forklift]
+iGpu2:2024-08-09 17:46:42.173964:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/16 m.txt'
+iGpu2:2024-08-09 17:46:42.176703:Now training [16] for [100] epochs on [forklift] (29/35)
+iGpu2:2024-08-09 17:48:32.189853:282 layers are freezed
+iGpu15:2024-08-09 18:06:19.646588:Now training [all m.1 after 10] for [100] epochs on [go-positions] (16/35)
+iGpu15:2024-08-09 18:08:33.492777:243 layers are freezed
+iGpu2:2024-08-09 18:30:52.136231:An error occured when training [16] on [forklift]
+iGpu2:2024-08-09 18:30:52.137438:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/16.txt'
+iGpu2:2024-08-09 18:30:52.140490:Now training [all m.2 after 10 + cv3] for [100] epochs on [forklift] (30/35)
+iGpu2:2024-08-09 18:32:41.762224:283 layers are freezed
+iGpu15:2024-08-09 19:14:50.177517:Now training [first 10 + 23 cv3] for [100] epochs on [go-positions] (17/35)
+iGpu2:2024-08-09 19:16:18.715411:An error occured when training [all m.2 after 10 + cv3] on [forklift]
+iGpu2:2024-08-09 19:16:18.716441:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m.2 after 10 + cv3.txt'
+iGpu2:2024-08-09 19:16:18.719041:Now training [all m.0 after 10 + cv3] for [100] epochs on [forklift] (31/35)
+iGpu15:2024-08-09 19:17:03.487892:249 layers are freezed
+iGpu2:2024-08-09 19:18:08.186408:285 layers are freezed
+iGpu2:2024-08-09 20:01:36.687832:An error occured when training [all m.0 after 10 + cv3] on [forklift]
+iGpu2:2024-08-09 20:01:36.688849:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m.0 after 10 + cv3.txt'
+iGpu2:2024-08-09 20:01:36.691521:Now training [all m.1 after 10 + cv3] for [100] epochs on [forklift] (32/35)
+iGpu2:2024-08-09 20:03:25.972919:285 layers are freezed
+iGpu14:2024-08-09 20:16:24.793088:Now training [all cv2] for [100] epochs on [rockets] (3/35)
+iGpu14:2024-08-09 20:18:21.149263:36 layers are freezed
+iGpu15:2024-08-09 20:23:40.418551:Now training [13 m] for [100] epochs on [go-positions] (18/35)
+iGpu15:2024-08-09 20:25:53.897202:252 layers are freezed
+iGpu2:2024-08-09 20:46:38.985670:An error occured when training [all m.1 after 10 + cv3] on [forklift]
+iGpu2:2024-08-09 20:46:38.986848:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m.1 after 10 + cv3.txt'
+iGpu2:2024-08-09 20:46:38.989822:Now training [all m after 10] for [100] epochs on [forklift] (33/35)
+iGpu2:2024-08-09 20:48:29.332523:315 layers are freezed
+iGpu2:2024-08-09 21:30:41.920477:An error occured when training [all m after 10] on [forklift]
+iGpu2:2024-08-09 21:30:41.921610:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m after 10.txt'
+iGpu2:2024-08-09 21:30:41.924579:Now training [17] for [100] epochs on [forklift] (34/35)
+iGpu15:2024-08-09 21:32:22.906168:Now training [first 15] for [100] epochs on [go-positions] (19/35)
+iGpu2:2024-08-09 21:32:30.936786:342 layers are freezed
+iGpu15:2024-08-09 21:34:36.771192:258 layers are freezed
+iGpu2:2024-08-09 22:12:26.225098:An error occured when training [17] on [forklift]
+iGpu2:2024-08-09 22:12:26.226074:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/17.txt'
+iGpu2:2024-08-09 22:12:26.229160:Now training [all m after 10 + cv3] for [100] epochs on [forklift] (35/35)
+iGpu2:2024-08-09 22:14:15.976809:357 layers are freezed
+iGpu15:2024-08-09 22:38:46.189059:Now training [13] for [100] epochs on [go-positions] (20/35)
+iGpu15:2024-08-09 22:41:00.595602:258 layers are freezed
+iGpu2:2024-08-09 22:56:34.694028:An error occured when training [all m after 10 + cv3] on [forklift]
+iGpu2:2024-08-09 22:56:34.695089:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/individual results/forklift/all m after 10 + cv3.txt'
+iGpu2:2024-08-09 22:56:34.697997:An error occured when saving results for [forklift]
+iGpu2:2024-08-09 22:56:34.698830:[Errno 2] No such file or directory: '/lab/micah/obj-det/testing runs/8-8 2nd set total/results/JSON DATA/forklift/FINAL mAP RESULTS.json'
+iGpu2:2024-08-09 22:56:34.701276:Finished testing [forklift] in [27.5363104161289 hours]
+iGpu15:2024-08-09 23:44:41.181707:Now training [16 cv1] for [100] epochs on [go-positions] (21/35)
+iGpu15:2024-08-09 23:46:54.673724:261 layers are freezed
+iGpu15:2024-08-10 00:50:22.008606:Now training [16 cv2] for [100] epochs on [go-positions] (22/35)
+iGpu15:2024-08-10 00:52:36.191179:261 layers are freezed
+iGpu15:2024-08-10 01:55:55.657527:Now training [all cv1 after 10 + cv3] for [100] epochs on [go-positions] (23/35)
+iGpu15:2024-08-10 01:58:09.123787:261 layers are freezed
+iGpu21:2024-08-10 02:13:14.951707:Now training [all cv2 after 10] for [100] epochs on [chess] (4/35)
+iGpu21:2024-08-10 02:15:13.972976:36 layers are freezed
+iGpu15:2024-08-10 03:03:00.124466:Now training [16 m.0] for [100] epochs on [go-positions] (24/35)
+iGpu15:2024-08-10 03:05:14.391350:264 layers are freezed
+iGpu15:2024-08-10 04:08:22.043082:Now training [16 m.1] for [100] epochs on [go-positions] (25/35)
+iGpu15:2024-08-10 04:10:36.527310:264 layers are freezed
+iGpu15:2024-08-10 05:13:27.209524:Now training [16 m.2] for [100] epochs on [go-positions] (26/35)
+iGpu15:2024-08-10 05:15:41.576394:264 layers are freezed
+iGpu15:2024-08-10 06:19:06.578392:Now training [first 10 + 23 one2one] for [100] epochs on [go-positions] (27/35)
+iGpu15:2024-08-10 06:21:20.245243:274 layers are freezed
+iGpu15:2024-08-10 07:26:42.210823:Now training [16 m] for [100] epochs on [go-positions] (28/35)
+iGpu15:2024-08-10 07:28:55.818603:276 layers are freezed
+iGpu14:2024-08-10 08:31:24.256430:Now training [all cv2 after 10] for [100] epochs on [rockets] (4/35)
+iGpu15:2024-08-10 08:31:25.030559:Now training [16] for [100] epochs on [go-positions] (29/35)
+iGpu14:2024-08-10 08:33:20.541812:36 layers are freezed
+iGpu15:2024-08-10 08:33:39.221891:282 layers are freezed
+iGpu15:2024-08-10 09:32:30.447657:Now training [all m.2 after 10 + cv3] for [100] epochs on [go-positions] (30/35)
+iGpu15:2024-08-10 09:34:44.427764:283 layers are freezed
+iGpu15:2024-08-10 10:39:19.492040:Now training [all m.0 after 10 + cv3] for [100] epochs on [go-positions] (31/35)
+iGpu15:2024-08-10 10:41:33.462354:285 layers are freezed
+iGpu15:2024-08-10 11:46:19.642994:Now training [all m.1 after 10 + cv3] for [100] epochs on [go-positions] (32/35)
+iGpu15:2024-08-10 11:48:33.746795:285 layers are freezed
+iGpu21:2024-08-10 12:18:56.297456:Now training [all m.2] for [100] epochs on [chess] (5/35)
+iGpu21:2024-08-10 12:20:52.164384:67 layers are freezed
+iGpu15:2024-08-10 12:52:47.643677:Now training [all m after 10] for [100] epochs on [go-positions] (33/35)
+iGpu15:2024-08-10 12:55:01.650795:315 layers are freezed
+iGpu15:2024-08-10 13:59:11.433028:Now training [17] for [100] epochs on [go-positions] (34/35)
+iGpu15:2024-08-10 14:01:25.500220:342 layers are freezed
+iGpu15:2024-08-10 14:56:26.086635:Now training [all m after 10 + cv3] for [100] epochs on [go-positions] (35/35)
+iGpu15:2024-08-10 14:58:40.011108:357 layers are freezed
+iGpu15:2024-08-10 16:01:40.079707:Finished testing [go-positions] in [44.62124202867349 hours]
+iGpu14:2024-08-10 20:47:45.341368:Now training [all m.2] for [100] epochs on [rockets] (5/35)
+iGpu14:2024-08-10 20:49:41.716859:67 layers are freezed
+iGpu21:2024-08-10 22:26:10.886203:Now training [all m.1] for [100] epochs on [chess] (6/35)
+iGpu21:2024-08-10 22:28:06.130562:69 layers are freezed
+iGpu21:2024-08-11 08:32:39.101563:Now training [all m.0] for [100] epochs on [chess] (7/35)
+iGpu21:2024-08-11 08:34:34.207304:69 layers are freezed
+iGpu14:2024-08-11 08:59:04.181151:Now training [all m.1] for [100] epochs on [rockets] (6/35)
+iGpu14:2024-08-11 09:01:00.730692:69 layers are freezed
+iGpu21:2024-08-11 18:39:28.532874:Now training [all cv2 after 10 + cv3] for [100] epochs on [chess] (8/35)
+iGpu21:2024-08-11 18:41:24.249464:78 layers are freezed
+iGpu14:2024-08-11 21:09:33.474404:Now training [all m.0] for [100] epochs on [rockets] (7/35)
+iGpu14:2024-08-11 21:11:29.845552:69 layers are freezed
+iGpu21:2024-08-12 04:39:19.124718:Now training [first 5] for [100] epochs on [chess] (9/35)
+iGpu21:2024-08-12 04:41:13.868523:81 layers are freezed
+iGpu14:2024-08-12 09:22:37.003644:Now training [all cv2 after 10 + cv3] for [100] epochs on [rockets] (8/35)
+iGpu14:2024-08-12 09:24:33.587552:78 layers are freezed
+iGpu21:2024-08-12 12:45:11.777176:Now training [first 10] for [100] epochs on [chess] (10/35)
+iGpu21:2024-08-12 12:47:07.013279:207 layers are freezed
+iGpu21:2024-08-12 19:55:50.437254:Now training [all cv1 after 10] for [100] epochs on [chess] (11/35)
+iGpu21:2024-08-12 19:57:47.166055:219 layers are freezed
+iGpu14:2024-08-12 21:29:03.178490:Now training [first 5] for [100] epochs on [rockets] (9/35)
+iGpu14:2024-08-12 21:30:59.658858:81 layers are freezed
+iGpu21:2024-08-13 02:58:47.672956:Now training [first 10 + 23 cv2] for [100] epochs on [chess] (12/35)
+iGpu21:2024-08-13 03:00:43.708376:231 layers are freezed
+iGpu14:2024-08-13 07:11:21.616035:Now training [first 10] for [100] epochs on [rockets] (10/35)
+iGpu14:2024-08-13 07:13:18.121982:207 layers are freezed
+iGpu21:2024-08-13 10:04:42.195964:Now training [all m.2 after 10] for [100] epochs on [chess] (13/35)
+iGpu21:2024-08-13 10:06:37.572192:241 layers are freezed
+iGpu14:2024-08-13 15:35:13.400744:Now training [all cv1 after 10] for [100] epochs on [rockets] (11/35)
+iGpu14:2024-08-13 15:37:09.902452:219 layers are freezed
+iGpu21:2024-08-13 17:09:35.316165:Now training [all m.0 after 10] for [100] epochs on [chess] (14/35)
+iGpu21:2024-08-13 17:11:31.504737:243 layers are freezed
+iGpu14:2024-08-13 23:53:52.114661:Now training [first 10 + 23 cv2] for [100] epochs on [rockets] (12/35)
+iGpu14:2024-08-13 23:55:48.731967:231 layers are freezed
+iGpu21:2024-08-14 00:14:03.916174:Now training [all m] for [100] epochs on [chess] (15/35)
+iGpu21:2024-08-14 00:16:00.836652:243 layers are freezed
+iGpu14:2024-08-14 08:13:04.185817:Now training [all m.2 after 10] for [100] epochs on [rockets] (13/35)
+iGpu14:2024-08-14 08:15:00.728014:241 layers are freezed
+iGpu21:2024-08-14 09:40:12.715869:Now training [all m.1 after 10] for [100] epochs on [chess] (16/35)
+iGpu21:2024-08-14 09:42:07.673650:243 layers are freezed
+iGpu14:2024-08-14 16:32:53.346813:Now training [all m.0 after 10] for [100] epochs on [rockets] (14/35)
+iGpu14:2024-08-14 16:34:49.970146:243 layers are freezed
+iGpu21:2024-08-14 16:44:42.071036:Now training [first 10 + 23 cv3] for [100] epochs on [chess] (17/35)
+iGpu21:2024-08-14 16:46:37.338390:249 layers are freezed
+iGpu21:2024-08-14 23:48:27.532292:Now training [13 m] for [100] epochs on [chess] (18/35)
+iGpu21:2024-08-14 23:50:22.723732:252 layers are freezed
+iGpu14:2024-08-15 00:53:12.692834:Now training [all m] for [100] epochs on [rockets] (15/35)
+iGpu14:2024-08-15 00:55:09.361205:243 layers are freezed
+iGpu21:2024-08-15 06:54:34.308700:Now training [first 15] for [100] epochs on [chess] (19/35)
+iGpu21:2024-08-15 06:56:30.644959:258 layers are freezed
+iGpu14:2024-08-15 12:06:14.360541:Now training [all m.1 after 10] for [100] epochs on [rockets] (16/35)
+iGpu14:2024-08-15 12:08:10.896721:243 layers are freezed
+iGpu21:2024-08-15 13:42:47.975883:Now training [13] for [100] epochs on [chess] (20/35)
+iGpu21:2024-08-15 13:44:43.633588:258 layers are freezed
+iGpu14:2024-08-15 20:25:24.175636:Now training [first 10 + 23 cv3] for [100] epochs on [rockets] (17/35)
+iGpu14:2024-08-15 20:27:20.784596:249 layers are freezed
+iGpu21:2024-08-15 20:31:29.163692:Now training [16 cv1] for [100] epochs on [chess] (21/35)
+iGpu21:2024-08-15 20:33:24.631018:261 layers are freezed
+iGpu21:2024-08-16 03:13:21.564632:Now training [16 cv2] for [100] epochs on [chess] (22/35)
+iGpu21:2024-08-16 03:15:17.959399:261 layers are freezed
+iGpu14:2024-08-16 04:45:07.579157:Now training [13 m] for [100] epochs on [rockets] (18/35)
+iGpu14:2024-08-16 04:47:04.369892:252 layers are freezed
+iGpu21:2024-08-16 09:58:57.091364:Now training [all cv1 after 10 + cv3] for [100] epochs on [chess] (23/35)
+iGpu21:2024-08-16 10:00:52.662887:261 layers are freezed
+iGpu14:2024-08-16 13:07:01.088446:Now training [first 15] for [100] epochs on [rockets] (19/35)
+iGpu14:2024-08-16 13:08:57.825188:258 layers are freezed
+iGpu21:2024-08-16 16:57:29.934039:Now training [16 m.0] for [100] epochs on [chess] (24/35)
+iGpu21:2024-08-16 16:59:25.237898:264 layers are freezed
+iGpu14:2024-08-16 21:08:40.452112:Now training [13] for [100] epochs on [rockets] (20/35)
+iGpu14:2024-08-16 21:10:37.348360:258 layers are freezed
+iGpu21:2024-08-16 23:41:39.786131:Now training [16 m.1] for [100] epochs on [chess] (25/35)
+iGpu21:2024-08-16 23:43:36.096696:264 layers are freezed
+iGpu14:2024-08-17 05:09:38.603482:Now training [16 cv1] for [100] epochs on [rockets] (21/35)
+iGpu14:2024-08-17 05:11:35.158024:261 layers are freezed
+iGpu21:2024-08-17 06:25:49.365775:Now training [16 m.2] for [100] epochs on [chess] (26/35)
+iGpu21:2024-08-17 06:27:45.695717:264 layers are freezed
+iGpu14:2024-08-17 13:04:25.064759:Now training [16 cv2] for [100] epochs on [rockets] (22/35)
+iGpu14:2024-08-17 13:06:21.792514:261 layers are freezed
+iGpu21:2024-08-17 13:09:21.955220:Now training [first 10 + 23 one2one] for [100] epochs on [chess] (27/35)
+iGpu21:2024-08-17 13:11:17.872908:274 layers are freezed
+iGpu21:2024-08-17 20:08:57.445734:Now training [16 m] for [100] epochs on [chess] (28/35)
+iGpu21:2024-08-17 20:10:52.740518:276 layers are freezed
+iGpu14:2024-08-17 21:03:53.477126:Now training [all cv1 after 10 + cv3] for [100] epochs on [rockets] (23/35)
+iGpu14:2024-08-17 21:05:50.336993:261 layers are freezed
+iGpu21:2024-08-18 02:49:13.536056:Now training [16] for [100] epochs on [chess] (29/35)
+iGpu21:2024-08-18 02:51:09.180618:282 layers are freezed
+iGpu14:2024-08-18 05:16:53.716590:Now training [16 m.0] for [100] epochs on [rockets] (24/35)
+iGpu14:2024-08-18 05:18:50.471016:264 layers are freezed
+iGpu21:2024-08-18 09:06:09.156961:Now training [all m.2 after 10 + cv3] for [100] epochs on [chess] (30/35)
+iGpu21:2024-08-18 09:08:06.357558:283 layers are freezed
+iGpu14:2024-08-18 13:13:13.646157:Now training [16 m.1] for [100] epochs on [rockets] (25/35)
+iGpu14:2024-08-18 13:15:10.847891:264 layers are freezed
+iGpu21:2024-08-18 16:06:06.499906:Now training [all m.0 after 10 + cv3] for [100] epochs on [chess] (31/35)
+iGpu21:2024-08-18 16:08:03.534423:285 layers are freezed
+iGpu14:2024-08-18 21:09:37.741000:Now training [16 m.2] for [100] epochs on [rockets] (26/35)
+iGpu14:2024-08-18 21:11:34.417215:264 layers are freezed
+iGpu21:2024-08-18 23:05:14.081379:Now training [all m.1 after 10 + cv3] for [100] epochs on [chess] (32/35)
+iGpu21:2024-08-18 23:07:08.799399:285 layers are freezed
+iGpu14:2024-08-19 05:06:38.728819:Now training [first 10 + 23 one2one] for [100] epochs on [rockets] (27/35)
+iGpu14:2024-08-19 05:08:35.675103:274 layers are freezed
+iGpu21:2024-08-19 06:04:32.963110:Now training [all m after 10] for [100] epochs on [chess] (33/35)
+iGpu21:2024-08-19 06:06:29.417325:315 layers are freezed
+iGpu21:2024-08-19 12:58:37.393867:Now training [17] for [100] epochs on [chess] (34/35)
+iGpu21:2024-08-19 13:00:32.343678:342 layers are freezed
+iGpu14:2024-08-19 13:17:15.348057:Now training [16 m] for [100] epochs on [rockets] (28/35)
+iGpu14:2024-08-19 13:19:12.921708:276 layers are freezed
+iGpu21:2024-08-19 18:50:15.127605:Now training [all m after 10 + cv3] for [100] epochs on [chess] (35/35)
+iGpu21:2024-08-19 18:52:10.911822:357 layers are freezed
+iGpu14:2024-08-19 21:07:22.850012:Now training [16] for [100] epochs on [rockets] (29/35)
+iGpu14:2024-08-19 21:09:19.554041:282 layers are freezed
+iGpu21:2024-08-20 01:38:39.163304:Finished testing [chess] in [270.2382508056031 hours]
+iGpu14:2024-08-20 04:30:24.170142:Now training [all m.2 after 10 + cv3] for [100] epochs on [rockets] (30/35)
+iGpu14:2024-08-20 04:32:20.918494:283 layers are freezed
+iGpu14:2024-08-20 12:43:34.030551:Now training [all m.0 after 10 + cv3] for [100] epochs on [rockets] (31/35)
+iGpu14:2024-08-20 12:45:30.756466:285 layers are freezed
+iGpu14:2024-08-20 20:57:12.616582:Now training [all m.1 after 10 + cv3] for [100] epochs on [rockets] (32/35)
+iGpu14:2024-08-20 20:59:09.431448:285 layers are freezed
+iGpu14:2024-08-21 05:09:55.495864:Now training [all m after 10] for [100] epochs on [rockets] (33/35)
+iGpu14:2024-08-21 05:11:52.902041:315 layers are freezed
+iGpu14:2024-08-21 13:20:14.535689:Now training [17] for [100] epochs on [rockets] (34/35)
+iGpu14:2024-08-21 13:22:11.602278:342 layers are freezed
+iGpu14:2024-08-21 20:14:25.341723:Now training [all m after 10 + cv3] for [100] epochs on [rockets] (35/35)
+iGpu14:2024-08-21 20:16:22.069700:357 layers are freezed
+iGpu14:2024-08-22 04:14:08.060088:Finished testing [rockets] in [320.8295037948423 hours]
